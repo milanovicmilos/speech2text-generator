@@ -370,7 +370,7 @@ def main():
     default_audio_out = os.path.join(os.path.dirname(__file__), 'rts_audio')
     parser.add_argument('--audio-out', help='Output audio filename', default=default_audio_out)
     parser.add_argument('--text-out', help='Output text filename', default=default_text_out)
-    parser.add_argument('--out-dir', help='Output directory for search results', default=os.path.join(os.path.dirname(__file__), 'rts_results'))
+    parser.add_argument('--out-dir', help='Output directory for search results', default=os.path.join(os.path.dirname(__file__), '..', 'data', 'raw'))
     args = parser.parse_args()
 
     if args.search:

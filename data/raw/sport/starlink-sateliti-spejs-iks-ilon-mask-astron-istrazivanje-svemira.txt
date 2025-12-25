@@ -1,0 +1,61 @@
+Maskovi sateliti astronomima blokiraju pogled na univerzum
+четвртак, 19.09.2024, 09:00
+
+Radio talasi sa rastuće mreže satelita Ilona Maska blokiraju mogućnosti naučnika da zavire u univerzum, tvrde istraživači iz Holandije.
+
+Nova generacija satelita Starlink , koji pružaju brzu internet konekciju širom sveta, mnogo više ometaju radio-teleskope nego prethodne verzije, ističu astronomi.
+
+Hiljade satelita u orbiti „zaslepljuju“ radio-teleskope i ometaju astronomska istraživanja, prema Holandskom institutu za radio astronomiju (ASTRON).
+
+Mreža Maskovih satelita pruža širokopojasni internet širom sveta , često i na najudaljenim tačkama planete, uključujući i izazovna okruženja poput Ukrajine i Jemena.
+
+Takođe se koriste za povezivanje udaljenih područja Velike Britanije na brzi internet. Testovi iz 2022. godine pokazali su da Starlin k može da isporuči internet vezu četiri puta bržu od proseka, prema britanskom Odeljenju za digitalizaciju, kulturu, medije i sport.
+
+Ali astronomi kažu da to ima cenu.
+
+„Svaki put kada se više njih lansira sa ovakvim nivoima emisije, sve manje vidimo nebo“, rekla je  za Bi-Bi-Si njuz profesorka Džesika Dempsi, direktorka ASTRON-a.
+
+„Pokušavamo da proučimo stvari poput eksplozija iz crnih rupa u centru galaksija. Takođe posmatramo neke od najranijih galaksija, udaljenih milione i milione svetlosnih godina, kao i egzoplanete", dodaje profesorka, ističući oblasti na koje satelitsko zračenje utiče.
+
+ASTRON je otkrio da su smetnje od satelita druge generacije, ili V2, 32 puta jače od prve generacije.
+
+Količina emitovanog zračenja premašuje standarde koje je propisala Međunarodna unija za telekomunikacije, dodaje profesorka Dempsi.
+
+Po jednoj proceni, trenutno se u orbiti nalazi 6.402 Starlink satelita na oko 550 kilometara iznad Zemlje, što ga čini najvećim internet provajderom.
+
+Sateliti su relativno veliki – sa ravnim panelima od tri metra i solarnim nizom od osam metara za napajanje.
+
+Glavni konkurent kompanije „Spejs Iks“, "OneWeb", ima manje od hiljadu. Ali to je poslovna trka koja se sve više ubrzava. „Amazon“ razvija sopstvenu mrežu i nada se da će u narednih nekoliko godina lansirati najmanje 3.000 satelita.
+
+Očekuje se da će do 2030. broj satelita u orbiti premašiti 100.000.
+
+Studija je urađena pomoću radio teleskopa LOFAR u Holandiji jednog dana u julu ove godine.
+
+Mnogi objekti u svemiru, uključujući udaljene galaksije i planete, emituju svetlost elektromagnetnog spektra. Ovo zračenje putuje kao talasi i radio-teleskopi mogu da uhvate te talase, omogućavajući nam da dobijemo sliku stvari koje ne možemo da vidimo golim okom.
+
+Ali te talase ometaju sateliti.
+
+Naučnici su otkrili nenamerno elektromagnetno zračenje sa skoro svih posmatranih satelita V2 Starlink . Bilo je oko 10 miliona puta svetlije nego iz najslabijih identifikovanih izvora svetlosti, kažu oni.
+
+Glavni autor studije, Siz Basa, rekao je da je to kao da upoređujem „Najslabiji sjaj zvezde vidljive golim okom i sjaj punog Meseca“.
+
+„Pošto 'Spejs Iks' svake nedelje lansira oko 40 Starlink satelita druge generacije, ovaj problem postaje sve gori“, dodaje Basa.
+
+„Očigledno je da ako imate nešto ovako svetlo što toliko kompromituje veliku radio opservatoriju, onda moramo nešto da uradimo i to moramo da uradimo brzo“, naglašava Robert Masi, zamenik izvršnog direktora Kraljevskog astronomskog društva u Velikoj Britaniji.
+
+Upitan o značaju astronomskih istraživanja, Masi napominje da je nemoguće reći da je neka nauka jednostavno nepotrebna. „Istraživanja mogu da traju decenijama ili čak i duže, ali mogu biti veoma fundamentalna i veoma važna.“
+
+Naučnici su takođe zabrinuti zbog svetlosnog zagađenja sa satelita i strahuju da to ometa i optičke teleskope.
+
+Astronomi kažu da su razgovarali sa „Spejs Iksom“ o zračenju prve generacije satelita i da je kompanija saslušala njihovu zabrinutost. Ali ASTRON sada kaže da je druga generacija V2 još moćnija.
+
+„Ovo zapravo ugrožava čitavu zemaljsku astronomiju na svakoj talasnoj dužini i na različite načine. Ako se nastavi, bez neke vrste ublažavanja da bi se ovi sateliti utišali, onda to postaje egzistencijalna pretnja za gotovo sva astronomska posmatranja koja izvodimo“, naglašava profesorka Dempsi.
+
+Istraživači takođe ističu da je neophodno da se donese regulativa u pogledu svemira i načina rada satelita kako bi se izbeglo ugrožavanje naučnog rada.
+
+Napominju i da bi kao najveći vlasnik satelita, „Spejs Iks“ mogao da postavi standarde za ograničavanje svetlosnog zagađenja. Profesorka Dempsi navodi da jednostavne radnje kao što je zaštita baterije na satelitu mogu napraviti veliku razliku i smanjiti emitovano svetlosno zračenje.
+
+Neke smetnje dolaze i od neispravne elektronike, tako da i na tome treba raditi. Ali ako se ništa ne preduzme, „vrlo brzo će jedina sazvežđa koja ćemo videti biti ona koja smo sami napravili“, dodala je profesorka.
+
+Rezultati analize su objavljeni u naučnom časopisu Astronomy and Astrophysics.
+
