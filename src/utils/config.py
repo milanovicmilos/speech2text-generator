@@ -13,7 +13,7 @@ import numpy as np
 import torch
 
 
-def load_config(config_path: str) -> Dict[str, Any]:
+def load_config(config_path: str = 'configs/config.yaml') -> Dict[str, Any]:
     """
     Load configuration from YAML file.
     

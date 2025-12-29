@@ -21,6 +21,7 @@ import numpy as np
 from transformers import WhisperProcessor
 
 from ..utils.text_preprocessing import SerbianTextPreprocessor
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -39,8 +40,9 @@ class WhisperSpeechDataset(Dataset):
         text_dir: str,
         processor: WhisperProcessor,
         sample_rate: int = 16000,
-        max_duration: float = 30.0,
+        max_duration: float = 300.0,  # Increased for raw audio
         text_preprocessor: Optional[SerbianTextPreprocessor] = None,
+        augment: bool = False,  # Enable data augmentation for training
     ):
         """
         Initialize dataset.
@@ -53,18 +55,20 @@ class WhisperSpeechDataset(Dataset):
             max_duration: Maximum audio duration in seconds
             text_preprocessor: Text preprocessor instance
         """
-        self.audio_dir = Path(audio_dir)
-        self.text_dir = Path(text_dir)
+        # Resolve dirs to absolute paths to avoid relative path mismatches
+        self.text_dir = Path(text_dir).resolve()
+        self.audio_dir = Path(audio_dir).resolve()
         self.processor = processor
         self.sample_rate = sample_rate
         self.max_duration = max_duration
         self.max_samples = int(max_duration * sample_rate)
         self.text_preprocessor = text_preprocessor or SerbianTextPreprocessor()
+        self.augment = augment
         
-        # Find all audio files
+        # Find all audio files (recursive)
         self.audio_files = sorted(self.audio_dir.glob("**/*.mp3")) + \
-                          sorted(self.audio_dir.glob("**/*.wav")) + \
-                          sorted(self.audio_dir.glob("**/*.flac"))
+                  sorted(self.audio_dir.glob("**/*.wav")) + \
+                  sorted(self.audio_dir.glob("**/*.flac"))
         
         if not self.audio_files:
             raise ValueError(f"No audio files found in {audio_dir}")
@@ -83,22 +87,94 @@ class WhisperSpeechDataset(Dataset):
     def _load_transcriptions(self):
         """Load transcriptions from text files."""
         for audio_path in self.audio_files:
-            # Try different text file formats
-            text_path = self.text_dir / (audio_path.stem + ".txt")
-            
-            if text_path.exists():
-                with open(text_path, 'r', encoding='utf-8') as f:
-                    text = f.read().strip()
-                    self.transcriptions[audio_path.stem] = text
-            else:
-                logger.warning(f"No text file for {audio_path.name}")
+            # Try multiple strategies to find matching transcription:
+            # 1) Flat mapping: text_dir / <stem>.txt
+            # 2) Relative mapping: keep same relative path under text_dir (for mirrored dirs)
+            # 3) Filename mapping: text_dir / <audio_name>.txt
+            stem = audio_path.stem
+            candidates = []
+
+            # Flat
+            candidates.append(self.text_dir / f"{stem}.txt")
+
+            # Relative (mirrored subdirs)
+            try:
+                rel = audio_path.relative_to(self.audio_dir)
+                candidates.append(self.text_dir / rel.with_suffix('.txt'))
+            except Exception:
+                # audio_path not under audio_dir (shouldn't happen), skip
+                pass
+
+            # Name-based (use the name without extension)
+            candidates.append(self.text_dir / audio_path.with_suffix('.txt').name)
+
+            found = False
+            for text_path in candidates:
+                text_path = text_path.resolve()
+                if text_path.exists():
+                    try:
+                        with open(text_path, 'r', encoding='utf-8') as f:
+                            raw_text = f.read().strip()
+                            # Store preprocessed text to keep stats consistent
+                            try:
+                                text = self.text_preprocessor.preprocess(raw_text)
+                            except Exception:
+                                text = raw_text
+                            self.transcriptions[stem] = text
+                            found = True
+                            break
+                    except Exception as e:
+                        logger.error(f"Error reading transcription {text_path}: {e}")
+
+            if not found:
+                logger.warning(f"No text file found for {audio_path.name} (tried {len(candidates)} paths)")
+
+    def _audio_duration(self, audio_path: Path) -> float:
+        try:
+            # use librosa.get_duration which is faster for just duration
+            return float(librosa.get_duration(path=str(audio_path)))
+        except Exception:
+            return 0.0
     
     def _find_valid_pairs(self) -> List[int]:
         """Find indices with valid audio-text pairs."""
         valid = []
+        problematic = []
         for idx, audio_path in enumerate(self.audio_files):
-            if audio_path.stem in self.transcriptions:
-                valid.append(idx)
+            stem = audio_path.stem
+            if stem not in self.transcriptions:
+                problematic.append((str(audio_path), 'missing_text'))
+                continue
+
+            text = self.transcriptions.get(stem, '')
+            if not text or not text.strip():
+                problematic.append((str(audio_path), 'empty_text'))
+                continue
+
+            # duration / words sanity check
+            duration = self._audio_duration(audio_path)
+            words = len(text.split())
+            if duration <= 0:
+                problematic.append((str(audio_path), 'zero_duration'))
+                continue
+            # words per second should be within reasonable bounds
+            wps = words / duration if duration > 0 else 0.0
+            if wps < 0.3 or wps > 5.0 or words < 5 or duration < 5.0:
+                problematic.append((str(audio_path), f'invalid_stats: wps={wps:.2f}, words={words}, dur={duration:.2f}'))
+                continue
+            valid.append(idx)
+
+        # write problematic report for user's inspection
+        if problematic:
+            try:
+                report_dir = Path('data') / 'problematic'
+                report_dir.mkdir(parents=True, exist_ok=True)
+                report_file = report_dir / 'problematic_pairs.json'
+                with open(report_file, 'w', encoding='utf-8') as rf:
+                    json.dump([{'audio': a, 'issue': i} for a, i in problematic], rf, ensure_ascii=False, indent=2)
+                logger.info(f"Wrote problematic pairs report: {report_file}")
+            except Exception:
+                logger.exception('Failed to write problematic pairs report')
         return valid
     
     def __len__(self) -> int:
@@ -119,6 +195,10 @@ class WhisperSpeechDataset(Dataset):
         file_idx = self.valid_indices[idx]
         audio_path = self.audio_files[file_idx]
         
+        # Get transcription first (before audio processing for raw data)
+        text = self.transcriptions[audio_path.stem]
+        text = self.text_preprocessor.preprocess(text)
+        
         # Load audio
         try:
             audio, sr = librosa.load(
@@ -129,17 +209,45 @@ class WhisperSpeechDataset(Dataset):
         except Exception as e:
             logger.error(f"Error loading audio {audio_path}: {e}")
             # Return dummy data
-            audio = np.zeros(self.max_samples)
+            audio = np.zeros(30 * self.sample_rate)  # 30s dummy
         
-        # Trim or pad to max duration
-        if len(audio) > self.max_samples:
-            audio = audio[:self.max_samples]
+        # Apply data augmentation if enabled (for training robustness)
+        if self.augment:
+            # Speed perturbation: 0.9x to 1.1x
+            speed_factor = np.random.uniform(0.9, 1.1)
+            try:
+                audio = librosa.effects.time_stretch(audio, rate=speed_factor)
+            except Exception:
+                # time_stretch can fail for very short audio; skip if error
+                pass
+            # Add noise: small Gaussian noise
+            noise = np.random.normal(0, 0.005, len(audio))
+            audio = audio + noise
+            audio = np.clip(audio, -1, 1)  # Clip to prevent overflow
+        
+        # For raw data (audio_dir == text_dir), truncate to 30s and adjust text
+        is_raw = self.audio_dir == self.text_dir
+        if is_raw:
+            # Truncate audio to 30s
+            max_samples_30s = 30 * self.sample_rate
+            if len(audio) > max_samples_30s:
+                audio = audio[:max_samples_30s]
+            else:
+                audio = np.pad(audio, (0, max_samples_30s - len(audio)))
+            
+            # Adjust text: take proportional words for first 30s
+            full_dur = self._audio_duration(audio_path)
+            if full_dur > 0:
+                words = text.split()
+                num_words = len(words)
+                words_for_30s = int((30 / full_dur) * num_words)
+                text = ' '.join(words[:words_for_30s]) if words_for_30s > 0 else text
         else:
-            audio = np.pad(audio, (0, self.max_samples - len(audio)))
-        
-        # Get transcription
-        text = self.transcriptions[audio_path.stem]
-        text = self.text_preprocessor.preprocess(text)
+            # For chunked, use max_duration
+            if len(audio) > self.max_samples:
+                audio = audio[:self.max_samples]
+            else:
+                audio = np.pad(audio, (0, self.max_samples - len(audio)))
         
         # Process with Whisper processor
         inputs = self.processor(
@@ -150,17 +258,26 @@ class WhisperSpeechDataset(Dataset):
         
         # Get input features (log-mel spectrogram)
         input_features = inputs.input_features[0]  # Remove batch dim
+        # Create an attention mask for input features (all ones — no internal padding)
+        # shape: (seq_len,)
+        try:
+            import torch as _torch
+            attention_mask = _torch.ones(input_features.shape[0], dtype=_torch.long)
+        except Exception:
+            attention_mask = None
         
         # Tokenize text
         labels = self.processor.tokenizer(
             text,
-            return_tensors="pt"
+            return_tensors="pt",
+            max_length=448,
+            truncation=True
         ).input_ids[0]  # Remove batch dim
         
         return {
             "input_features": input_features,
+            "attention_mask": attention_mask,
             "labels": labels,
-            "audio_path": str(audio_path),
             "text": text,
         }
 
@@ -169,12 +286,16 @@ class WhisperSpeechDataset(Dataset):
 class WhisperDataCollator:
     """
     Data collator for Whisper.
-    
-    Handles padding of variable-length sequences.
+
+    Handles padding of variable-length sequences. Optionally returns the
+    original `text` strings when `include_text=True` which is useful for
+    offline evaluation. For training with `Trainer` keep `include_text=False`
+    to avoid passing unexpected kwargs to the model forward.
     """
-    
+
     processor: WhisperProcessor
-    
+    include_text: bool = False
+
     def __call__(self, batch: List[Dict]) -> Dict[str, torch.Tensor]:
         """
         Collate batch.
@@ -191,6 +312,10 @@ class WhisperDataCollator:
         
         # Pad input features (all should be same size already from processor)
         input_features = torch.stack(input_features)
+        # build attention_mask batch if present
+        attention_masks = None
+        if "attention_mask" in batch[0] and batch[0]["attention_mask"] is not None:
+            attention_masks = torch.stack([item["attention_mask"] for item in batch])
         
         # Pad labels
         max_label_len = max(len(label) for label in labels)
@@ -203,10 +328,18 @@ class WhisperDataCollator:
         
         labels = torch.stack(labels_padded)
         
-        return {
+        texts = [item.get("text", "") for item in batch]
+
+        out = {
             "input_features": input_features,
+            "attention_mask": attention_masks,
             "labels": labels,
         }
+
+        if self.include_text:
+            out["text"] = texts
+
+        return out
 
 
 def create_dataloaders(
@@ -218,6 +351,7 @@ def create_dataloaders(
     train_ratio: float = 0.8,
     val_ratio: float = 0.1,
     seed: int = 42,
+    augment_train: bool = True,  # Enable augmentation for training set
 ) -> Tuple[DataLoader, DataLoader, DataLoader]:
     """
     Create train/val/test dataloaders.
@@ -231,19 +365,135 @@ def create_dataloaders(
         train_ratio: Training split ratio
         val_ratio: Validation split ratio
         seed: Random seed
+        augment_train: Enable augmentation for training set
         
     Returns:
         Tuple of (train_loader, val_loader, test_loader)
     """
-    # Create dataset
-    dataset = WhisperSpeechDataset(
-        audio_dir=data_dir,
-        text_dir=data_dir,
+    # Detect common chunked structure: data_dir/audio and data_dir/text
+    base = Path(data_dir)
+    audio_dir = base
+    text_dir = base
+
+    audio_sub = base / "audio"
+    text_sub = base / "text"
+    if audio_sub.exists() and text_sub.exists():
+        logger.info(f"Detected chunked dataset structure: audio={audio_sub}, text={text_sub}")
+        audio_dir = audio_sub
+        text_dir = text_sub
+
+        # If text_dir exists but is empty, try to populate chunked text files
+        # by mapping back to original transcripts found under data/raw
+        try:
+            has_text = any(text_sub.glob("**/*.txt"))
+        except Exception:
+            has_text = False
+
+        if not has_text:
+            logger.info(f"Chunked text dir {text_sub} is empty — attempting to populate from data/raw (split per chunk)")
+            # root to search for original transcripts; expect repo/data/raw/<set>
+            raw_root = base.parents[1] / "raw" if len(base.parents) > 1 else None
+            if raw_root and raw_root.exists():
+                # Build index of raw transcripts by stem
+                raw_index = {p.stem: p for p in raw_root.rglob("*.txt")}
+
+                # Group chunk files by base stem (strip trailing _chunkNN)
+                chunk_re = re.compile(r"(?P<base>.+?)_chunk(?P<idx>\d+)$")
+                groups = {}
+                for a in audio_sub.glob("**/*"):
+                    if a.suffix.lower() not in (".wav", ".mp3", ".flac"):
+                        continue
+                    m = chunk_re.match(a.stem)
+                    if m:
+                        base_stem = m.group("base")
+                    else:
+                        base_stem = a.stem
+                    groups.setdefault(base_stem, []).append(a)
+
+                created = 0
+                for base_stem, files in groups.items():
+                    files = sorted(files, key=lambda p: p.name)
+                    raw_src = raw_index.get(base_stem)
+                    if not raw_src:
+                        # try a looser match: sometimes raw file names don't match exactly (strip punctuation)
+                        alt = base_stem.replace('---', '-').replace('--', '-').strip('-')
+                        raw_src = raw_index.get(alt)
+
+                    if not raw_src:
+                        logger.debug(f"No raw transcript found for base '{base_stem}', skipping")
+                        continue
+
+                    # Read raw transcript and split into roughly equal parts by words
+                    try:
+                        text = raw_src.read_text(encoding='utf-8').strip()
+                    except Exception as e:
+                        logger.error(f"Failed reading raw transcript {raw_src}: {e}")
+                        continue
+
+                    if not text:
+                        logger.debug(f"Raw transcript {raw_src} is empty, skipping")
+                        continue
+
+                    words = text.split()
+                    k = len(files)
+                    if k == 0:
+                        continue
+
+                    # Distribute words into k parts as evenly as possible
+                    base_count = len(words) // k
+                    remainder = len(words) % k
+                    parts = []
+                    idx = 0
+                    for i in range(k):
+                        take = base_count + (1 if i < remainder else 0)
+                        part_words = words[idx: idx + take] if take > 0 else []
+                        parts.append(' '.join(part_words).strip())
+                        idx += take
+
+                    # If splitting yielded empty parts (e.g., short transcripts), fall back to copying whole text
+                    if all(not p for p in parts):
+                        parts = [text] * k
+
+                    # Write parts to corresponding chunk text files
+                    for file_obj, part_text in zip(files, parts):
+                        dest = text_sub / f"{file_obj.stem}.txt"
+                        try:
+                            dest.parent.mkdir(parents=True, exist_ok=True)
+                            dest.write_text(part_text, encoding='utf-8')
+                            created += 1
+                        except Exception as e:
+                            logger.error(f"Failed to write chunk transcript {dest}: {e}")
+
+                logger.info(f"Populated {created} chunked transcripts into {text_sub}")
+            else:
+                logger.warning(f"No raw transcripts root found at {raw_root}; skipping auto-populate")
+
+    # Create datasets (train with augmentation, val/test without)
+    train_dataset_full = WhisperSpeechDataset(
+        audio_dir=str(audio_dir),
+        text_dir=str(text_dir),
         processor=processor,
+        augment=augment_train,
     )
+    # Create a non-augmenting copy for val/test but ensure it shares the same
+    # indexing (valid_indices and audio_files) so splits are consistent.
+    val_test_dataset = WhisperSpeechDataset(
+        audio_dir=str(audio_dir),
+        text_dir=str(text_dir),
+        processor=processor,
+        augment=False,
+    )
+    # Align the indexing between train and val/test datasets to avoid mismatches
+    try:
+        val_test_dataset.valid_indices = train_dataset_full.valid_indices
+        val_test_dataset.transcriptions = train_dataset_full.transcriptions
+        val_test_dataset.audio_files = train_dataset_full.audio_files
+    except Exception:
+        # If anything goes wrong, proceed but log a warning
+        logger.warning('Could not align train/val_test dataset indices; proceeding with defaults')
     
     # Split dataset
-    n = len(dataset)
+    n = len(train_dataset_full)
     n_train = int(n * train_ratio)
     n_val = int(n * val_ratio)
     n_test = n - n_train - n_val
@@ -256,12 +506,14 @@ def create_dataloaders(
     
     # Create subsets
     from torch.utils.data import Subset
-    train_dataset = Subset(dataset, train_indices)
-    val_dataset = Subset(dataset, val_indices)
-    test_dataset = Subset(dataset, test_indices)
+    train_dataset = Subset(train_dataset_full, train_indices)
+    val_dataset = Subset(val_test_dataset, val_indices)
+    test_dataset = Subset(val_test_dataset, test_indices)
     
-    # Create data collator
-    collator = WhisperDataCollator(processor=processor)
+    # Create data collators: one for training (no raw text passed to model)
+    # and one for evaluation (include original text for reference/metrics).
+    collator = WhisperDataCollator(processor=processor, include_text=False)
+    collator_eval = WhisperDataCollator(processor=processor, include_text=True)
     
     # Create dataloaders
     train_loader = DataLoader(
@@ -279,7 +531,7 @@ def create_dataloaders(
         shuffle=False,
         num_workers=num_workers,
         pin_memory=pin_memory,
-        collate_fn=collator,
+        collate_fn=collator_eval,
     )
     
     test_loader = DataLoader(
@@ -288,7 +540,7 @@ def create_dataloaders(
         shuffle=False,
         num_workers=num_workers,
         pin_memory=pin_memory,
-        collate_fn=collator,
+        collate_fn=collator_eval,
     )
     
     logger.info(f"Created dataloaders:")

@@ -102,9 +102,16 @@ class SerbianTextPreprocessor:
     def __init__(self):
         """Initialize preprocessor."""
         # Characters to remove (punctuation, symbols)
-        self.chars_to_remove = re.compile(r'[\.\'\"!\-—–\(\)\[\]{}<>;:,?\#\*]')
+        self.chars_to_remove = re.compile(r'[\.\'"!\-—–\(\)\[\]{}<>;:,?\#\*]')
         # Multiple spaces
         self.multiple_spaces = re.compile(r'\s+')
+        # Cyrillic detection
+        self.cyrillic_re = re.compile('[\u0400-\u04FF]')
+        # simple transliteration map for Serbian
+        self._cyr_to_lat = {
+            'А':'A','Б':'B','В':'V','Г':'G','Д':'D','Ђ':'Đ','Е':'E','Ж':'Ž','З':'Z','И':'I','Ј':'J','К':'K','Л':'L','Љ':'Lj','М':'M','Н':'N','Њ':'Nj','О':'O','П':'P','Р':'R','С':'S','Т':'T','Ћ':'Ć','У':'U','Ф':'F','Х':'H','Ц':'C','Ч':'Č','Џ':'Dž','Ш':'Š',
+            'а':'a','б':'b','в':'v','г':'g','д':'d','ђ':'đ','е':'e','ж':'ž','з':'z','и':'i','ј':'j','к':'k','л':'l','љ':'lj','м':'m','н':'n','њ':'nj','о':'o','п':'p','р':'r','с':'s','т':'t','ћ':'ć','у':'u','ф':'f','х':'h','ц':'c','ч':'č','џ':'dž','ш':'š'
+        }
         logger.info("Initialized SerbianTextPreprocessor")
     
     def preprocess(self, text: str) -> str:
@@ -120,6 +127,11 @@ class SerbianTextPreprocessor:
         if not text:
             return ""
         
+        # Normalize whitespace early
+        text = text.strip()
+        # Transliterate Cyrillic to Latin for consistent tokenization
+        if self.cyrillic_re.search(text):
+            text = self._transliterate(text)
         # Lowercase
         text = text.lower()
         
@@ -131,8 +143,30 @@ class SerbianTextPreprocessor:
         
         # Normalize whitespace
         text = self.multiple_spaces.sub(' ', text).strip()
-        
+
+        # Collapse repeated tokens (e.g., "da da da" -> "da") up to sensible limit
+        text = self._collapse_repeated_tokens(text)
+
         return text
+
+    def _transliterate(self, s: str) -> str:
+        return ''.join(self._cyr_to_lat.get(ch, ch) for ch in s)
+
+    def _collapse_repeated_tokens(self, s: str) -> str:
+        # collapse more than 3 repeated tokens to a single token
+        parts = s.split()
+        out = []
+        prev = None
+        count = 0
+        for p in parts:
+            if p == prev:
+                count += 1
+            else:
+                prev = p
+                count = 1
+            if count <= 3:
+                out.append(p)
+        return ' '.join(out)
     
     def _convert_numbers_to_words(self, text: str) -> str:
         """
@@ -184,6 +218,67 @@ class SerbianTextPreprocessor:
         
         # Replace all numbers
         text = re.sub(r'\d+[.,]?\d*', replace_number, text)
+        return text
+
+    def postprocess_prediction(self, text: str) -> str:
+        """
+        Additional post-processing for model predictions to fix common ASR artifacts.
+
+        This runs after initial `preprocess` and aims to correct common decoding errors:
+        - normalize number formatting
+        - fix some common tokenization artifacts
+        - collapse repeated short garbage tokens
+        """
+        if not text:
+            return ""
+
+        # basic normalization
+        text = text.strip().lower()
+
+        # transliterate if needed
+        if self.cyrillic_re.search(text):
+            text = self._transliterate(text)
+
+        # normalize decimals/commas by converting any remaining digits to words
+        text = self._convert_numbers_to_words(text)
+
+        # remove long sequences of repeated non-word characters (garbage)
+        text = re.sub(r'[^\w\s]{2,}', ' ', text)
+
+        # remove tokens that are mostly non-alpha or extremely long garbage tokens
+        parts = text.split()
+        clean_parts = []
+        for p in parts:
+            # drop tokens with >50% non-alpha characters or length > 60
+            non_alpha = len(re.findall(r'[^a-zA-Zčćžšđčćšžđnjljdž]', p))
+            if len(p) > 60:
+                continue
+            if len(p) > 0 and (non_alpha / len(p)) > 0.5:
+                continue
+            clean_parts.append(p)
+
+        text = ' '.join(clean_parts)
+
+        # fix some common concatenation mistakes e.g. 'egodine' -> 'godine'
+        text = re.sub(r'\be?godine\b', 'godine', text)
+
+        # collapse repeated filler tokens (more than 3 -> 1)
+        parts = text.split()
+        out = []
+        prev = None
+        count = 0
+        for p in parts:
+            if p == prev:
+                count += 1
+            else:
+                prev = p
+                count = 1
+            if count <= 3:
+                out.append(p)
+        text = ' '.join(out)
+
+        # normalize whitespace
+        text = self.multiple_spaces.sub(' ', text).strip()
         return text
 
 
