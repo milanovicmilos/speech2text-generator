@@ -58,6 +58,41 @@ def setup_arg_parser() -> argparse.ArgumentParser:
         help="Output file for transcription",
     )
     
+    
+    parser.add_argument(
+        "--num_beams",
+        type=int,
+        default=8,
+        help="Number of beams for beam search",
+    )
+    
+    parser.add_argument(
+        "--no_repeat_ngram_size",
+        type=int,
+        default=10,
+        help="No-repeat ngram size",
+    )
+    
+    parser.add_argument(
+        "--repetition_penalty",
+        type=float,
+        default=5.0,
+        help="Repetition penalty",
+    )
+    
+    parser.add_argument(
+        "--length_penalty",
+        type=float,
+        default=1.0,
+        help="Length penalty",
+    )
+    
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=0.0,
+        help="Temperature for sampling",
+    )
     return parser
 
 
@@ -76,10 +111,18 @@ def main():
     
     # Load transcriber
     logger.info(f"Loading model from {args.model}...")
+    generation_params = {
+        "num_beams": args.num_beams,
+        "no_repeat_ngram_size": args.no_repeat_ngram_size,
+        "repetition_penalty": args.repetition_penalty,
+        "length_penalty": args.length_penalty,
+        "temperature": args.temperature,
+    }
     transcriber = WhisperTranscriber(
         model_path=args.model,
         device=args.device,
-        language="Serbian"
+        language="Serbian",
+        generation_params=generation_params,
     )
     
     # Transcribe

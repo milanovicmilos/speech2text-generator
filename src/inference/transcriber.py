@@ -4,7 +4,7 @@ Transcriber class for performing inference with Whisper ASR model.
 
 import logging
 from pathlib import Path
-from typing import Optional, Tuple
+from typing import Optional, Tuple, Dict, Any
 
 import torch
 import librosa
@@ -28,6 +28,7 @@ class WhisperTranscriber:
         model_path: str,
         device: Optional[str] = None,
         language: str = "Serbian",
+        generation_params: Optional[Dict[str, Any]] = None,
     ):
         """
         Initialize transcriber.
@@ -41,14 +42,17 @@ class WhisperTranscriber:
         self.language = language
         
         # Setup device
-        if device is None:
+        if device is None or device == "auto":
             self.device = get_device("auto")
         else:
             self.device = torch.device(device)
         
         # Load model
         logger.info(f"Loading model from {self.model_path}...")
-        self.model = WhisperASRModel(model_name="openai/whisper-base")
+        self.model = WhisperASRModel(model_name=str(self.model_path), language=language)
+
+        # Generation defaults (can be overridden per call)
+        self.generation_params: Dict[str, Any] = generation_params or {}
         
         # Move to device
         self.model.get_model().to(self.device)
@@ -82,7 +86,11 @@ class WhisperTranscriber:
         
         # Transcribe
         with torch.no_grad():
-            transcription = self.model.transcribe(audio, sampling_rate=sr)
+            transcription = self.model.transcribe(
+                audio,
+                sampling_rate=sr,
+                generation_kwargs=self.generation_params,
+            )
         
         logger.info(f"Transcribed: {transcription}")
         return transcription

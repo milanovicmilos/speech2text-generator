@@ -1,30 +1,14 @@
 [
   {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\direktor-cikaski-maraton-rts-organizacija-trka-_chunk005.wav",
-    "issue": "empty_text"
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\raw\\sport\\konji---ljubav-i-ponos-sapcana.mp3",
+    "issue": "invalid_stats: wps=0.06, words=211, dur=3337.38"
   },
   {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona_chunk012.wav",
-    "issue": "invalid_stats: wps=0.66, words=1, dur=1.51"
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\raw\\sport\\selfi-sa-vesticom.mp3",
+    "issue": "invalid_stats: wps=13.31, words=747, dur=56.12"
   },
   {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\selfi-sa-vesticom_chunk000.wav",
-    "issue": "invalid_stats: wps=16.43, words=493, dur=30.00"
-  },
-  {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\selfi-sa-vesticom_chunk001.wav",
-    "issue": "invalid_stats: wps=16.16, words=254, dur=15.72"
-  },
-  {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\slucaj-iman-helif-i-nova-runda-jednog-sukoba--boks-i-igre-su-u-nokdaunu_chunk019.wav",
-    "issue": "invalid_stats: wps=844.70, words=1338, dur=1.58"
-  },
-  {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\vlahovic-juventus-liga-sampiona-lil_chunk000.wav",
-    "issue": "invalid_stats: wps=12.27, words=368, dur=30.00"
-  },
-  {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\chunked\\sport\\audio\\vlahovic-juventus-liga-sampiona-lil_chunk001.wav",
-    "issue": "invalid_stats: wps=12.83, words=146, dur=11.38"
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\raw\\sport\\vlahovic-juventus-liga-sampiona-lil.mp3",
+    "issue": "invalid_stats: wps=5.12, words=514, dur=100.45"
   }
 ]

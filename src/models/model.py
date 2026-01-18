@@ -55,14 +55,43 @@ class WhisperASRModel(nn.Module):
         self.model_name = model_name
         self.language = language
         
+        # Default decoding settings (tuned to reduce repetitions)
+        self.default_gen_kwargs: Dict[str, Any] = dict(
+            num_beams=8,
+            no_repeat_ngram_size=10,
+            repetition_penalty=5.0,
+            length_penalty=1.0,
+            early_stopping=True,
+            temperature=0.0,
+            max_new_tokens=128,
+            max_length=256,
+            language=self.language,
+            suppress_tokens=None,
+            begin_suppress_tokens=None,
+        )
+
         # Load pretrained Whisper model
         self.model = WhisperForConditionalGeneration.from_pretrained(
             model_name,
             attn_implementation="sdpa"  # Scaled dot-product attention
         )
-        
+
         # Load processor (handles feature extraction and tokenization)
         self.processor = WhisperProcessor.from_pretrained(model_name)
+
+        # Disable forced decoder ids and suppress tokens to let custom generation params drive decoding
+        try:
+            if hasattr(self.model, "generation_config"):
+                self.model.generation_config.forced_decoder_ids = None
+            self.model.generation_config.suppress_tokens = None
+            self.model.generation_config.begin_suppress_tokens = None
+        except Exception:
+            pass
+        try:
+            if hasattr(self.model, "config"):
+                self.model.config.forced_decoder_ids = None
+        except Exception:
+            pass
         
         logger.info(f"Loaded Whisper model: {model_name}")
         logger.info(f"Processor sample rate: {self.processor.feature_extractor.sampling_rate}")
@@ -118,10 +147,17 @@ class WhisperASRModel(nn.Module):
     def generate(
         self,
         input_features: torch.Tensor,
-        max_length: int = 225,
-        num_beams: int = 1,
+        max_length: int = 256,
+        max_new_tokens: int = 128,
+        num_beams: int = 8,
+        no_repeat_ngram_size: int = 10,
+        repetition_penalty: float = 5.0,
+        length_penalty: float = 1.0,
         temperature: float = 0.0,
+        early_stopping: bool = True,
         language: str = "Serbian",
+        suppress_tokens: Optional[list] = None,
+        begin_suppress_tokens: Optional[list] = None,
     ) -> torch.Tensor:
         """
         Generate transcription from audio features.
@@ -137,18 +173,23 @@ class WhisperASRModel(nn.Module):
             Generated token IDs
         """
         # Get forced decoder IDs for Serbian
-        forced_decoder_ids = self.processor.get_decoder_prompt_ids(
-            language=language,
-            task="transcribe"
-        )
-        
-        # Generate
+        # Some checkpoints persist forced ids in configs; ensure they are off
+        self.model.generation_config.forced_decoder_ids = None
+
         predicted_ids = self.model.generate(
             input_features=input_features,
             max_length=max_length,
+            max_new_tokens=max_new_tokens,
             num_beams=num_beams,
+            no_repeat_ngram_size=no_repeat_ngram_size,
+            repetition_penalty=repetition_penalty,
+            length_penalty=length_penalty,
+            early_stopping=early_stopping,
             temperature=temperature,
-            forced_decoder_ids=forced_decoder_ids,
+            language=language,
+            task="transcribe",
+            suppress_tokens=suppress_tokens,
+            begin_suppress_tokens=begin_suppress_tokens,
         )
         
         return predicted_ids
@@ -157,6 +198,7 @@ class WhisperASRModel(nn.Module):
         self,
         audio_array: torch.Tensor,
         sampling_rate: int = 16000,
+        generation_kwargs: Optional[Dict[str, Any]] = None,
     ) -> str:
         """
         Transcribe audio to text.
@@ -175,9 +217,11 @@ class WhisperASRModel(nn.Module):
             return_tensors="pt"
         )
         
+        gen_kwargs = {**self.default_gen_kwargs, **(generation_kwargs or {})}
+
         # Generate
         with torch.no_grad():
-            predicted_ids = self.generate(inputs.input_features.to(self.model.device))
+            predicted_ids = self.generate(inputs.input_features.to(self.model.device), **gen_kwargs)
         
         # Decode
         transcription = self.processor.batch_decode(

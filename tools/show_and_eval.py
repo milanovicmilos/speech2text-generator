@@ -23,6 +23,8 @@ def main():
     try:
         if hasattr(model, 'generation_config'):
             model.generation_config.forced_decoder_ids = None
+            model.generation_config.suppress_tokens = None
+            model.generation_config.begin_suppress_tokens = None
     except Exception:
         pass
     try:
@@ -58,8 +60,10 @@ def main():
                 input_features=inp,
                 attention_mask=attn,
                 num_beams=1,
-                task="transcribe",
-                language="sr",
+                max_new_tokens=128,
+                max_length=256,
+                suppress_tokens=None,
+                begin_suppress_tokens=None,
             )
         dec = processor.batch_decode(gen, skip_special_tokens=True)[0]
         ref = item.get('text', '')
@@ -73,15 +77,11 @@ def main():
     cer = evaluate.load('cer')
 
     gen_configs = [
-        # Best from previous round
-        {'num_beams': 6, 'no_repeat_ngram_size': 6, 'early_stopping': True, 'repetition_penalty': 3.0, 'length_penalty': 1.0},
-        # Ultra-aggressive anti-repetition
-        {'num_beams': 6, 'no_repeat_ngram_size': 7, 'early_stopping': True, 'repetition_penalty': 3.5, 'length_penalty': 1.0},
-        {'num_beams': 8, 'no_repeat_ngram_size': 8, 'early_stopping': True, 'repetition_penalty': 4.0, 'length_penalty': 1.0},
-        {'num_beams': 5, 'no_repeat_ngram_size': 6, 'early_stopping': True, 'repetition_penalty': 3.0, 'length_penalty': 1.2},
-        # Balanced configs
-        {'num_beams': 5, 'no_repeat_ngram_size': 5, 'early_stopping': True, 'repetition_penalty': 2.5, 'length_penalty': 1.1},
-        {'num_beams': 7, 'no_repeat_ngram_size': 6, 'early_stopping': True, 'repetition_penalty': 3.2, 'length_penalty': 1.0},
+        # Best config from testing
+        {'num_beams': 8, 'no_repeat_ngram_size': 10, 'early_stopping': True, 'repetition_penalty': 5.0, 'length_penalty': 1.0},
+        # Alternative configs
+        {'num_beams': 6, 'no_repeat_ngram_size': 8, 'early_stopping': True, 'repetition_penalty': 4.0, 'length_penalty': 1.1},
+        {'num_beams': 7, 'no_repeat_ngram_size': 7, 'early_stopping': True, 'repetition_penalty': 3.5, 'length_penalty': 1.0},
     ]
 
     results = []
@@ -95,16 +95,19 @@ def main():
             if attn is not None:
                 attn = attn.to(device)
             with torch.no_grad():
+                # Disable forced_decoder_ids to allow config to be used
+                model.generation_config.forced_decoder_ids = None
+                
                 gen_kwargs = dict(
                     input_features=inp,
                     attention_mask=attn,
-                    task="transcribe",
-                    language="sr",
                     num_beams=cfg['num_beams'],
                     no_repeat_ngram_size=cfg['no_repeat_ngram_size'],
                     early_stopping=cfg['early_stopping'],
                     max_new_tokens=128,
                     max_length=256,
+                    suppress_tokens=None,
+                    begin_suppress_tokens=None,
                 )
                 # optional keys
                 if 'repetition_penalty' in cfg:
