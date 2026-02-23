@@ -352,6 +352,7 @@ def create_dataloaders(
     val_ratio: float = 0.1,
     seed: int = 42,
     augment_train: bool = True,  # Enable augmentation for training set
+    group_split: bool = True,
 ) -> Tuple[DataLoader, DataLoader, DataLoader]:
     """
     Create train/val/test dataloaders.
@@ -366,6 +367,7 @@ def create_dataloaders(
         val_ratio: Validation split ratio
         seed: Random seed
         augment_train: Enable augmentation for training set
+        group_split: Keep all chunks from the same source in one split
         
     Returns:
         Tuple of (train_loader, val_loader, test_loader)
@@ -499,10 +501,73 @@ def create_dataloaders(
     n_test = n - n_train - n_val
     
     # Reproducible split
-    indices = np.random.RandomState(seed).permutation(n)
-    train_indices = indices[:n_train]
-    val_indices = indices[n_train:n_train + n_val]
-    test_indices = indices[n_train + n_val:]
+    if group_split:
+        # Group by base stem so *_chunkNN variants stay in the same split
+        chunk_re = re.compile(r"(?P<base>.+?)_chunk\d+$")
+        groups: Dict[str, List[int]] = {}
+        for ds_idx in range(n):
+            file_idx = train_dataset_full.valid_indices[ds_idx]
+            audio_path = train_dataset_full.audio_files[file_idx]
+            stem = audio_path.stem
+            m = chunk_re.match(stem)
+            group_key = m.group('base') if m else stem
+            groups.setdefault(group_key, []).append(ds_idx)
+
+        rng = np.random.RandomState(seed)
+        group_keys = list(groups.keys())
+        rng.shuffle(group_keys)
+
+        train_indices: List[int] = []
+        val_indices: List[int] = []
+        test_indices: List[int] = []
+
+        for key in group_keys:
+            group_ids = groups[key]
+            if len(train_indices) < n_train:
+                train_indices.extend(group_ids)
+            elif len(val_indices) < n_val:
+                val_indices.extend(group_ids)
+            else:
+                test_indices.extend(group_ids)
+
+        # Safety: trim potential overshoot and keep all indices accounted for
+        all_indices = train_indices + val_indices + test_indices
+        if len(all_indices) > n:
+            all_indices = all_indices[:n]
+
+        # Ensure disjointness of groups (for logging/validation)
+        train_groups = set()
+        val_groups = set()
+        test_groups = set()
+        for ds_idx in train_indices:
+            file_idx = train_dataset_full.valid_indices[ds_idx]
+            stem = train_dataset_full.audio_files[file_idx].stem
+            m = chunk_re.match(stem)
+            train_groups.add(m.group('base') if m else stem)
+        for ds_idx in val_indices:
+            file_idx = train_dataset_full.valid_indices[ds_idx]
+            stem = train_dataset_full.audio_files[file_idx].stem
+            m = chunk_re.match(stem)
+            val_groups.add(m.group('base') if m else stem)
+        for ds_idx in test_indices:
+            file_idx = train_dataset_full.valid_indices[ds_idx]
+            stem = train_dataset_full.audio_files[file_idx].stem
+            m = chunk_re.match(stem)
+            test_groups.add(m.group('base') if m else stem)
+
+        overlap_count = len(train_groups & val_groups) + len(train_groups & test_groups) + len(val_groups & test_groups)
+        logger.info(f"Group split enabled: groups={len(groups)}, overlap_count={overlap_count}")
+        logger.info(f"Group split sample counts: train={len(train_indices)}, val={len(val_indices)}, test={len(test_indices)}")
+
+        # Convert to numpy arrays for Subset compatibility
+        train_indices = np.array(train_indices, dtype=np.int64)
+        val_indices = np.array(val_indices, dtype=np.int64)
+        test_indices = np.array(test_indices, dtype=np.int64)
+    else:
+        indices = np.random.RandomState(seed).permutation(n)
+        train_indices = indices[:n_train]
+        val_indices = indices[n_train:n_train + n_val]
+        test_indices = indices[n_train + n_val:]
     
     # Create subsets
     from torch.utils.data import Subset
