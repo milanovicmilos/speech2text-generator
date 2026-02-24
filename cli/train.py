@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI script for training Whisper ASR model.
+CLI script for training ASR model.
 
 Usage:
     python cli/train.py --data_dir data/raw --epochs 5 --batch_size 4
@@ -10,34 +10,26 @@ import sys
 import logging
 import argparse
 from pathlib import Path
-from typing import Tuple
 
-import torch
 import numpy as np
-from datasets import Dataset, Audio
 from transformers import (
-    WhisperProcessor,
-    WhisperForConditionalGeneration,
     Seq2SeqTrainingArguments,
     Seq2SeqTrainer,
 )
-import evaluate
-import librosa
 
 # Add src to path so we can import the library
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src import (
-    WhisperSpeechDataset,
     WhisperDataCollator,
     create_dataloaders,
-    WhisperASRModel,
     load_config,
     save_config,
     setup_logging,
     set_seed,
     get_device,
     count_parameters,
+    get_model_registry,
 )
 
 logger = logging.getLogger(__name__)
@@ -150,7 +142,7 @@ def compute_metrics(pred, tokenizer):
 def setup_arg_parser() -> argparse.ArgumentParser:
     """Setup command line argument parser."""
     parser = argparse.ArgumentParser(
-        description="Train Whisper for Serbian ASR",
+        description="Train ASR model for Serbian",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     
@@ -173,6 +165,13 @@ def setup_arg_parser() -> argparse.ArgumentParser:
         type=str,
         default="openai/whisper-base",
         help="Pretrained model name",
+    )
+
+    parser.add_argument(
+        "--model_type",
+        type=str,
+        default="whisper",
+        help="Model type from registry",
     )
     
     parser.add_argument(
@@ -275,8 +274,9 @@ def main():
     set_seed(config['seed'])
     
     logger.info('=' * 80)
-    logger.info('WHISPER ASR MODEL TRAINING - SERBIAN')
+    logger.info('SERBIAN ASR MODEL TRAINING')
     logger.info('=' * 80)
+    logger.info(f'Model type: {config["model_type"]}')
     logger.info(f'Model: {config["model_name"]}')
     logger.info(f'Data directory: {config["data_dir"]}')
     logger.info(f'Output directory: {config["output_dir"]}')
@@ -288,12 +288,15 @@ def main():
     
     # Load model and processor
     logger.info(f'Loading model {config["model_name"]}...')
-    processor = WhisperProcessor.from_pretrained(
-        config['model_name'],
+    registry = get_model_registry()
+    adapter = registry.create(
+        config['model_type'],
+        model_name_or_path=config['model_name'],
         language='sr',
-        task='transcribe'
+        freeze_encoder=False,
     )
-    model = WhisperForConditionalGeneration.from_pretrained(config['model_name'])
+    processor = adapter.get_processor()
+    model = adapter.unwrap()
     
     # Apply LoRA for efficient tuning if requested (2025 best practice)
     if config.get('use_lora', False):
@@ -342,7 +345,7 @@ def main():
         logger.info(f'Trainable parameters: {params["trainable"]:,}')
     
     device = get_device()
-    model.to(device)
+    adapter.to(device)
 
     # Persist run config for reproducibility
     output_dir = Path(config['output_dir'])

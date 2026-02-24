@@ -3,10 +3,9 @@
 Utility script for converting audio files to WAV format.
 
 Usage:
-    python tools/convert_audio.py --input_dir data/raw --output_dir data/processed
+    python cli/convert_audio.py --input_dir data/raw --output_dir data/processed
 """
 
-import sys
 import logging
 import argparse
 from pathlib import Path

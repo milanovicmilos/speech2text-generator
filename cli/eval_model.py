@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI script for evaluating Whisper model.
+CLI script for evaluating ASR models.
 
 Usage:
     python cli/evaluate.py --data_dir data/raw --model_dir models/whisper/final --split test
@@ -11,35 +11,64 @@ import logging
 import argparse
 import json
 from pathlib import Path
+from typing import Any, Dict
 
 import torch
-import librosa
 from evaluate import load
-from transformers import WhisperProcessor, WhisperForConditionalGeneration
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src import setup_logging, get_device, create_dataloaders
+from src import setup_logging, get_device, create_dataloaders, get_model_registry, load_config
 from src.utils.text_preprocessing import SerbianTextPreprocessor
 
 logger = logging.getLogger(__name__)
 
 
+def _load_generation_defaults(config_path: str = "configs/config.yaml") -> Dict[str, Any]:
+    """Load generation defaults from config with safe fallback values."""
+    fallback = {
+        "num_beams": 8,
+        "no_repeat_ngram_size": 10,
+        "repetition_penalty": 5.0,
+        "length_penalty": 1.0,
+        "temperature": 0.0,
+        "max_new_tokens": 128,
+        "max_length": 256,
+    }
+    try:
+        config = load_config(config_path)
+    except Exception:
+        return fallback
+
+    generation = config.get("generation", {}) if isinstance(config, dict) else {}
+    if not isinstance(generation, dict):
+        return fallback
+
+    defaults = dict(fallback)
+    for key in fallback:
+        if key in generation:
+            defaults[key] = generation[key]
+    return defaults
+
+
 def main():
     """Main evaluation function."""
-    parser = argparse.ArgumentParser(description="Evaluate Whisper ASR model")
+    generation_defaults = _load_generation_defaults()
+
+    parser = argparse.ArgumentParser(description="Evaluate ASR model")
     parser.add_argument("--data_dir", type=str, default="data/raw", help="Data directory")
     parser.add_argument("--model_dir", type=str, default="models/whisper/final", help="Model directory")
+    parser.add_argument("--model_type", type=str, default="whisper", help="Model type from registry")
     parser.add_argument("--split", choices=["val", "test"], default="val", help="Split to evaluate")
     parser.add_argument("--batch_size", type=int, default=8, help="Batch size")
-    parser.add_argument("--num_beams", type=int, default=1, help="Beam search width")
-    parser.add_argument("--no_repeat_ngram_size", type=int, default=0, help="No-repeat ngram size")
-    parser.add_argument("--repetition_penalty", type=float, default=1.0, help="Repetition penalty")
-    parser.add_argument("--length_penalty", type=float, default=1.0, help="Length penalty")
-    parser.add_argument("--temperature", type=float, default=0.0, help="Decoding temperature")
-    parser.add_argument("--max_new_tokens", type=int, default=128, help="Max new tokens")
-    parser.add_argument("--max_length", type=int, default=256, help="Max generated length")
+    parser.add_argument("--num_beams", type=int, default=int(generation_defaults["num_beams"]), help="Beam search width")
+    parser.add_argument("--no_repeat_ngram_size", type=int, default=int(generation_defaults["no_repeat_ngram_size"]), help="No-repeat ngram size")
+    parser.add_argument("--repetition_penalty", type=float, default=float(generation_defaults["repetition_penalty"]), help="Repetition penalty")
+    parser.add_argument("--length_penalty", type=float, default=float(generation_defaults["length_penalty"]), help="Length penalty")
+    parser.add_argument("--temperature", type=float, default=float(generation_defaults["temperature"]), help="Decoding temperature")
+    parser.add_argument("--max_new_tokens", type=int, default=int(generation_defaults["max_new_tokens"]), help="Max new tokens")
+    parser.add_argument("--max_length", type=int, default=int(generation_defaults["max_length"]), help="Max generated length")
     parser.add_argument("--metrics_out", type=str, default="", help="Optional path to save metrics JSON")
     parser.add_argument(
         "--predictions_out",
@@ -54,15 +83,22 @@ def main():
     device = get_device()
     
     logger.info("=" * 80)
-    logger.info("WHISPER ASR - EVALUATION")
+    logger.info("SERBIAN ASR - EVALUATION")
     logger.info("=" * 80)
     
     # Load model
     logger.info(f'Loading model from {args.model_dir} for evaluation')
-    processor = WhisperProcessor.from_pretrained(args.model_dir)
-    model = WhisperForConditionalGeneration.from_pretrained(args.model_dir)
-    model.to(device)
-    model.eval()
+    registry = get_model_registry()
+    adapter = registry.create(
+        args.model_type,
+        model_name_or_path=args.model_dir,
+        language='sr',
+        freeze_encoder=False,
+    )
+    processor = adapter.get_processor()
+    model = adapter.unwrap()
+    adapter.to(device)
+    adapter.eval()
 
     # Match validated decoding behavior from historical best setup.
     # Prevent model-level suppression from conflicting with anti-repetition decoding.

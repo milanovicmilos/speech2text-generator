@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare baseline Whisper model against a fine-tuned Whisper checkpoint."""
+"""Compare baseline model against a fine-tuned checkpoint."""
 
 from __future__ import annotations
 
@@ -8,22 +8,49 @@ import json
 import logging
 import sys
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
 
 import torch
 from evaluate import load
-from transformers import WhisperForConditionalGeneration, WhisperProcessor
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src import create_dataloaders, get_device, setup_logging  # noqa: E402
+from src import create_dataloaders, get_device, get_model_registry, setup_logging, load_config  # noqa: E402
 from src.utils.text_preprocessing import SerbianTextPreprocessor  # noqa: E402
 
 logger = logging.getLogger(__name__)
 
 
+def _load_generation_defaults(config_path: str = "configs/config.yaml") -> Dict[str, Any]:
+    """Load generation defaults from config with safe fallback values."""
+    fallback = {
+        "num_beams": 8,
+        "no_repeat_ngram_size": 10,
+        "repetition_penalty": 5.0,
+        "length_penalty": 1.0,
+        "temperature": 0.0,
+        "max_new_tokens": 128,
+        "max_length": 256,
+    }
+    try:
+        config = load_config(config_path)
+    except Exception:
+        return fallback
+
+    generation = config.get("generation", {}) if isinstance(config, dict) else {}
+    if not isinstance(generation, dict):
+        return fallback
+
+    defaults = dict(fallback)
+    for key in fallback:
+        if key in generation:
+            defaults[key] = generation[key]
+    return defaults
+
+
 def evaluate_model(
     model_id_or_path: str,
+    model_type: str,
     data_dir: str,
     split: str,
     batch_size: int,
@@ -38,10 +65,17 @@ def evaluate_model(
     device = get_device()
 
     logger.info("Loading model for evaluation: %s", model_id_or_path)
-    processor = WhisperProcessor.from_pretrained(model_id_or_path)
-    model = WhisperForConditionalGeneration.from_pretrained(model_id_or_path)
-    model.to(device)
-    model.eval()
+    registry = get_model_registry()
+    adapter = registry.create(
+        model_type,
+        model_name_or_path=model_id_or_path,
+        language='sr',
+        freeze_encoder=False,
+    )
+    processor = adapter.get_processor()
+    model = adapter.unwrap()
+    adapter.to(device)
+    adapter.eval()
 
     try:
         if hasattr(model, "generation_config"):
@@ -117,8 +151,11 @@ def evaluate_model(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compare baseline and fine-tuned Whisper models")
+    generation_defaults = _load_generation_defaults()
+
+    parser = argparse.ArgumentParser(description="Compare baseline and fine-tuned ASR models")
     parser.add_argument("--data_dir", type=str, default="data/raw", help="Dataset directory")
+    parser.add_argument("--model_type", type=str, default="whisper", help="Model type from registry")
     parser.add_argument(
         "--baseline_model",
         type=str,
@@ -133,13 +170,13 @@ def main() -> None:
     )
     parser.add_argument("--split", choices=["val", "test"], default="test", help="Evaluation split")
     parser.add_argument("--batch_size", type=int, default=8, help="Batch size")
-    parser.add_argument("--num_beams", type=int, default=8, help="Beam search width")
-    parser.add_argument("--no_repeat_ngram_size", type=int, default=4, help="No-repeat ngram size")
-    parser.add_argument("--repetition_penalty", type=float, default=1.2, help="Repetition penalty")
-    parser.add_argument("--length_penalty", type=float, default=1.0, help="Length penalty")
-    parser.add_argument("--temperature", type=float, default=0.0, help="Decoding temperature")
-    parser.add_argument("--max_new_tokens", type=int, default=128, help="Max new tokens")
-    parser.add_argument("--max_length", type=int, default=256, help="Max output length")
+    parser.add_argument("--num_beams", type=int, default=int(generation_defaults["num_beams"]), help="Beam search width")
+    parser.add_argument("--no_repeat_ngram_size", type=int, default=int(generation_defaults["no_repeat_ngram_size"]), help="No-repeat ngram size")
+    parser.add_argument("--repetition_penalty", type=float, default=float(generation_defaults["repetition_penalty"]), help="Repetition penalty")
+    parser.add_argument("--length_penalty", type=float, default=float(generation_defaults["length_penalty"]), help="Length penalty")
+    parser.add_argument("--temperature", type=float, default=float(generation_defaults["temperature"]), help="Decoding temperature")
+    parser.add_argument("--max_new_tokens", type=int, default=int(generation_defaults["max_new_tokens"]), help="Max new tokens")
+    parser.add_argument("--max_length", type=int, default=int(generation_defaults["max_length"]), help="Max output length")
     parser.add_argument("--out_json", type=str, default="", help="Optional JSON output path")
 
     args = parser.parse_args()
@@ -147,6 +184,7 @@ def main() -> None:
 
     baseline = evaluate_model(
         model_id_or_path=args.baseline_model,
+        model_type=args.model_type,
         data_dir=args.data_dir,
         split=args.split,
         batch_size=args.batch_size,
@@ -161,6 +199,7 @@ def main() -> None:
 
     finetuned = evaluate_model(
         model_id_or_path=args.finetuned_model,
+        model_type=args.model_type,
         data_dir=args.data_dir,
         split=args.split,
         batch_size=args.batch_size,

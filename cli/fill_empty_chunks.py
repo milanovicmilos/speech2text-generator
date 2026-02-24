@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     parser = argparse.ArgumentParser(description="Fill empty chunk text files from raw transcripts")
-    parser.add_argument('--base_dir', type=str, default='data/chunked/sport')
+    parser.add_argument('--base_dir', type=str, default='data/chunked/sport', help='Chunk root containing audio/ and text/ folders')
     
     args = parser.parse_args()
     

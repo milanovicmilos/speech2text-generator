@@ -12,7 +12,13 @@ __version__ = "1.0.0"
 __author__ = "Milos"
 
 from .data import WhisperSpeechDataset, WhisperDataCollator, create_dataloaders
-from .models import WhisperASRModel, create_whisper_model
+from .models import (
+    ASRModelAdapter,
+    GenerationConfig,
+    ModelRegistry,
+    WhisperASRAdapter,
+    get_model_registry,
+)
 from .utils import (
     load_config,
     save_config,
@@ -28,8 +34,11 @@ __all__ = [
     "WhisperSpeechDataset",
     "WhisperDataCollator",
     "create_dataloaders",
-    "WhisperASRModel",
-    "create_whisper_model",
+    "ASRModelAdapter",
+    "GenerationConfig",
+    "ModelRegistry",
+    "get_model_registry",
+    "WhisperASRAdapter",
     "load_config",
     "save_config",
     "setup_logging",
