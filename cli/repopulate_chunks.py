@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI script for repopulating chunked text files (word-based proportional).
+CLI script for repopulating ASR chunked text files (word-based proportional).
 
 Usage:
     python cli/repopulate_chunks.py --base_dir data/chunked/sport
@@ -27,8 +27,8 @@ def split_words(text):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Repopulate chunked text files (word-based proportional)")
-    parser.add_argument('--base_dir', type=str, default='data/chunked/sport')
+    parser = argparse.ArgumentParser(description="Repopulate ASR chunked text files (word-based proportional)")
+    parser.add_argument('--base_dir', type=str, default='data/chunked/sport', help='Chunk root containing audio/ and text/ folders')
     
     args = parser.parse_args()
     

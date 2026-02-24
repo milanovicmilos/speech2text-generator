@@ -1,24 +1,21 @@
-"""
-Transcriber class for performing inference with Whisper ASR model.
-"""
+"""Transcriber classes for performing ASR inference."""
 
 import logging
 from pathlib import Path
-from typing import Optional, Tuple, Dict, Any
+from typing import Optional, Dict, Any
 
 import torch
 import librosa
-import numpy as np
 
-from ..models import WhisperASRModel
+from ..models import GenerationConfig, get_model_registry
 from ..utils import get_device
 
 logger = logging.getLogger(__name__)
 
 
-class WhisperTranscriber:
+class ASRTranscriber:
     """
-    High-level interface for transcribing audio with Whisper.
+    High-level interface for transcribing audio with ASR models.
     
     Handles model loading, audio loading, and transcription.
     """
@@ -28,18 +25,20 @@ class WhisperTranscriber:
         model_path: str,
         device: Optional[str] = None,
         language: str = "Serbian",
+        model_type: str = "whisper",
         generation_params: Optional[Dict[str, Any]] = None,
     ):
         """
         Initialize transcriber.
         
         Args:
-            model_path: Path to fine-tuned Whisper model
+            model_path: Path to fine-tuned ASR model
             device: Device to use (cuda, cpu, auto)
             language: Language for transcription
         """
         self.model_path = Path(model_path)
         self.language = language
+        self.model_type = model_type
         
         # Setup device
         if device is None or device == "auto":
@@ -49,14 +48,20 @@ class WhisperTranscriber:
         
         # Load model
         logger.info(f"Loading model from {self.model_path}...")
-        self.model = WhisperASRModel(model_name=str(self.model_path), language=language)
+        registry = get_model_registry()
+        self.model = registry.create(
+            self.model_type,
+            model_name_or_path=str(self.model_path),
+            language=language,
+            freeze_encoder=False,
+        )
 
         # Generation defaults (can be overridden per call)
         self.generation_params: Dict[str, Any] = generation_params or {}
         
         # Move to device
-        self.model.get_model().to(self.device)
-        self.model.get_model().eval()
+        self.model.to(self.device)
+        self.model.eval()
         
         logger.info(f"Model loaded on {self.device}")
     
@@ -85,11 +90,23 @@ class WhisperTranscriber:
         audio, _ = librosa.effects.trim(audio, top_db=40)
         
         # Transcribe
+        generation_config = GenerationConfig(
+            num_beams=self.generation_params.get("num_beams", 8),
+            no_repeat_ngram_size=self.generation_params.get("no_repeat_ngram_size", 10),
+            repetition_penalty=self.generation_params.get("repetition_penalty", 5.0),
+            length_penalty=self.generation_params.get("length_penalty", 1.0),
+            early_stopping=self.generation_params.get("early_stopping", True),
+            temperature=self.generation_params.get("temperature", 0.0),
+            max_new_tokens=self.generation_params.get("max_new_tokens", 128),
+            max_length=self.generation_params.get("max_length", 256),
+            suppress_tokens=self.generation_params.get("suppress_tokens", None),
+            begin_suppress_tokens=self.generation_params.get("begin_suppress_tokens", None),
+        )
         with torch.no_grad():
-            transcription = self.model.transcribe(
-                audio,
+            transcription = self.model.transcribe_array(
+                audio_array=audio,
                 sampling_rate=sr,
-                generation_kwargs=self.generation_params,
+                generation_config=generation_config,
             )
         
         logger.info(f"Transcribed: {transcription}")
@@ -130,3 +147,6 @@ class WhisperTranscriber:
                 })
         
         return transcriptions
+
+
+WhisperTranscriber = ASRTranscriber

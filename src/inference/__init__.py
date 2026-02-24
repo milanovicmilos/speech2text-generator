@@ -1,5 +1,5 @@
-"""Inference module for Whisper ASR."""
+"""Inference module exports."""
 
-from .transcriber import WhisperTranscriber
+from .transcriber import ASRTranscriber, WhisperTranscriber
 
-__all__ = ["WhisperTranscriber"]
+__all__ = ["ASRTranscriber", "WhisperTranscriber"]

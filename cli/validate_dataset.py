@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI script for validating dataset mapping.
+CLI script for validating ASR dataset mapping.
 
 Usage:
     python cli/validate_dataset.py --audio_dir data/chunked/sport/audio --text_dir data/chunked/sport/text
@@ -22,9 +22,9 @@ logger = logging.getLogger(__name__)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate dataset mapping and report issues")
-    parser.add_argument('--audio_dir', type=str, default='data/chunked/sport/audio')
-    parser.add_argument('--text_dir', type=str, default='data/chunked/sport/text')
+    parser = argparse.ArgumentParser(description="Validate ASR dataset mapping and report issues")
+    parser.add_argument('--audio_dir', type=str, default='data/chunked/sport/audio', help='Directory with audio chunks')
+    parser.add_argument('--text_dir', type=str, default='data/chunked/sport/text', help='Directory with transcript chunks')
     
     args = parser.parse_args()
     

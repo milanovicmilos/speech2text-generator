@@ -1,5 +1,16 @@
-"""Model definitions for Whisper ASR."""
+"""Model package exports.
 
-from .model import WhisperASRModel, create_whisper_model
+SOLID-oriented contracts and registry abstractions.
+"""
 
-__all__ = ["WhisperASRModel", "create_whisper_model"]
+from .contracts import ASRModelAdapter, GenerationConfig
+from .registry import ModelRegistry, get_model_registry
+from .whisper_adapter import WhisperASRAdapter
+
+__all__ = [
+	"ASRModelAdapter",
+	"GenerationConfig",
+	"ModelRegistry",
+	"get_model_registry",
+	"WhisperASRAdapter",
+]

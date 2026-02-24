@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI script for running inference with Whisper model.
+CLI script for running ASR inference.
 
 Usage:
     python cli/transcribe.py --audio audio.wav --model models/whisper/final
@@ -10,22 +10,50 @@ import sys
 import logging
 import argparse
 from pathlib import Path
-
-import torch
+from typing import Any, Dict
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src import setup_logging, get_device
-from src.inference import WhisperTranscriber
+from src import setup_logging, load_config
+from src.inference import ASRTranscriber
 
 logger = logging.getLogger(__name__)
 
 
+def _load_generation_defaults(config_path: str = "configs/config.yaml") -> Dict[str, Any]:
+    """Load generation defaults from config with safe fallback values."""
+    fallback = {
+        "num_beams": 8,
+        "no_repeat_ngram_size": 10,
+        "repetition_penalty": 5.0,
+        "length_penalty": 1.0,
+        "temperature": 0.0,
+        "max_new_tokens": 128,
+        "max_length": 256,
+    }
+    try:
+        config = load_config(config_path)
+    except Exception:
+        return fallback
+
+    generation = config.get("generation", {}) if isinstance(config, dict) else {}
+    if not isinstance(generation, dict):
+        return fallback
+
+    defaults = dict(fallback)
+    for key in fallback:
+        if key in generation:
+            defaults[key] = generation[key]
+    return defaults
+
+
 def setup_arg_parser() -> argparse.ArgumentParser:
     """Setup command line argument parser."""
+    generation_defaults = _load_generation_defaults()
+
     parser = argparse.ArgumentParser(
-        description="Transcribe audio with Whisper",
+        description="Transcribe audio with ASR model",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     
@@ -40,7 +68,14 @@ def setup_arg_parser() -> argparse.ArgumentParser:
         "--model",
         type=str,
         default="models/whisper/final",
-        help="Path to Whisper model",
+        help="Path to model directory",
+    )
+
+    parser.add_argument(
+        "--model_type",
+        type=str,
+        default="whisper",
+        help="Model type registered in model registry",
     )
     
     parser.add_argument(
@@ -62,35 +97,35 @@ def setup_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--num_beams",
         type=int,
-        default=8,
+        default=int(generation_defaults["num_beams"]),
         help="Number of beams for beam search",
     )
     
     parser.add_argument(
         "--no_repeat_ngram_size",
         type=int,
-        default=10,
+        default=int(generation_defaults["no_repeat_ngram_size"]),
         help="No-repeat ngram size",
     )
     
     parser.add_argument(
         "--repetition_penalty",
         type=float,
-        default=5.0,
+        default=float(generation_defaults["repetition_penalty"]),
         help="Repetition penalty",
     )
     
     parser.add_argument(
         "--length_penalty",
         type=float,
-        default=1.0,
+        default=float(generation_defaults["length_penalty"]),
         help="Length penalty",
     )
     
     parser.add_argument(
         "--temperature",
         type=float,
-        default=0.0,
+        default=float(generation_defaults["temperature"]),
         help="Temperature for sampling",
     )
     return parser
@@ -106,7 +141,7 @@ def main():
     setup_logging()
     
     logger.info("=" * 80)
-    logger.info("WHISPER ASR - INFERENCE")
+    logger.info("SERBIAN ASR - INFERENCE")
     logger.info("=" * 80)
     
     # Load transcriber
@@ -118,8 +153,9 @@ def main():
         "length_penalty": args.length_penalty,
         "temperature": args.temperature,
     }
-    transcriber = WhisperTranscriber(
+    transcriber = ASRTranscriber(
         model_path=args.model,
+        model_type=args.model_type,
         device=args.device,
         language="Serbian",
         generation_params=generation_params,

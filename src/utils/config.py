@@ -3,6 +3,7 @@ Configuration and logging utilities.
 """
 
 import os
+import sys
 import logging
 import random
 from pathlib import Path
@@ -52,14 +53,22 @@ def setup_logging(log_dir: str = "logs", level: int = logging.INFO):
     log_dir = Path(log_dir)
     log_dir.mkdir(parents=True, exist_ok=True)
     
+    if hasattr(sys.stdout, "reconfigure"):
+        try:
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+            sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
     # Configure logging
     logging.basicConfig(
         level=level,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(log_dir / "training.log"),
+            logging.FileHandler(log_dir / "training.log", encoding='utf-8'),
             logging.StreamHandler()
-        ]
+        ],
+        force=True,
     )
     
     logger = logging.getLogger(__name__)
