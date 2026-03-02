@@ -1,1 +1,0 @@
-bez obzira u kojem se šeširu nalazi, dobiti po dva protivnika iz svakog od četiri šešira - dva iz prvog, dva iz drugog, dva iz trećeg i dva protivnika iz četvrtog šešira. Od ukupno dve utakmice protiv timova iz istog šešira, svaka ekipa će jednom biti domaćin, a jednom gost, za šta će se pobrinuti softver. Kao i do sada, pobeda u prvoj (ligaškoj) fazi takmičenja

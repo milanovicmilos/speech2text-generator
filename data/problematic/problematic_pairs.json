@@ -1,14 +1,74 @@
 [
   {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\raw\\sport\\konji---ljubav-i-ponos-sapcana.mp3",
-    "issue": "invalid_stats: wps=0.06, words=211, dur=3337.38"
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\-medjunarodni-dan-dunava_aligned_0005.wav",
+    "issue": "invalid_stats: wps=1.73, words=8, dur=4.62"
   },
   {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\raw\\sport\\selfi-sa-vesticom.mp3",
-    "issue": "invalid_stats: wps=13.31, words=747, dur=56.12"
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0013.wav",
+    "issue": "invalid_stats: wps=1.93, words=7, dur=3.62"
   },
   {
-    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\raw\\sport\\vlahovic-juventus-liga-sampiona-lil.mp3",
-    "issue": "invalid_stats: wps=5.12, words=514, dur=100.45"
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\amorim-sporting-mancester-junajted-fudbal_aligned_0005.wav",
+    "issue": "invalid_stats: wps=2.71, words=13, dur=4.80"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0009.wav",
+    "issue": "invalid_stats: wps=5.57, words=133, dur=23.88"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0011.wav",
+    "issue": "invalid_stats: wps=7.94, words=190, dur=23.94"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0016.wav",
+    "issue": "invalid_stats: wps=2.45, words=10, dur=4.08"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0007.wav",
+    "issue": "invalid_stats: wps=3.33, words=15, dur=4.50"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0007.wav",
+    "issue": "invalid_stats: wps=3.32, words=15, dur=4.52"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\crveni-alarm-medju-roso-nerima-ibrahimovic-drzao-govor-igracima-milana_aligned_0010.wav",
+    "issue": "invalid_stats: wps=3.10, words=14, dur=4.52"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0006.wav",
+    "issue": "invalid_stats: wps=5.83, words=40, dur=6.86"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dizanje-tegova-olimpijske-igre-2024-pariz_aligned_0000.wav",
+    "issue": "invalid_stats: wps=16.07, words=384, dur=23.90"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dizanje-tegova-olimpijske-igre-2024-pariz_aligned_0005.wav",
+    "issue": "invalid_stats: wps=0.13, words=3, dur=23.76"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dizanje-tegova-olimpijske-igre-2024-pariz_aligned_0006.wav",
+    "issue": "invalid_stats: wps=0.25, words=6, dur=23.80"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dokumentarni-filmovi-na-festivalu-u-vranju_aligned_0008.wav",
+    "issue": "invalid_stats: wps=1.60, words=6, dur=3.76"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dva-gola-vlahovic-juventus-preokret-lil-sok-real_aligned_0007.wav",
+    "issue": "invalid_stats: wps=8.35, words=74, dur=8.86"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027_aligned_0010.wav",
+    "issue": "invalid_stats: wps=2.88, words=14, dur=4.86"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\dzudisti-crvene-zvezde-pobednici-turira-u-pirotu_aligned_0005.wav",
+    "issue": "invalid_stats: wps=2.66, words=13, dur=4.88"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1\\audio\\ekspo-borovcanin-beograd_aligned_0013.wav",
+    "issue": "invalid_stats: wps=2.42, words=9, dur=3.72"
   }
 ]

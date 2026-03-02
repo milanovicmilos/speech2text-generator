@@ -225,23 +225,40 @@ class WhisperSpeechDataset(Dataset):
             audio = audio + noise
             audio = np.clip(audio, -1, 1)  # Clip to prevent overflow
         
-        # For raw data (audio_dir == text_dir), truncate to 30s and adjust text
+        # For raw data (audio_dir == text_dir), use 30s windows and
+        # proportionally aligned text slices.
         is_raw = self.audio_dir == self.text_dir
         if is_raw:
-            # Truncate audio to 30s
-            max_samples_30s = 30 * self.sample_rate
-            if len(audio) > max_samples_30s:
-                audio = audio[:max_samples_30s]
-            else:
-                audio = np.pad(audio, (0, max_samples_30s - len(audio)))
-            
-            # Adjust text: take proportional words for first 30s
+            max_window_seconds = 30
+            max_samples_30s = max_window_seconds * self.sample_rate
             full_dur = self._audio_duration(audio_path)
+
+            start_sec = 0.0
+            if full_dur > max_window_seconds:
+                if self.augment:
+                    start_sec = float(np.random.uniform(0.0, full_dur - max_window_seconds))
+                else:
+                    start_sec = 0.0
+
+            start_sample = int(start_sec * self.sample_rate)
+            end_sample = start_sample + max_samples_30s
+            audio = audio[start_sample:end_sample]
+
+            if len(audio) < max_samples_30s:
+                audio = np.pad(audio, (0, max_samples_30s - len(audio)))
+
+            # Adjust text to the same proportional segment of the transcript.
             if full_dur > 0:
                 words = text.split()
                 num_words = len(words)
-                words_for_30s = int((30 / full_dur) * num_words)
-                text = ' '.join(words[:words_for_30s]) if words_for_30s > 0 else text
+                if num_words > 0:
+                    end_sec = min(start_sec + max_window_seconds, full_dur)
+                    start_word = int((start_sec / full_dur) * num_words)
+                    end_word = int((end_sec / full_dur) * num_words)
+                    start_word = max(0, min(start_word, num_words - 1))
+                    end_word = max(start_word + 1, min(end_word, num_words))
+                    text_slice = words[start_word:end_word]
+                    text = ' '.join(text_slice) if text_slice else text
         else:
             # For chunked, use max_duration
             if len(audio) > self.max_samples:

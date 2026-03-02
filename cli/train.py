@@ -293,7 +293,7 @@ def main():
         config['model_type'],
         model_name_or_path=config['model_name'],
         language='sr',
-        freeze_encoder=False,
+        freeze_encoder=not config.get('unfreeze_encoder', False),
     )
     processor = adapter.get_processor()
     model = adapter.unwrap()

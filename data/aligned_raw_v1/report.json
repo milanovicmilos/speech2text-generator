@@ -1,0 +1,10 @@
+{
+  "raw_dir": "data\\raw",
+  "out_dir": "data\\aligned_raw_v1",
+  "pairs_total": 80,
+  "pairs_kept": 80,
+  "pairs_skipped": 0,
+  "total_chunks_written": 792,
+  "avg_chunks_per_kept_pair": 9.9,
+  "skipped_examples": []
+}
