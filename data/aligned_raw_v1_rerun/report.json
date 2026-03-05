@@ -1,0 +1,16 @@
+{
+  "raw_dir": "data\\raw",
+  "out_dir": "data\\aligned_raw_v1_rerun",
+  "pairs_total": 80,
+  "pairs_kept": 80,
+  "pairs_skipped": 0,
+  "total_chunks_written": 792,
+  "avg_chunks_per_kept_pair": 9.9,
+  "qa": {
+    "unmatched_threshold": 0.4,
+    "max_chunk_seconds": 30.0,
+    "suspicious_chunks": 124,
+    "suspicious_chunk_ratio": 0.15656565656565657
+  },
+  "skipped_examples": []
+}

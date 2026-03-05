@@ -356,3 +356,24 @@ If you want, I can now:
 - prepare a small reproduction script (PowerShell) that runs the full sequence end-to-end and collects artifacts.
 
 Tell me which of the two you prefer and I'll add it to this document and mark the todo list accordingly.
+
+Status i rezultat
+
+Završio sam sve što si tražio: obrisani su stari chunked skupovi i modeli, pa napravljen novi moderni raw-first pipeline.
+Obrisano: data/chunked, data/chunked_clean_v1, models/whisper (pa ponovo kreiran prazan folder).
+Cilj WER < 0.65 je postignut: WER = 0.5340 na raw_aligned_v2026_run2_eval_aligned_test.json.
+Zašto 30s uopšte postoji
+
+Whisper arhitektura radi na 30s akustičkom prozoru; direktan trening na višeminutnom celom fajlu nije standardan put.
+Ispravan 2026 pristup je: alignment-first segmentacija dugog raw audio zapisa, pa trening na poravnatim segmentima (ne naivno sečenje).
+Zato sam dodao novu skriptu build_aligned_chunks.py i napravio skup report.json (80 raw parova → 792 aligned chunkova, 774 validna).
+Bitno upozorenje (velika razlika vs baseline)
+
+Na istom aligned testu baseline je već vrlo jak: WER 0.5419 u baseline_openai_whisper_base_eval_aligned_test.json.
+Novi model je 0.5340, što je bolje, ali nije velika razlika.
+Razlog: aligned test je “lakši” i blizak modelskim granicama (segmentisan i očišćen), pa je gain nad whisper-base prirodno mali.
+Šta je sledeći pravi korak da dobiješ i veliko poboljšanje
+
+Proširiti alignment sa 80 na svih 370 raw parova, pa trenirati duže (8–12 epoha) na tom skupu.
+Napraviti strogi, potpuno odvojen eval skup iz raw (ručno validiran/bez auto-alignment leakage) i tek tu meriti “veliku razliku”.
+Ako želiš, odmah krećem u full alignment svih 370 fajlova + novi trening run i izveštaj sa fer baseline poređenjem.
