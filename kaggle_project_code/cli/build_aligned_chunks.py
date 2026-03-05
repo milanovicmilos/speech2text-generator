@@ -67,6 +67,7 @@ class PairResult:
     reason: str
     chunk_manifest_rows: List[dict]
     suspicious_chunks: int
+    dropped_suspicious_chunks: int
 
 
 def _collect_pairs(raw_dir: Path) -> List[Tuple[Path, Path]]:
@@ -189,18 +190,21 @@ def _process_pair(
     sample_rate: int,
     qa_unmatched_threshold: float,
     qa_max_chunk_seconds: float,
+    min_aligned_word_ratio: float,
+    max_chars_per_second: float,
+    drop_suspicious: bool,
 ) -> PairResult:
     try:
         raw_text = text_path.read_text(encoding="utf-8").strip()
     except Exception as exc:
-        return PairResult(str(audio_path), str(text_path), 0, True, f"read_text_failed:{exc}", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, f"read_text_failed:{exc}", [], 0, 0)
 
     if not raw_text:
-        return PairResult(str(audio_path), str(text_path), 0, True, "empty_text", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, "empty_text", [], 0, 0)
 
     ref_words = _split_words(raw_text)
     if len(ref_words) < 5:
-        return PairResult(str(audio_path), str(text_path), 0, True, "too_few_ref_words", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, "too_few_ref_words", [], 0, 0)
 
     try:
         audio, sr = sf.read(str(audio_path), always_2d=False)
@@ -210,24 +214,25 @@ def _process_pair(
             audio = librosa.resample(audio.astype(np.float32), orig_sr=sr, target_sr=sample_rate)
             sr = sample_rate
     except Exception as exc:
-        return PairResult(str(audio_path), str(text_path), 0, True, f"read_audio_failed:{exc}", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, f"read_audio_failed:{exc}", [], 0, 0)
 
     words_ts = _extract_word_timestamps(model, audio_path, language)
     if len(words_ts) < 6:
-        return PairResult(str(audio_path), str(text_path), 0, True, "too_few_asr_words", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, "too_few_asr_words", [], 0, 0)
 
     hyp_words_norm = [_normalize_token(w.word) for w in words_ts]
     ref_words_norm = [_normalize_token(w) for w in ref_words]
 
     hyp_to_ref = _build_hyp_to_ref_map(hyp_words_norm, ref_words_norm)
     if not hyp_to_ref:
-        return PairResult(str(audio_path), str(text_path), 0, True, "empty_alignment_map", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, "empty_alignment_map", [], 0, 0)
 
     groups = _group_word_indices_by_time(words_ts, target_chunk_seconds=target_chunk_seconds)
     stem = _safe_stem(audio_path)
 
     written = 0
     suspicious_chunks = 0
+    dropped_suspicious_chunks = 0
     chunk_manifest_rows: List[dict] = []
     for chunk_idx, (left, right) in enumerate(groups):
         start_t = words_ts[left].start
@@ -266,17 +271,28 @@ def _process_pair(
                 matched += 1
         aligned_word_ratio = matched / float(total_hyp_words)
 
+        chunk_text = " ".join(chunk_text_words)
+        chars_per_second = len(chunk_text) / max(float(duration), 1e-6)
+
         suspicious_reasons: List[str] = []
         if duration > qa_max_chunk_seconds:
             suspicious_reasons.append("duration_exceeds_threshold")
         if (1.0 - aligned_word_ratio) > qa_unmatched_threshold:
             suspicious_reasons.append("high_unmatched_word_ratio")
+        if min_aligned_word_ratio > 0 and aligned_word_ratio < min_aligned_word_ratio:
+            suspicious_reasons.append("aligned_word_ratio_below_min")
+        if max_chars_per_second > 0 and chars_per_second > max_chars_per_second:
+            suspicious_reasons.append("chars_per_second_too_high")
+
         if suspicious_reasons:
+            if drop_suspicious:
+                dropped_suspicious_chunks += 1
+                continue
             suspicious_chunks += 1
 
         try:
             sf.write(str(out_audio), audio[start_sample:end_sample], sample_rate)
-            out_text.write_text(" ".join(chunk_text_words), encoding="utf-8")
+            out_text.write_text(chunk_text, encoding="utf-8")
             written += 1
             chunk_manifest_rows.append(
                 {
@@ -293,6 +309,7 @@ def _process_pair(
                     "hyp_word_left": int(left),
                     "hyp_word_right": int(right),
                     "aligned_word_ratio": round(float(aligned_word_ratio), 4),
+                    "chars_per_second": round(float(chars_per_second), 4),
                     "suspicious_reasons": suspicious_reasons,
                 }
             )
@@ -300,7 +317,7 @@ def _process_pair(
             continue
 
     if written == 0:
-        return PairResult(str(audio_path), str(text_path), 0, True, "no_valid_chunks", [], 0)
+        return PairResult(str(audio_path), str(text_path), 0, True, "no_valid_chunks", [], suspicious_chunks, dropped_suspicious_chunks)
 
     return PairResult(
         str(audio_path),
@@ -310,6 +327,7 @@ def _process_pair(
         "ok",
         chunk_manifest_rows,
         suspicious_chunks,
+        dropped_suspicious_chunks,
     )
 
 
@@ -334,7 +352,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--qa_unmatched_threshold",
         type=float,
-        default=0.4,
+        default=0.35,
         help="Flag chunk when unmatched word ratio exceeds this threshold",
     )
     parser.add_argument(
@@ -342,6 +360,24 @@ def parse_args() -> argparse.Namespace:
         type=float,
         default=30.0,
         help="Flag chunk when duration exceeds this threshold",
+    )
+    parser.add_argument(
+        "--min_aligned_word_ratio",
+        type=float,
+        default=0.55,
+        help="Optional minimum aligned word ratio; chunks below this are flagged (and dropped if --drop_suspicious is set)",
+    )
+    parser.add_argument(
+        "--max_chars_per_second",
+        type=float,
+        default=20.0,
+        help="Optional max text density threshold; chunks above this chars/sec are flagged (and dropped if --drop_suspicious is set)",
+    )
+    parser.add_argument(
+        "--drop_suspicious",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Drop suspicious chunks instead of only flagging them",
     )
     return parser.parse_args()
 
@@ -393,6 +429,9 @@ def main() -> None:
             sample_rate=args.sample_rate,
             qa_unmatched_threshold=args.qa_unmatched_threshold,
             qa_max_chunk_seconds=args.qa_max_chunk_seconds,
+            min_aligned_word_ratio=args.min_aligned_word_ratio,
+            max_chars_per_second=args.max_chars_per_second,
+            drop_suspicious=args.drop_suspicious,
         )
         results.append(result)
 
@@ -401,6 +440,7 @@ def main() -> None:
     total_chunks = sum(r.chunks_written for r in results)
     all_chunk_rows = [row for result in results for row in result.chunk_manifest_rows]
     suspicious_chunks = sum(result.suspicious_chunks for result in results)
+    dropped_suspicious_chunks = sum(result.dropped_suspicious_chunks for result in results)
 
     report = {
         "raw_dir": str(raw_dir),
@@ -413,7 +453,11 @@ def main() -> None:
         "qa": {
             "unmatched_threshold": args.qa_unmatched_threshold,
             "max_chunk_seconds": args.qa_max_chunk_seconds,
+            "min_aligned_word_ratio": args.min_aligned_word_ratio,
+            "max_chars_per_second": args.max_chars_per_second,
+            "drop_suspicious": args.drop_suspicious,
             "suspicious_chunks": suspicious_chunks,
+            "dropped_suspicious_chunks": dropped_suspicious_chunks,
             "suspicious_chunk_ratio": (suspicious_chunks / total_chunks) if total_chunks else 0.0,
         },
         "skipped_examples": [

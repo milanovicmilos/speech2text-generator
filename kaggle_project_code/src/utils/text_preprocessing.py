@@ -144,9 +144,6 @@ class SerbianTextPreprocessor:
         # Normalize whitespace
         text = self.multiple_spaces.sub(' ', text).strip()
 
-        # Collapse repeated tokens (e.g., "da da da" -> "da") up to sensible limit
-        text = self._collapse_repeated_tokens(text)
-
         return text
 
     def _transliterate(self, s: str) -> str:

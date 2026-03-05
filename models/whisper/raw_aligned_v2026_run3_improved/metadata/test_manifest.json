@@ -1,0 +1,297 @@
+[
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0000.txt"
+  },
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0001.txt"
+  },
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0002.txt"
+  },
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0003.txt"
+  },
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0004.txt"
+  },
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0005.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0001.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0002.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0003.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0004.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0005.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0006",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0006.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0006.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0007",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0007.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0007.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0008.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0009",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0009.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0009.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0010",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0010.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0010.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0011",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0011.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0011.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0012",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0012.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0012.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0013",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0013.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0013.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0014",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0014.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0014.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0015",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0015.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0015.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0016",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0016.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0016.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0017",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0017.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0017.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0018.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0019",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0019.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0019.txt"
+  },
+  {
+    "sample_id": "-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0000.txt"
+  },
+  {
+    "sample_id": "-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0001.txt"
+  },
+  {
+    "sample_id": "-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0002.txt"
+  },
+  {
+    "sample_id": "-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0003.txt"
+  },
+  {
+    "sample_id": "-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0004.txt"
+  },
+  {
+    "sample_id": "-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\-gazeta-delo-sport-sta-se-desava-sa-strahinjom-pavlovicem_aligned_0005.txt"
+  },
+  {
+    "sample_id": "bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0000.txt"
+  },
+  {
+    "sample_id": "bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0001.txt"
+  },
+  {
+    "sample_id": "bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0002.txt"
+  },
+  {
+    "sample_id": "bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0003.txt"
+  },
+  {
+    "sample_id": "beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0003.txt"
+  },
+  {
+    "sample_id": "beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0004.txt"
+  },
+  {
+    "sample_id": "beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0005.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0000.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0001.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0002.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0006",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0006.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0006.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0007",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0007.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0007.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0008.txt"
+  },
+  {
+    "sample_id": "duljaj-pobeda-partizan-radnik_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\duljaj-pobeda-partizan-radnik_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\duljaj-pobeda-partizan-radnik_aligned_0001.txt"
+  },
+  {
+    "sample_id": "duljaj-pobeda-partizan-radnik_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\duljaj-pobeda-partizan-radnik_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\duljaj-pobeda-partizan-radnik_aligned_0002.txt"
+  },
+  {
+    "sample_id": "atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0001.txt"
+  },
+  {
+    "sample_id": "atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0002.txt"
+  },
+  {
+    "sample_id": "atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0003.txt"
+  },
+  {
+    "sample_id": "atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0004.txt"
+  },
+  {
+    "sample_id": "atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\atletiko-deklasirao-spartu-milan-bolji-od-slovana_aligned_0005.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0001.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0002.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0003.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0004.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0005.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0006",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0006.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0006.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0007",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0007.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0007.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0008.txt"
+  }
+]

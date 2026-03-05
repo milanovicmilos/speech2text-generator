@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-03-05T10:48:40.645004+00:00",
+  "seed": 42,
+  "data_dir": "data/aligned_raw_v1_improved",
+  "model_name": "openai/whisper-base",
+  "git_commit": "6a5dd16339b7e721f503d89afb96f7e1b057c585"
+}

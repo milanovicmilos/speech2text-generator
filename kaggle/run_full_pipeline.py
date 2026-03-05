@@ -39,6 +39,16 @@ def main() -> None:
     parser.add_argument("--target_chunk_seconds", type=float, default=24.0, help="Aligned chunk target duration")
     parser.add_argument("--min_chunk_seconds", type=float, default=3.0, help="Aligned chunk min duration")
     parser.add_argument("--sample_rate", type=int, default=16000, help="Sample rate")
+    parser.add_argument("--qa_unmatched_threshold", type=float, default=0.35, help="QA threshold for unmatched word ratio")
+    parser.add_argument("--qa_max_chunk_seconds", type=float, default=30.0, help="QA threshold for chunk duration")
+    parser.add_argument("--min_aligned_word_ratio", type=float, default=0.55, help="Minimum aligned word ratio for chunk acceptance")
+    parser.add_argument("--max_chars_per_second", type=float, default=20.0, help="Maximum allowed transcript chars/sec")
+    parser.add_argument(
+        "--drop_suspicious",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Drop suspicious chunks during aligned chunk build",
+    )
     parser.add_argument("--num_beams", type=int, default=8, help="Eval decoding beams")
     parser.add_argument("--no_repeat_ngram_size", type=int, default=10, help="Eval no repeat ngram")
     parser.add_argument("--repetition_penalty", type=float, default=5.0, help="Eval repetition penalty")
@@ -108,8 +118,17 @@ def main() -> None:
             str(args.min_chunk_seconds),
             "--sample_rate",
             str(args.sample_rate),
+            "--qa_unmatched_threshold",
+            str(args.qa_unmatched_threshold),
+            "--qa_max_chunk_seconds",
+            str(args.qa_max_chunk_seconds),
+            "--min_aligned_word_ratio",
+            str(args.min_aligned_word_ratio),
+            "--max_chars_per_second",
+            str(args.max_chars_per_second),
             "--include_list_json",
             str(holdout_dir / "train_val_list.json"),
+            *( ["--drop_suspicious"] if args.drop_suspicious else [] ),
         ],
         cwd=repo_root,
     )
@@ -134,8 +153,17 @@ def main() -> None:
             str(args.min_chunk_seconds),
             "--sample_rate",
             str(args.sample_rate),
+            "--qa_unmatched_threshold",
+            str(args.qa_unmatched_threshold),
+            "--qa_max_chunk_seconds",
+            str(args.qa_max_chunk_seconds),
+            "--min_aligned_word_ratio",
+            str(args.min_aligned_word_ratio),
+            "--max_chars_per_second",
+            str(args.max_chars_per_second),
             "--include_list_json",
             str(holdout_dir / "holdout_list.json"),
+            *( ["--drop_suspicious"] if args.drop_suspicious else [] ),
         ],
         cwd=repo_root,
     )

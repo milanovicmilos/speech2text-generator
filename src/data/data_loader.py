@@ -468,8 +468,8 @@ def create_dataloaders(
                 # Build index of raw transcripts by stem
                 raw_index = {p.stem: p for p in raw_root.rglob("*.txt")}
 
-                # Group chunk files by base stem (strip trailing _chunkNN)
-                chunk_re = re.compile(r"(?P<base>.+?)_chunk(?P<idx>\d+)$")
+                # Group chunk files by base stem (strip trailing _chunkNN or _aligned_NNNN)
+                chunk_re = re.compile(r"(?P<base>.+?)(?:_chunk\d+|_aligned_\d+)$")
                 groups = {}
                 for a in audio_sub.glob("**/*"):
                     if a.suffix.lower() not in (".wav", ".mp3", ".flac"):
@@ -592,8 +592,8 @@ def create_dataloaders(
     
     # Reproducible split
     if group_split:
-        # Group by base stem so *_chunkNN variants stay in the same split
-        chunk_re = re.compile(r"(?P<base>.+?)_chunk\d+$")
+        # Group by base stem so *_chunkNN and *_aligned_NNNN variants stay in the same split
+        chunk_re = re.compile(r"(?P<base>.+?)(?:_chunk\d+|_aligned_\d+)$")
         groups: Dict[str, List[int]] = {}
         for ds_idx in range(n):
             file_idx = train_dataset_full.valid_indices[ds_idx]
