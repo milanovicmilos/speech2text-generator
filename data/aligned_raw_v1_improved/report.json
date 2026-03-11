@@ -1,0 +1,25 @@
+{
+  "raw_dir": "data\\raw",
+  "out_dir": "data\\aligned_raw_v1_improved",
+  "pairs_total": 80,
+  "pairs_kept": 79,
+  "pairs_skipped": 1,
+  "total_chunks_written": 607,
+  "avg_chunks_per_kept_pair": 7.6835443037974684,
+  "qa": {
+    "unmatched_threshold": 0.35,
+    "max_chunk_seconds": 30.0,
+    "min_aligned_word_ratio": 0.55,
+    "max_chars_per_second": 20.0,
+    "drop_suspicious": true,
+    "suspicious_chunks": 0,
+    "dropped_suspicious_chunks": 185,
+    "suspicious_chunk_ratio": 0.0
+  },
+  "skipped_examples": [
+    {
+      "audio": "data\\raw\\sport\\dizanje-tegova-olimpijske-igre-2024-pariz.mp3",
+      "reason": "no_valid_chunks"
+    }
+  ]
+}

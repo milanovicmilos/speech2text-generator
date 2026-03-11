@@ -1,0 +1,18 @@
+{
+  "model_dir": "/kaggle/input/notebooks/milomilanovi/notebook50e3bd03b0/asr_full_run_v2/final",
+  "data_dir": "/kaggle/input/notebooks/milomilanovi/notebook50e3bd03b0/asr_full_run_v1/aligned_holdout",
+  "split": "all",
+  "num_samples": 519,
+  "decode": {
+    "num_beams": 8,
+    "no_repeat_ngram_size": 10,
+    "repetition_penalty": 5.0,
+    "length_penalty": 1.0,
+    "temperature": 0.0,
+    "max_new_tokens": 128,
+    "max_length": 256
+  },
+  "wer": 0.5129621759456013,
+  "cer": 0.20376052147132717,
+  "normalization": "SerbianTextPreprocessor.preprocess"
+}
