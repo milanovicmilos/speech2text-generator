@@ -29,6 +29,9 @@ dist/
 *.log
 logs/
 logs/**/*
+res/
+dist/
+*.zip
 
 # OS files
 .DS_Store
@@ -72,6 +75,9 @@ models/**/tokenizer_config.json
 
 # Tensorboard logs
 logs/tensorboard/
+
+# Training checkpoints and experiment outputs
+**/checkpoint-*/
 
 # Secrets
 .env
