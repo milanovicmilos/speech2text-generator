@@ -58,10 +58,6 @@ def build_results_digest(
         for key, value in zcr_error_bridge_stats.items():
             digest[f"zcr_bridge_{key}"] = float(value) if pd.notna(value) else np.nan
 
-    print("=== RESULTS DIGEST (tekst za Word) ===")
-    for key in sorted(digest.keys()):
-        print(f"{key}: {digest[key]}")
-
     summary_rows = [
         {
             "scenario": "Raw Finetuned",
@@ -100,8 +96,5 @@ def build_results_digest(
         \\end{{table*}}
         """
     )
-
-    print("\n=== LATEX TABELA ===")
-    print(latex_table)
 
     return {"digest": digest, "summary_table_df": summary_table_df, "latex_table": latex_table}

@@ -48,10 +48,10 @@ def run_quality_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
             continue
 
         for item in parse_manifest_items(manifest_path):
-            text = str(get_first(item, ["text", "transcript", "label"], default=""))
-            duration = float(get_first(item, ["duration", "duration_s", "audio_duration"], default=np.nan))
+            text = str(get_first(item, ["text", "transcript", "label", "chunk_text"], default=""))
+            duration = float(get_first(item, ["duration", "duration_s", "duration_sec", "audio_duration"], default=np.nan))
             awr = float(get_first(item, ["aligned_word_ratio", "alignment_word_ratio"], default=np.nan))
-            sample_id = str(get_first(item, ["id", "sample_id", "audio_path", "path"], default=""))
+            sample_id = str(get_first(item, ["id", "sample_id", "chunk_id", "audio_path", "path", "chunk_audio"], default=""))
             n_chars = len(text)
             n_words = len(re.findall(r"\w+", text, flags=re.UNICODE))
             cps = (n_chars / duration) if pd.notna(duration) and duration > 0 else np.nan
@@ -71,7 +71,6 @@ def run_quality_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     quality_df = quality_df.replace([np.inf, -np.inf], np.nan).dropna(subset=["duration_s"])
 
     if quality_df.empty:
-        print("No quality rows available.")
         return {"quality_df": quality_df}
 
     quality_df["is_cps_outlier"] = (quality_df["cps"] > 18) | (quality_df["cps"] < 2)
@@ -90,12 +89,6 @@ def run_quality_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     hard_alignment = quality_df["aligned_word_ratio"].between(0.60, 0.75, inclusive="left")
     word_heavy = quality_df["n_words"] >= quality_df["n_words"].quantile(0.90)
     quality_df["is_hard_sample"] = (~quality_df["is_toxic_sample"]) & (hard_cps | hard_alignment | word_heavy)
-
-    print("Quality rows:", len(quality_df))
-    print("CPS outliers:", int(quality_df["is_cps_outlier"].sum()))
-    print("AWR < 0.60:", int(quality_df["is_awr_below_060"].sum()))
-    print("Toxic samples:", int(quality_df["is_toxic_sample"].sum()))
-    print("Hard (non-toxic) samples:", int(quality_df["is_hard_sample"].sum()))
 
     display(
         Markdown(
@@ -124,8 +117,6 @@ def run_quality_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     qa_status["share_percent"] = 100.0 * qa_status["count"] / max(1, len(quality_df))
     display(qa_status)
 
-    display(quality_df.head())
-
     cps_clean = quality_df["cps"].dropna()
     if not cps_clean.empty:
         plt.figure(figsize=(14, 6))
@@ -139,7 +130,6 @@ def run_quality_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
         sample = cps_clean.sample(min(5000, len(cps_clean)), random_state=42) if len(cps_clean) > 3 else cps_clean
         if len(sample) > 3:
             sh_stat, sh_p = stats.shapiro(sample)
-            print(f"Shapiro-Wilk za CPS -> W={sh_stat:.4f}, p={sh_p:.4e}")
             if sh_p < 0.05:
                 display(Markdown("Distribucija CPS nije normalna, pa je Spearman korelacija metodološki opravdana."))
 

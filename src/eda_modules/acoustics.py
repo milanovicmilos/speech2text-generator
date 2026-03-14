@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import importlib.util
 from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -17,6 +18,12 @@ from scipy import stats as scipy_stats
 from .io_utils import list_audio_files, read_jsonl_records
 from .stats import bonferroni_correction
 from .visualization import style_plotly_figure
+
+
+MODEL_LABEL_MAP = {
+    "wer_baseline": "Baseline (Whisper Small)",
+    "wer_finetuned": "Finetuned (RTS optimized)",
+}
 
 
 def _normalize_prediction_frame(df: pd.DataFrame) -> pd.DataFrame:
@@ -204,13 +211,16 @@ def _resolve_audio_path(sample_id: str, raw_audio_path: str, ctx: Dict[str, Any]
 
 def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     """Run full acoustic analytics, including ZCR/SNR bridge diagnostics."""
-    aligned_audio_paths = list_audio_files(ctx["RUN_V2_DIR"] / "aligned_train" / "audio")
+    aligned_audio_paths = list_audio_files(ctx["RUN_V1_DIR"] / "aligned_holdout" / "audio")
     if not aligned_audio_paths:
         aligned_audio_paths = list_audio_files(ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "audio")
 
     audio_df = load_audio_stats(aligned_audio_paths, max_files=800)
-    print("Analyzed audio files:", len(audio_df))
-    display(audio_df.head())
+    preview_cols = ["file_name", "duration_s", "sr", "db_mean", "zcr_mean", "silence_ratio"]
+    if set(preview_cols).issubset(audio_df.columns):
+        display(audio_df[preview_cols].head().fillna("n/a"))
+    else:
+        display(audio_df.head().fillna("n/a"))
 
     zcr_error_bridge_stats: Dict[str, float] = {}
     if audio_df.empty:
@@ -230,7 +240,6 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     plt.ylabel("Broj chunkova")
     plt.legend()
     plt.show()
-    print({"P25": round(q25, 2), "Median": round(med, 2), "P75": round(q75, 2)})
 
     rms_floor = np.maximum(audio_df["rms_mean"].quantile(0.1), 1e-8)
     audio_df["snr_proxy_db"] = 20.0 * np.log10(np.maximum(audio_df["rms_mean"], 1e-8) / rms_floor)
@@ -421,7 +430,6 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
                 "high_zcr_low_snr_n": n1,
                 "other_regimes_n": n2,
             }
-            print("ZCR-error bridge stats:", zcr_error_bridge_stats)
 
             fig = px.box(
                 bridge_df,
@@ -525,23 +533,27 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
                         var_name="model_variant",
                         value_name="wer",
                     )
+                    long_df["model_variant"] = long_df["model_variant"].map(MODEL_LABEL_MAP).fillna(long_df["model_variant"])
                     fig = px.box(
                         long_df,
                         x="snr_class",
                         y="wer",
                         color="model_variant",
                         points="all",
-                        title="WER pre/post fine-tuninga po SNR klasi",
+                        title="WER po SNR klasi: Baseline vs Finetuned",
                     )
                     style_plotly_figure(fig, x_title="SNR klasa", y_title="WER [0-1]", show_target_wer=True, y_is_wer=True)
                     fig.show()
+
+                    # Plotly OLS trendline requires statsmodels; fall back gracefully if unavailable.
+                    trendline_mode: Optional[str] = "ols" if importlib.util.find_spec("statsmodels") else None
 
                     fig = px.scatter(
                         compare_df,
                         x="snr_proxy_db",
                         y="wer_delta",
                         color="zcr_class",
-                        trendline="ols",
+                        trendline=trendline_mode,
                         title="Dobitak fine-tuninga (baseline - finetuned WER) vs SNR",
                     )
                     style_plotly_figure(fig, x_title="SNR proxy [dB]", y_title="WER delta (pozitivno = poboljšanje)")
@@ -580,7 +592,6 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
                             "spearman_zcr_vs_delta_p_bonferroni": float(adjusted["spearman_zcr_vs_delta"]),
                         }
                     )
-                    print("Acoustic delta stats (baseline vs finetuned):", zcr_error_bridge_stats)
 
     sr_counts = audio_df["sr"].value_counts().rename_axis("sample_rate").reset_index(name="count")
     fig = px.bar(sr_counts, x="sample_rate", y="count", title="Provera sample-rate integriteta")
@@ -588,6 +599,7 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     fig.show()
 
     non_16k = audio_df[audio_df["sr"] != 16000]
-    print("Files with non-16kHz SR:", len(non_16k))
+    if not non_16k.empty:
+        display(non_16k[["file_name", "sr"]].head(30))
 
     return {"audio_df": audio_df, "zcr_error_bridge_stats": zcr_error_bridge_stats}

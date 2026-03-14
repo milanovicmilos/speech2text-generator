@@ -5,7 +5,7 @@ from typing import Any, Dict, Optional
 
 
 def build_context(root: Optional[Path] = None) -> Dict[str, Any]:
-    """Build and print canonical paths used by EDA modules."""
+    """Build canonical paths used by EDA modules."""
     current_root = root or Path.cwd()
     if current_root.name == "notebooks":
         current_root = current_root.parent
@@ -42,10 +42,4 @@ def build_context(root: Optional[Path] = None) -> Dict[str, Any]:
         "V2_FINETUNED_PRED": legacy_dir / "raw_aligned_v2026_run2_rerun_eval_aligned_test_predictions.jsonl",
     }
 
-    print(f"ROOT: {ctx['ROOT']}")
-    print(f"RAW dir exists: {ctx['DATA_RAW_DIR'].exists()}")
-    print(
-        f"v1 run exists: {ctx['RUN_V1_DIR'].exists()} | "
-        f"v2 run exists: {ctx['RUN_V2_DIR'].exists()}"
-    )
     return ctx

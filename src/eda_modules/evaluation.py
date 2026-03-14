@@ -16,6 +16,14 @@ from .stats import bonferroni_correction
 from .visualization import style_plotly_figure
 
 
+MODEL_LABEL_MAP = {
+    "wer_baseline_v1": "Baseline (Whisper Small)",
+    "wer_finetuned_v1": "Finetuned (RTS optimized)",
+    "wer_baseline": "Baseline (Whisper Small)",
+    "wer_finetuned": "Finetuned (RTS optimized)",
+}
+
+
 def read_metrics_file(path: Path) -> Dict[str, float]:
     """Read standard metric file and coerce fields to float."""
     data = read_json(path)
@@ -110,8 +118,6 @@ def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     metric_files = {
         "processed_baseline": ctx["V1_BASELINE_METRICS"],
         "processed_finetuned": ctx["V1_FINETUNED_METRICS"],
-        "legacy_v2_baseline": ctx["V2_BASELINE_METRICS"],
-        "legacy_v2_finetuned": ctx["V2_FINETUNED_METRICS"],
         "raw_finetuned": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "raw_v2026_run1_eval_raw_test.json",
         "raw_baseline": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "baseline_raw_openai_whisper_base.json",
         "unfiltered_baseline": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "baseline_openai_whisper_base_eval_aligned_test.json",
@@ -210,7 +216,6 @@ def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
                 "absolute_drop": float(raw_wer - prep_wer),
                 "relative_drop_percent": float(((raw_wer - prep_wer) / raw_wer) * 100 if raw_wer > 0 else np.nan),
             }
-            print("Normalization-only effect:", normalization_effect)
 
     report_files = {
         "aligned_raw_v1": ctx["ROOT"] / "data" / "aligned_raw_v1" / "report.json",
@@ -239,6 +244,16 @@ def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
         )
 
     data_quality_evolution = pd.DataFrame(evolution_rows)
+    if not data_quality_evolution.empty:
+        fill_zero_cols = [
+            "pairs_skipped",
+            "dropped_suspicious_chunks",
+            "suspicious_chunks",
+            "suspicious_chunk_ratio",
+        ]
+        for col in fill_zero_cols:
+            if col in data_quality_evolution.columns:
+                data_quality_evolution[col] = data_quality_evolution[col].fillna(0.0)
     display(data_quality_evolution)
 
     quality_cost_summary = pd.DataFrame()
@@ -373,12 +388,10 @@ def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def run_fair_comparison(ctx: Dict[str, Any], quality_df: pd.DataFrame) -> Dict[str, Any]:
-    """Build fair paired comparison dataframe across v1/v2 predictions."""
+    """Build strict sample_id paired comparison for baseline vs finetuned predictions."""
     preferred_pred_files = {
         "v1_baseline": ctx["V1_BASELINE_PRED"],
         "v1_finetuned": ctx["V1_FINETUNED_PRED"],
-        "v2_baseline": ctx["V2_BASELINE_PRED"],
-        "v2_finetuned": ctx["V2_FINETUNED_PRED"],
     }
 
     pred_map: Dict[str, pd.DataFrame] = {}
@@ -386,7 +399,7 @@ def run_fair_comparison(ctx: Dict[str, Any], quality_df: pd.DataFrame) -> Dict[s
         if path.exists():
             pred_map[key] = normalize_cols(read_predictions_jsonl(path))
 
-    if not {"v1_baseline", "v1_finetuned", "v2_finetuned"}.issubset(pred_map.keys()):
+    if not {"v1_baseline", "v1_finetuned"}.issubset(pred_map.keys()):
         pred_files = [p for p in ctx["ROOT"].rglob("*.jsonl") if any(k in p.name.lower() for k in ["pred", "holdout"])]
         for path in pred_files:
             lower = str(path).lower()
@@ -394,10 +407,6 @@ def run_fair_comparison(ctx: Dict[str, Any], quality_df: pd.DataFrame) -> Dict[s
                 key = "v1_baseline"
             elif "finetuned_holdout_predictions" in lower:
                 key = "v1_finetuned"
-            elif "run2_rerun" in lower and "raw_aligned" in lower:
-                key = "v2_finetuned"
-            elif "run2_rerun" in lower and "baseline" in lower:
-                key = "v2_baseline"
             else:
                 key = "other"
             if key in pred_map:
@@ -431,58 +440,36 @@ def run_fair_comparison(ctx: Dict[str, Any], quality_df: pd.DataFrame) -> Dict[s
                         value_vars=["wer_baseline_v1", "wer_finetuned_v1"],
                         var_name="model_variant",
                         value_name="wer",
-                    ),
+                    ).assign(model_variant=lambda df: df["model_variant"].map(MODEL_LABEL_MAP).fillna(df["model_variant"])),
                     x="model_variant",
                     y="wer",
                     points="all",
                     color="model_variant",
-                    title="Fiksni holdout: baseline vs finetuned (strict sample_id)"
+                    title="Fiksni skup: Baseline vs Finetuned (strict sample_id)",
                 )
                 style_plotly_figure(fig, x_title="Model", y_title="WER [0-1]", show_target_wer=True, y_is_wer=True)
                 fig.show()
 
-    if "v1_finetuned" in pred_map and "v2_finetuned" in pred_map:
-        p1 = pred_map["v1_finetuned"]
-        p2 = pred_map["v2_finetuned"]
-        needed = {"sample_id", "wer"}
-        if needed.issubset(p1.columns) and needed.issubset(p2.columns):
-            common = pd.merge(
-                p1[["sample_id", "wer"]].rename(columns={"wer": "wer_v1"}),
-                p2[["sample_id", "wer"]].rename(columns={"wer": "wer_v2"}),
-                on="sample_id",
-                how="inner",
-            )
-            print("Common samples found:", len(common))
-            if len(common) > 0:
-                fig = px.scatter(common, x="wer_v1", y="wer_v2", trendline="ols", title="Pošteno poređenje: WER v1 vs WER v2")
-                fig.add_shape(type="line", x0=0, y0=0, x1=1, y1=1, line=dict(color="red", dash="dash"))
-                style_plotly_figure(fig, x_title="WER v1 [0-1]", y_title="WER v2 [0-1]", show_target_wer=True, y_is_wer=True)
-                fig.show()
-
-                if not quality_df.empty and {"sample_id", "aligned_word_ratio"}.issubset(quality_df.columns):
-                    awr_by_sample = quality_df[["sample_id", "aligned_word_ratio"]].dropna().drop_duplicates("sample_id")
-                    eval_alignment_df = common.merge(awr_by_sample, on="sample_id", how="left")
-                else:
-                    eval_alignment_df = common
-                if not v1_paired_df.empty:
-                    eval_alignment_df = eval_alignment_df.merge(
-                        v1_paired_df[["sample_id", "wer_baseline_v1", "wer_finetuned_v1", "wer_delta_baseline_minus_finetuned"]],
-                        on="sample_id",
-                        how="left",
-                    )
-                display(eval_alignment_df.head())
+    if not v1_paired_df.empty:
+        eval_alignment_df = v1_paired_df.copy()
+        if not quality_df.empty and {"sample_id", "aligned_word_ratio"}.issubset(quality_df.columns):
+            awr_by_sample = quality_df[["sample_id", "aligned_word_ratio"]].dropna().drop_duplicates("sample_id")
+            eval_alignment_df = eval_alignment_df.merge(awr_by_sample, on="sample_id", how="left")
 
     return {"pred_map": pred_map, "eval_alignment_df": eval_alignment_df, "v1_paired_df": v1_paired_df}
 
 
 def run_statistical_tests(eval_alignment_df: pd.DataFrame, v1_paired_df: pd.DataFrame | None = None) -> None:
-    """Run robust normality and paired tests for v1/v2 comparison."""
+    """Run robust normality, correlation and paired tests for baseline vs finetuned."""
     if eval_alignment_df.empty and (v1_paired_df is None or v1_paired_df.empty):
         return
 
+    baseline_col = "wer_baseline_v1" if "wer_baseline_v1" in eval_alignment_df.columns else "wer_v1"
+    finetuned_col = "wer_finetuned_v1" if "wer_finetuned_v1" in eval_alignment_df.columns else "wer_v2"
+
     normality_rejected = False
     p_values: Dict[str, float] = {}
-    for run_col in ["wer_v1", "wer_v2"]:
+    for run_col in [baseline_col, finetuned_col]:
         if run_col not in eval_alignment_df.columns:
             continue
         series = eval_alignment_df[run_col].dropna()
@@ -491,33 +478,67 @@ def run_statistical_tests(eval_alignment_df: pd.DataFrame, v1_paired_df: pd.Data
             sh_w, sh_p = stats.shapiro(sample)
             normality_rejected = normality_rejected or (sh_p < 0.05)
             p_values[f"shapiro_{run_col}"] = float(sh_p)
-            print(f"Shapiro-Wilk {run_col}: W={sh_w:.4f}, p={sh_p:.4e}")
 
     if normality_rejected:
         display(Markdown("Distribucije WER nisu normalne, poređenje verzija je vođeno neparametrijskim testovima."))
 
-    corr_df = eval_alignment_df.dropna(subset=["aligned_word_ratio", "wer_v2"]) if {"aligned_word_ratio", "wer_v2"}.issubset(eval_alignment_df.columns) else pd.DataFrame()
+    corr_df = (
+        eval_alignment_df.dropna(subset=["aligned_word_ratio", finetuned_col])
+        if {"aligned_word_ratio", finetuned_col}.issubset(eval_alignment_df.columns)
+        else pd.DataFrame()
+    )
     if len(corr_df) > 3:
-        pearson_r, pearson_p = stats.pearsonr(corr_df["aligned_word_ratio"], corr_df["wer_v2"])
-        spearman_r, spearman_p = stats.spearmanr(corr_df["aligned_word_ratio"], corr_df["wer_v2"], nan_policy="omit")
-        p_values["pearson_aligned_vs_wer_v2"] = float(pearson_p)
-        p_values["spearman_aligned_vs_wer_v2"] = float(spearman_p)
-        print(f"Pearson(aligned_word_ratio, WER_v2): r={pearson_r:.4f}, p={pearson_p:.4e}")
-        print(f"Spearman(aligned_word_ratio, WER_v2): rho={spearman_r:.4f}, p={spearman_p:.4e}")
+        pearson_r, pearson_p = stats.pearsonr(corr_df["aligned_word_ratio"], corr_df[finetuned_col])
+        spearman_r, spearman_p = stats.spearmanr(corr_df["aligned_word_ratio"], corr_df[finetuned_col], nan_policy="omit")
+        p_values["pearson_aligned_vs_wer_finetuned"] = float(pearson_p)
+        p_values["spearman_aligned_vs_wer_finetuned"] = float(spearman_p)
+        corr_summary_df = pd.DataFrame(
+            [
+                {
+                    "metric": "pearson_aligned_vs_wer_finetuned",
+                    "statistic": float(pearson_r),
+                    "p_value": float(pearson_p),
+                },
+                {
+                    "metric": "spearman_aligned_vs_wer_finetuned",
+                    "statistic": float(spearman_r),
+                    "p_value": float(spearman_p),
+                },
+            ]
+        )
+        display(corr_summary_df)
 
-    paired = eval_alignment_df.dropna(subset=["wer_v1", "wer_v2"]) if {"wer_v1", "wer_v2"}.issubset(eval_alignment_df.columns) else pd.DataFrame()
+    paired = (
+        eval_alignment_df.dropna(subset=[baseline_col, finetuned_col])
+        if {baseline_col, finetuned_col}.issubset(eval_alignment_df.columns)
+        else pd.DataFrame()
+    )
     if len(paired) > 3:
-        diff = paired["wer_v1"] - paired["wer_v2"]
-        wilcoxon_stat, wilcoxon_p = stats.wilcoxon(paired["wer_v1"], paired["wer_v2"], alternative="two-sided")
-        p_values["wilcoxon_wer_v1_vs_v2"] = float(wilcoxon_p)
-        print(f"Wilcoxon(wer_v1 vs wer_v2): W={wilcoxon_stat:.4f}, p={wilcoxon_p:.4e}")
+        diff = paired[baseline_col] - paired[finetuned_col]
+        wilcoxon_stat, wilcoxon_p = stats.wilcoxon(
+            paired[baseline_col],
+            paired[finetuned_col],
+            alternative="greater",
+        )
+        p_values["wilcoxon_baseline_vs_finetuned"] = float(wilcoxon_p)
+        wilcoxon_df = pd.DataFrame(
+            [
+                {
+                    "test": "wilcoxon_baseline_vs_finetuned",
+                    "alternative": "baseline>finetuned",
+                    "W": float(wilcoxon_stat),
+                    "p_value": float(wilcoxon_p),
+                }
+            ]
+        )
+        display(wilcoxon_df)
 
         std_diff = float(np.nanstd(diff, ddof=1)) if len(diff) > 1 else np.nan
         cohen_dz = float(np.nanmean(diff) / std_diff) if pd.notna(std_diff) and std_diff > 0 else np.nan
         effect_size_df = pd.DataFrame(
             [
                 {
-                    "comparison": "wer_v1_vs_wer_v2",
+                    "comparison": "baseline_vs_finetuned",
                     "n": int(len(diff)),
                     "median_delta_wer": float(np.nanmedian(diff)),
                     "mean_delta_wer": float(np.nanmean(diff)),
@@ -527,36 +548,6 @@ def run_statistical_tests(eval_alignment_df: pd.DataFrame, v1_paired_df: pd.Data
         )
         display(Markdown("Effect size za upareno poređenje (pored p-vrednosti):"))
         display(effect_size_df)
-
-    paired_v1 = v1_paired_df if v1_paired_df is not None else pd.DataFrame()
-    if len(paired_v1) > 3 and {"wer_baseline_v1", "wer_finetuned_v1"}.issubset(paired_v1.columns):
-        diff_v1 = paired_v1["wer_baseline_v1"] - paired_v1["wer_finetuned_v1"]
-        wilcoxon_stat_v1, wilcoxon_p_v1 = stats.wilcoxon(
-            paired_v1["wer_baseline_v1"],
-            paired_v1["wer_finetuned_v1"],
-            alternative="greater",
-        )
-        p_values["wilcoxon_v1_baseline_vs_finetuned"] = float(wilcoxon_p_v1)
-        print(
-            "Wilcoxon(v1 baseline vs finetuned, alternative=baseline>finetuned): "
-            f"W={wilcoxon_stat_v1:.4f}, p={wilcoxon_p_v1:.4e}"
-        )
-
-        std_diff_v1 = float(np.nanstd(diff_v1, ddof=1)) if len(diff_v1) > 1 else np.nan
-        cohen_dz_v1 = float(np.nanmean(diff_v1) / std_diff_v1) if pd.notna(std_diff_v1) and std_diff_v1 > 0 else np.nan
-        effect_size_v1_df = pd.DataFrame(
-            [
-                {
-                    "comparison": "v1_baseline_vs_finetuned",
-                    "n": int(len(diff_v1)),
-                    "median_delta_wer": float(np.nanmedian(diff_v1)),
-                    "mean_delta_wer": float(np.nanmean(diff_v1)),
-                    "cohen_dz": cohen_dz_v1,
-                }
-            ]
-        )
-        display(Markdown("Effect size za ključni test poboljšanja (v1 baseline vs finetuned):"))
-        display(effect_size_v1_df)
 
     if p_values:
         adjusted = bonferroni_correction(p_values)
@@ -573,19 +564,21 @@ def run_statistical_tests(eval_alignment_df: pd.DataFrame, v1_paired_df: pd.Data
 
 
 def run_oov_analysis(pred_map: Dict[str, pd.DataFrame]) -> None:
-    """Estimate missing-reference-token reduction from v1 to v2."""
-    if "v1" not in pred_map or "v2" not in pred_map:
+    """Estimate missing-reference-token reduction from baseline to finetuned."""
+    source_baseline = "v1_baseline" if "v1_baseline" in pred_map else ("baseline" if "baseline" in pred_map else None)
+    source_finetuned = "v1_finetuned" if "v1_finetuned" in pred_map else ("finetuned" if "finetuned" in pred_map else None)
+    if source_baseline is None or source_finetuned is None:
         return
 
-    p1 = pred_map["v1"]
-    p2 = pred_map["v2"]
+    p1 = pred_map[source_baseline]
+    p2 = pred_map[source_finetuned]
     needed = {"sample_id", "ref", "pred"}
     if not needed.issubset(p1.columns) or not needed.issubset(p2.columns):
         return
 
     joined = pd.merge(
-        p1[["sample_id", "ref", "pred"]].rename(columns={"pred": "pred_v1"}),
-        p2[["sample_id", "pred"]].rename(columns={"pred": "pred_v2"}),
+        p1[["sample_id", "ref", "pred"]].rename(columns={"pred": "pred_baseline"}),
+        p2[["sample_id", "pred"]].rename(columns={"pred": "pred_finetuned"}),
         on="sample_id",
         how="inner",
     )
@@ -598,16 +591,16 @@ def run_oov_analysis(pred_map: Dict[str, pd.DataFrame]) -> None:
 
     for _, row in joined.iterrows():
         ref_tokens = token_set(str(row["ref"]))
-        v1_tokens = token_set(str(row["pred_v1"]))
-        v2_tokens = token_set(str(row["pred_v2"]))
-        oov_v1.update(ref_tokens - v1_tokens)
-        oov_v2.update(ref_tokens - v2_tokens)
+        baseline_tokens = token_set(str(row["pred_baseline"]))
+        finetuned_tokens = token_set(str(row["pred_finetuned"]))
+        oov_v1.update(ref_tokens - baseline_tokens)
+        oov_v2.update(ref_tokens - finetuned_tokens)
 
-    top_v1 = pd.DataFrame(oov_v1.most_common(30), columns=["token", "missing_count_v1"])
-    top_v2 = pd.DataFrame(oov_v2.most_common(30), columns=["token", "missing_count_v2"])
+    top_v1 = pd.DataFrame(oov_v1.most_common(30), columns=["token", "missing_count_baseline"])
+    top_v2 = pd.DataFrame(oov_v2.most_common(30), columns=["token", "missing_count_finetuned"])
     learned = top_v1.merge(top_v2, on="token", how="left").fillna(0)
-    learned["gain_v2"] = learned["missing_count_v1"] - learned["missing_count_v2"]
-    display(learned.sort_values("gain_v2", ascending=False).head(25))
+    learned["gain_finetuned"] = learned["missing_count_baseline"] - learned["missing_count_finetuned"]
+    display(learned.sort_values("gain_finetuned", ascending=False).head(25))
 
 
 def run_error_breakdown(pred_map: Dict[str, pd.DataFrame]) -> None:
@@ -643,8 +636,9 @@ def run_error_breakdown(pred_map: Dict[str, pd.DataFrame]) -> None:
         _, sub, ins, dele = dp[n][m]
         return {"substitutions": sub, "insertions": ins, "deletions": dele}
 
-    if "v2" in pred_map and {"ref", "pred"}.issubset(pred_map["v2"].columns):
-        sample_df = pred_map["v2"].dropna(subset=["ref", "pred"]).head(500)
+    source_v2 = "v1_finetuned" if "v1_finetuned" in pred_map else ("v2_finetuned" if "v2_finetuned" in pred_map else ("v2" if "v2" in pred_map else None))
+    if source_v2 is not None and {"ref", "pred"}.issubset(pred_map[source_v2].columns):
+        sample_df = pred_map[source_v2].dropna(subset=["ref", "pred"]).head(500)
         agg: Counter[str] = Counter()
         for _, row in sample_df.iterrows():
             agg.update(edit_breakdown(tokenize(str(row["ref"])), tokenize(str(row["pred"]))))
@@ -671,12 +665,13 @@ def run_character_levenshtein(pred_map: Dict[str, pd.DataFrame]) -> None:
                 dp[i, j] = min(dp[i - 1, j] + 1, dp[i, j - 1] + 1, dp[i - 1, j - 1] + cost)
         return int(dp[n, m])
 
-    if "v2" in pred_map and {"ref", "pred"}.issubset(pred_map["v2"].columns):
+    source_v2 = "v1_finetuned" if "v1_finetuned" in pred_map else ("v2_finetuned" if "v2_finetuned" in pred_map else ("v2" if "v2" in pred_map else None))
+    if source_v2 is not None and {"ref", "pred"}.issubset(pred_map[source_v2].columns):
         pairs = [("č", "ć"), ("ć", "č"), ("š", "ž"), ("ž", "š"), ("đ", "dj")]
         rows = []
         confusion: Counter[str] = Counter()
 
-        for _, row in pred_map["v2"].dropna(subset=["ref", "pred"]).head(1200).iterrows():
+        for _, row in pred_map[source_v2].dropna(subset=["ref", "pred"]).head(1200).iterrows():
             ref = str(row["ref"]).lower()
             pred = str(row["pred"]).lower()
             dist = levenshtein_chars(ref, pred)

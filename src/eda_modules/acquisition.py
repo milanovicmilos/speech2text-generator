@@ -94,10 +94,11 @@ def run_data_acquisition(ctx: Dict[str, Any]) -> Dict[str, Any]:
         )
 
     alignment_df = pd.DataFrame(alignment_stats)
+    if not alignment_df.empty:
+        alignment_df["suspicious_count"] = alignment_df["suspicious_count"].fillna(0).astype(int)
     raw_total = len(raw_df)
     best_aligned = int(alignment_df["chunk_count"].max()) if not alignment_df.empty else 0
 
-    print("Raw audio files:", raw_total)
     display(alignment_df)
 
     return {
@@ -111,7 +112,6 @@ def run_data_acquisition(ctx: Dict[str, Any]) -> Dict[str, Any]:
 def plot_data_acquisition(raw_df: pd.DataFrame, raw_total: int, best_aligned: int) -> None:
     """Render source, timeline and raw-vs-aligned volume charts."""
     if raw_df.empty:
-        print("No raw records available for plotting.")
         return
 
     source_counts = raw_df["source"].value_counts().rename_axis("source").reset_index(name="count")

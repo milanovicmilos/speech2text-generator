@@ -45,10 +45,6 @@ def run_text_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     for text in text_df.get("text", pd.Series(dtype=str)).tolist():
         all_tokens.extend(re.findall(r"\w+", str(text).lower(), flags=re.UNICODE))
 
-    print("Ukupan broj transkripata:", len(text_df))
-    print("Ukupan broj reči:", len(all_tokens))
-    print("Veličina vokabulara:", len(set(all_tokens)))
-
     if all_tokens:
         word_df = pd.DataFrame(Counter(all_tokens).most_common(30), columns=["word", "count"])
         fig = px.bar(word_df.sort_values("count"), x="count", y="word", orientation="h", title="Top 30 najčešćih reči")
