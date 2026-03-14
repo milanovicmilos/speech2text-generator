@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "cuda": true,
+    "device_name": "Tesla T4"
+  },
+  "paths": {
+    "work_dir": "/kaggle/working/asr_full_run_v1",
+    "holdout_dir": "/kaggle/working/asr_full_run_v1/holdout",
+    "aligned_train_dir": "/kaggle/working/asr_full_run_v1/aligned_train",
+    "aligned_holdout_dir": "/kaggle/working/asr_full_run_v1/aligned_holdout",
+    "model_out_dir": "/kaggle/working/asr_full_run_v1/models/raw_aligned_full",
+    "metrics_dir": "/kaggle/working/asr_full_run_v1/metrics"
+  },
+  "holdout_lock": {
+    "mode": "generated_new",
+    "train_val_list": "/kaggle/working/asr_full_run_v1/holdout/train_val_list.json",
+    "holdout_list": "/kaggle/working/asr_full_run_v1/holdout/holdout_list.json"
+  },
+  "baseline": {
+    "model_dir": "openai/whisper-base",
+    "data_dir": "/kaggle/working/asr_full_run_v1/aligned_holdout",
+    "split": "all",
+    "num_samples": 2172,
+    "decode": {
+      "num_beams": 8,
+      "no_repeat_ngram_size": 10,
+      "repetition_penalty": 5.0,
+      "length_penalty": 1.0,
+      "temperature": 0.0,
+      "max_new_tokens": 128,
+      "max_length": 256
+    },
+    "wer": 0.4944126668324629,
+    "cer": 0.19084020110370853,
+    "normalization": "SerbianTextPreprocessor.preprocess"
+  },
+  "finetuned": {
+    "model_dir": "/kaggle/working/asr_full_run_v1/models/raw_aligned_full/final",
+    "data_dir": "/kaggle/working/asr_full_run_v1/aligned_holdout",
+    "split": "all",
+    "num_samples": 2172,
+    "decode": {
+      "num_beams": 8,
+      "no_repeat_ngram_size": 10,
+      "repetition_penalty": 5.0,
+      "length_penalty": 1.0,
+      "temperature": 0.0,
+      "max_new_tokens": 128,
+      "max_length": 256
+    },
+    "wer": 0.48768133963359034,
+    "cer": 0.19198796243834929,
+    "normalization": "SerbianTextPreprocessor.preprocess"
+  },
+  "delta": {
+    "wer": 0.006731327198872539,
+    "cer": -0.0011477613346407567
+  }
+}

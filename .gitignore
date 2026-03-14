@@ -97,4 +97,6 @@ htmlcov/
 .coverage
 .coverage.*
 coverage.xml
-*.cover
+*.covernew_res/**/models/
+new_res/asr_full_run_v1/models/
+*.safetensors

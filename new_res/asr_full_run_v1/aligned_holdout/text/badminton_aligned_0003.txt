@@ -1,0 +1,1 @@
+Takmičari zauzimaju pozicije na suprotnim polovinama terena, ispred njih je mreža. Igrači koriste rekete, ali i pernatu loptu tokom igre. Svaki takmičar može samo jednom da udari loptu pre nego što pređe preko mreže. Nadmetanje, tj. poen se završava kada loptica udari o pod ili ako sudija dosudi grešku. Loptica

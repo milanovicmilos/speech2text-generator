@@ -1,0 +1,1 @@
+o izdaji uključuje učesnika, koji se naziva „pošiljalac“, koji dobija malu količinu novca. Pošiljalac može odlučiti da zadrži novac za sebe ili može izabrati da ga pošalje nekom drugom – „primaocu“. Ako se novac – recimo 10 evra – pošalje, pretvara se u 30 evra. Primalac tada može ili da zadrži novac ili vratiti polovinu pošiljaocu tako da
