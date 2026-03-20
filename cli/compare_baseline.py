@@ -101,39 +101,45 @@ def evaluate_model(
     references: List[str] = []
 
     for batch in loader:
-        input_feats = batch["input_features"].to(device)
+        input_key = "input_features" if "input_features" in batch and batch["input_features"] is not None else "input_values"
+        input_feats = batch[input_key].to(device)
         attention_mask = batch.get("attention_mask")
         if attention_mask is not None:
             attention_mask = attention_mask.to(device)
 
-        generate_kwargs = {
-            "input_features": input_feats,
-            "attention_mask": attention_mask,
-            "language": "sr",
-            "task": "transcribe",
-            "num_beams": num_beams,
-            "repetition_penalty": repetition_penalty,
-            "length_penalty": length_penalty,
-            "temperature": temperature,
-            "max_new_tokens": max_new_tokens,
-            "max_length": max_length,
-            "suppress_tokens": None,
-            "begin_suppress_tokens": None,
-        }
-        if no_repeat_ngram_size > 0:
-            generate_kwargs["no_repeat_ngram_size"] = no_repeat_ngram_size
-
         with torch.no_grad():
-            try:
-                generated = model.generate(**generate_kwargs)
-            except TypeError:
-                forced = processor.get_decoder_prompt_ids(language="sr", task="transcribe")
-                generate_kwargs.pop("language", None)
-                generate_kwargs.pop("task", None)
-                generate_kwargs["forced_decoder_ids"] = forced
-                generated = model.generate(**generate_kwargs)
+            if model_type.lower() == "wav2vec2":
+                logits = model(input_values=input_feats, attention_mask=attention_mask).logits
+                generated = torch.argmax(logits, dim=-1)
+                decoded = processor.batch_decode(generated)
+            else:
+                generate_kwargs = {
+                    "input_features": input_feats,
+                    "attention_mask": attention_mask,
+                    "language": "sr",
+                    "task": "transcribe",
+                    "num_beams": num_beams,
+                    "repetition_penalty": repetition_penalty,
+                    "length_penalty": length_penalty,
+                    "temperature": temperature,
+                    "max_new_tokens": max_new_tokens,
+                    "max_length": max_length,
+                    "suppress_tokens": None,
+                    "begin_suppress_tokens": None,
+                }
+                if no_repeat_ngram_size > 0:
+                    generate_kwargs["no_repeat_ngram_size"] = no_repeat_ngram_size
 
-        decoded = processor.tokenizer.batch_decode(generated, skip_special_tokens=True)
+                try:
+                    generated = model.generate(**generate_kwargs)
+                except TypeError:
+                    forced = processor.get_decoder_prompt_ids(language="sr", task="transcribe")
+                    generate_kwargs.pop("language", None)
+                    generate_kwargs.pop("task", None)
+                    generate_kwargs["forced_decoder_ids"] = forced
+                    generated = model.generate(**generate_kwargs)
+
+                decoded = processor.tokenizer.batch_decode(generated, skip_special_tokens=True)
         for index, text in enumerate(decoded):
             predictions.append(preproc.preprocess(text))
             references.append(preproc.preprocess(batch["text"][index]))

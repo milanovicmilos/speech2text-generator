@@ -127,54 +127,60 @@ def main():
     
     logger.info(f'Running evaluation on {args.split} set')
     for batch in loader:
-        input_feats = batch['input_features'].to(device)
+        input_key = 'input_features' if 'input_features' in batch and batch['input_features'] is not None else 'input_values'
+        input_feats = batch[input_key].to(device)
         attn = batch.get('attention_mask')
         if attn is not None:
             attn = attn.to(device)
         with torch.no_grad():
-            generate_kwargs = {
-                "input_features": input_feats,
-                "attention_mask": attn,
-                "language": 'sr',
-                "task": 'transcribe',
-                "num_beams": args.num_beams,
-                "repetition_penalty": args.repetition_penalty,
-                "length_penalty": args.length_penalty,
-                "temperature": args.temperature,
-                "max_new_tokens": args.max_new_tokens,
-                "max_length": args.max_length,
-                "suppress_tokens": None,
-                "begin_suppress_tokens": None,
-            }
-            if args.no_repeat_ngram_size > 0:
-                generate_kwargs["no_repeat_ngram_size"] = args.no_repeat_ngram_size
-            try:
-                generated = model.generate(**generate_kwargs)
-            except TypeError:
+            if args.model_type.lower() == 'wav2vec2':
+                logits = model(input_values=input_feats, attention_mask=attn).logits
+                generated = torch.argmax(logits, dim=-1)
+                decoded = processor.batch_decode(generated)
+            else:
+                generate_kwargs = {
+                    "input_features": input_feats,
+                    "attention_mask": attn,
+                    "language": 'sr',
+                    "task": 'transcribe',
+                    "num_beams": args.num_beams,
+                    "repetition_penalty": args.repetition_penalty,
+                    "length_penalty": args.length_penalty,
+                    "temperature": args.temperature,
+                    "max_new_tokens": args.max_new_tokens,
+                    "max_length": args.max_length,
+                    "suppress_tokens": None,
+                    "begin_suppress_tokens": None,
+                }
+                if args.no_repeat_ngram_size > 0:
+                    generate_kwargs["no_repeat_ngram_size"] = args.no_repeat_ngram_size
                 try:
-                    forced = processor.get_decoder_prompt_ids(language='sr', task='transcribe')
-                    generate_kwargs.pop("language", None)
-                    generate_kwargs.pop("task", None)
-                    generate_kwargs["forced_decoder_ids"] = forced
                     generated = model.generate(**generate_kwargs)
-                except Exception:
-                    generated = model.generate(input_feats, attention_mask=attn)
-            except RuntimeError as runtime_error:
-                error_text = str(runtime_error).lower()
-                if 'bad allocation' in error_text or 'out of memory' in error_text:
-                    logger.warning(
-                        'Generation OOM/bad allocation detected; retrying with safe decode settings (num_beams=1).'
-                    )
-                    safe_kwargs = dict(generate_kwargs)
-                    safe_kwargs['num_beams'] = 1
-                    safe_kwargs.pop('no_repeat_ngram_size', None)
-                    safe_kwargs['repetition_penalty'] = 1.0
-                    safe_kwargs['length_penalty'] = 1.0
-                    safe_kwargs['temperature'] = 0.0
-                    generated = model.generate(**safe_kwargs)
-                else:
-                    raise
-        decoded = processor.tokenizer.batch_decode(generated, skip_special_tokens=True)
+                except TypeError:
+                    try:
+                        forced = processor.get_decoder_prompt_ids(language='sr', task='transcribe')
+                        generate_kwargs.pop("language", None)
+                        generate_kwargs.pop("task", None)
+                        generate_kwargs["forced_decoder_ids"] = forced
+                        generated = model.generate(**generate_kwargs)
+                    except Exception:
+                        generated = model.generate(input_feats, attention_mask=attn)
+                except RuntimeError as runtime_error:
+                    error_text = str(runtime_error).lower()
+                    if 'bad allocation' in error_text or 'out of memory' in error_text:
+                        logger.warning(
+                            'Generation OOM/bad allocation detected; retrying with safe decode settings (num_beams=1).'
+                        )
+                        safe_kwargs = dict(generate_kwargs)
+                        safe_kwargs['num_beams'] = 1
+                        safe_kwargs.pop('no_repeat_ngram_size', None)
+                        safe_kwargs['repetition_penalty'] = 1.0
+                        safe_kwargs['length_penalty'] = 1.0
+                        safe_kwargs['temperature'] = 0.0
+                        generated = model.generate(**safe_kwargs)
+                    else:
+                        raise
+                decoded = processor.tokenizer.batch_decode(generated, skip_special_tokens=True)
         for i, text in enumerate(decoded):
             preds.append(preproc.preprocess(text))
             refs.append(preproc.preprocess(batch['text'][i]))

@@ -9,12 +9,18 @@ Usage:
 import sys
 import logging
 import argparse
+import json
 from pathlib import Path
 
 import numpy as np
 from transformers import (
+    Trainer,
+    TrainingArguments,
     Seq2SeqTrainingArguments,
     Seq2SeqTrainer,
+    Wav2Vec2CTCTokenizer,
+    Wav2Vec2FeatureExtractor,
+    Wav2Vec2Processor,
 )
 
 # Add src to path so we can import the library
@@ -139,6 +145,116 @@ def compute_metrics(pred, tokenizer):
     return {"wer": wer_score, "cer": cer_score}
 
 
+def compute_ctc_metrics(pred, processor):
+    """Compute WER/CER for CTC models such as Wav2Vec2.
+    
+    batch_decode() automatically filters PAD tokens (CTC blank).
+    """
+    import evaluate
+
+    wer = evaluate.load('wer')
+    cer = evaluate.load('cer')
+
+    pred_logits = pred.predictions
+    label_ids = pred.label_ids
+
+    if isinstance(pred_logits, tuple):
+        pred_logits = pred_logits[0]
+
+    pred_ids = np.argmax(pred_logits, axis=-1)
+    label_ids = np.array(label_ids)
+    label_ids[label_ids == -100] = processor.tokenizer.pad_token_id
+
+    # batch_decode() automatically filters pad_token_id (CTC blank)
+    pred_str = processor.batch_decode(pred_ids)
+    label_str = processor.batch_decode(label_ids)
+
+    wer_score = wer.compute(predictions=pred_str, references=label_str)
+    cer_score = cer.compute(predictions=pred_str, references=label_str)
+
+    return {"wer": wer_score, "cer": cer_score}
+
+
+def create_wav2vec2_processor_from_data(data_dir: str, model_name: str, output_dir: str):
+    """
+    Create Wav2Vec2Processor with vocabulary extracted from training data.
+
+    Builds the character-level vocabulary from *preprocessed* text so that
+    the tokenizer matches exactly what the model sees during training.
+    The pipe character ``|`` is used as CTC word delimiter (represents spaces).
+
+    Args:
+        data_dir: Directory containing text transcription files
+        model_name: Pretrained model name (for feature extractor)
+        output_dir: Directory to save vocabulary
+
+    Returns:
+        Wav2Vec2Processor with custom vocabulary
+    """
+    from src.utils.text_preprocessing import SerbianTextPreprocessor
+
+    logger.info("Extracting vocabulary from training data (preprocessed)...")
+    preproc = SerbianTextPreprocessor()
+
+    # Extract all unique characters from preprocessed text
+    chars: set[str] = set()
+    data_path = Path(data_dir)
+
+    for txt_file in data_path.rglob("*.txt"):
+        try:
+            with open(txt_file, 'r', encoding='utf-8') as f:
+                raw = f.read().strip()
+                text = preproc.preprocess(raw)
+                chars.update(text)
+        except Exception as e:
+            logger.warning(f"Failed to read {txt_file}: {e}")
+
+    # Remove whitespace-class characters; space is encoded as "|" word delimiter
+    chars.discard('\n')
+    chars.discard('\r')
+    chars.discard('\t')
+    chars.discard(' ')  # space is represented by | in CTC vocabulary
+
+    # Create vocabulary: sorted list of unique characters
+    vocab_list = sorted(list(chars))
+
+    # Reserve special tokens: [PAD]=0 (also CTC blank), [UNK]=1, "|"=2 (word delimiter / space)
+    vocab_dict: dict[str, int] = {"[PAD]": 0, "[UNK]": 1, "|": 2}
+    for idx, ch in enumerate(vocab_list, start=3):
+        if ch not in vocab_dict:  # safety guard against duplicates
+            vocab_dict[ch] = idx
+
+    logger.info(f"Vocabulary size: {len(vocab_dict)} characters")
+    logger.info(f"Sample characters: {list(vocab_dict.keys())[:20]}")
+
+    # Save vocabulary to file
+    vocab_path = Path(output_dir) / "vocab.json"
+    vocab_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(vocab_path, 'w', encoding='utf-8') as f:
+        json.dump(vocab_dict, f, ensure_ascii=False, indent=2)
+
+    logger.info(f"Vocabulary saved to {vocab_path}")
+
+    # Create tokenizer with custom vocabulary
+    tokenizer = Wav2Vec2CTCTokenizer(
+        str(vocab_path),
+        unk_token="[UNK]",
+        pad_token="[PAD]",
+        word_delimiter_token="|",
+    )
+
+    # Load feature extractor from pretrained model
+    feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(model_name)
+
+    # Create processor
+    processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
+
+    logger.info("Wav2Vec2Processor created with custom vocabulary")
+
+    return processor
+
+
 def setup_arg_parser() -> argparse.ArgumentParser:
     """Setup command line argument parser."""
     parser = argparse.ArgumentParser(
@@ -242,6 +358,14 @@ def setup_arg_parser() -> argparse.ArgumentParser:
     )
     
     parser.add_argument(
+        "--freeze_n_layers",
+        type=int,
+        default=0,
+        help="Freeze first N transformer encoder layers (wav2vec2). "
+             "Recommended: 8 for wav2vec2-base (12 layers), 20 for xls-r-300m (24 layers).",
+    )
+    
+    parser.add_argument(
         "--use_lora",
         action="store_true",
         help="Use LoRA for efficient fine-tuning",
@@ -289,17 +413,29 @@ def main():
     # Load model and processor
     logger.info(f'Loading model {config["model_name"]}...')
     registry = get_model_registry()
+    
+    # For wav2vec2, create processor with vocabulary from data first
+    processor_for_adapter = None
+    if config['model_type'].lower() == 'wav2vec2':
+        processor_for_adapter = create_wav2vec2_processor_from_data(
+            data_dir=config['data_dir'],
+            model_name=config['model_name'],
+            output_dir=config['output_dir'],
+        )
+    
     adapter = registry.create(
         config['model_type'],
         model_name_or_path=config['model_name'],
         language='sr',
         freeze_encoder=False,
+        freeze_n_layers=config.get('freeze_n_layers', 0),
+        processor=processor_for_adapter,
     )
     processor = adapter.get_processor()
     model = adapter.unwrap()
     
-    # Apply LoRA for efficient tuning if requested (2025 best practice)
-    if config.get('use_lora', False):
+    # Apply LoRA for efficient tuning if requested (Whisper path)
+    if config.get('use_lora', False) and config['model_type'].lower() == 'whisper':
         from peft import LoraConfig, get_peft_model
         logger.info('Applying LoRA for parameter-efficient fine-tuning')
         lora_config = LoraConfig(
@@ -344,6 +480,14 @@ def main():
         logger.info(f'Total parameters: {params["total"]:,}')
         logger.info(f'Trainable parameters: {params["trainable"]:,}')
     
+    # Enable gradient checkpointing to reduce memory usage
+    if config['model_type'].lower() == 'wav2vec2':
+        if hasattr(model, 'gradient_checkpointing_enable'):
+            model.gradient_checkpointing_enable()
+            logger.info('Enabled gradient checkpointing for memory efficiency')
+        else:
+            logger.warning('Model does not support gradient checkpointing')
+    
     device = get_device()
     adapter.to(device)
 
@@ -360,44 +504,71 @@ def main():
         batch_size=config['batch_size']
     )
     
-    # Training arguments
-    training_args = Seq2SeqTrainingArguments(
-        output_dir=config['output_dir'],
-        per_device_train_batch_size=config['batch_size'],
-        per_device_eval_batch_size=config['batch_size'],
-        gradient_accumulation_steps=config['gradient_accumulation_steps'],
-        learning_rate=config['learning_rate'],
-        warmup_steps=config['warmup_steps'],
-        max_steps=-1,
-        num_train_epochs=config['epochs'],
-        eval_strategy='epoch',
-        save_strategy='epoch',
-        predict_with_generate=True,
-        generation_max_length=256,
+    if config['model_type'].lower() == 'whisper':
+        training_args = Seq2SeqTrainingArguments(
+            output_dir=config['output_dir'],
+            per_device_train_batch_size=config['batch_size'],
+            per_device_eval_batch_size=config['batch_size'],
+            gradient_accumulation_steps=config['gradient_accumulation_steps'],
+            learning_rate=config['learning_rate'],
+            warmup_steps=config['warmup_steps'],
+            max_steps=-1,
+            num_train_epochs=config['epochs'],
+            eval_strategy='epoch',
+            save_strategy='epoch',
+            predict_with_generate=True,
+            generation_max_length=256,
+            logging_steps=10,
+            save_total_limit=2,
+            load_best_model_at_end=True,
+            metric_for_best_model='wer',
+            greater_is_better=False,
+            fp16=config['fp16'],
+            dataloader_pin_memory=False,
+            remove_unused_columns=False,
+            label_names=['labels'],
+        )
 
-        logging_steps=10,
-        save_total_limit=2,  # Keep best and last checkpoint
-        load_best_model_at_end=True,
-        metric_for_best_model='wer',
-        greater_is_better=False,
-        fp16=config['fp16'],
-        dataloader_pin_memory=False,
-        remove_unused_columns=False,
-        label_names=['labels'],
-    )
-    
-    # Data collator
-    data_collator = WhisperDataCollator(processor)
-    
-    # Trainer
-    trainer = Seq2SeqTrainer(
-        model=model,
-        args=training_args,
-        train_dataset=train_loader.dataset,
-        eval_dataset=val_loader.dataset,
-        data_collator=data_collator,
-        compute_metrics=lambda pred: compute_metrics(pred, processor.tokenizer),
-    )
+        data_collator = WhisperDataCollator(processor)
+        trainer = Seq2SeqTrainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_loader.dataset,
+            eval_dataset=val_loader.dataset,
+            data_collator=data_collator,
+            compute_metrics=lambda pred: compute_metrics(pred, processor.tokenizer),
+        )
+    else:
+        training_args = TrainingArguments(
+            output_dir=config['output_dir'],
+            per_device_train_batch_size=config['batch_size'],
+            per_device_eval_batch_size=config['batch_size'],
+            gradient_accumulation_steps=config['gradient_accumulation_steps'],
+            learning_rate=config['learning_rate'],
+            warmup_steps=config['warmup_steps'],
+            num_train_epochs=config['epochs'],
+            eval_strategy='epoch',
+            save_strategy='epoch',
+            logging_steps=10,
+            save_total_limit=2,
+            load_best_model_at_end=True,
+            metric_for_best_model='wer',
+            greater_is_better=False,
+            fp16=config['fp16'],
+            dataloader_pin_memory=False,
+            remove_unused_columns=False,
+            label_names=['labels'],
+        )
+
+        data_collator = WhisperDataCollator(processor)
+        trainer = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_loader.dataset,
+            eval_dataset=val_loader.dataset,
+            data_collator=data_collator,
+            compute_metrics=lambda pred: compute_ctc_metrics(pred, processor),
+        )
     
     # Train
     logger.info('Starting training...')
