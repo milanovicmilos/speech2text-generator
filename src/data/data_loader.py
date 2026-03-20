@@ -18,8 +18,6 @@ import torch
 import librosa
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
-from transformers import WhisperProcessor
-
 from ..utils.text_preprocessing import SerbianTextPreprocessor
 import re
 
@@ -38,7 +36,7 @@ class WhisperSpeechDataset(Dataset):
         self,
         audio_dir: str,
         text_dir: str,
-        processor: WhisperProcessor,
+        processor: Any,
         sample_rate: int = 16000,
         max_duration: float = 300.0,  # Increased for raw audio
         text_preprocessor: Optional[SerbianTextPreprocessor] = None,
@@ -51,7 +49,7 @@ class WhisperSpeechDataset(Dataset):
             audio_dir: Directory with audio files
             text_dir: Directory with text transcriptions
             processor: WhisperProcessor for feature extraction
-            sample_rate: Target sample rate
+            sample_rate: Target sample rate (MUST be 16000 Hz for Wav2Vec2/Whisper). Audio will be resampled if necessary.
             max_duration: Maximum audio duration in seconds
             text_preprocessor: Text preprocessor instance
         """
@@ -79,10 +77,13 @@ class WhisperSpeechDataset(Dataset):
         self.transcriptions = {}
         self._load_transcriptions()
         
-        # Filter to only valid pairs
-        self.valid_indices = self._find_valid_pairs()
+        # Filter to only valid pairs and create chunk indices
+        # For raw data: split into 30s chunks; for chunked: keep as-is
+        self.valid_file_indices = self._find_valid_pairs()
+        self.chunk_indices = self._create_chunk_indices()
         
-        logger.info(f"Found {len(self.valid_indices)} valid audio-text pairs")
+        logger.info(f"Found {len(self.valid_file_indices)} valid audio-text pairs")
+        logger.info(f"Created {len(self.chunk_indices)} chunks for training (30s per chunk)")
     
     def _load_transcriptions(self):
         """Load transcriptions from text files."""
@@ -177,35 +178,67 @@ class WhisperSpeechDataset(Dataset):
                 logger.exception('Failed to write problematic pairs report')
         return valid
     
+    def _create_chunk_indices(self) -> List[Tuple[int, int]]:
+        """
+        Create chunk indices for 30s chunks from valid audio files.
+        For raw audio (audio_dir == text_dir): split into 30s chunks
+        For chunked audio: keep as single chunks
+        
+        Returns:
+            List of tuples: (file_idx, chunk_number)
+        """
+        chunk_indices = []
+        is_raw = self.audio_dir == self.text_dir
+        chunk_duration_sec = 30
+        
+        for file_idx in self.valid_file_indices:
+            audio_path = self.audio_files[file_idx]
+            
+            if is_raw:
+                # For raw: calculate how many 30s chunks can fit
+                full_dur = self._audio_duration(audio_path)
+                if full_dur > 0:
+                    num_chunks = max(1, int(np.ceil(full_dur / chunk_duration_sec)))
+                    for chunk_num in range(num_chunks):
+                        chunk_indices.append((file_idx, chunk_num))
+            else:
+                # For chunked: treat entire file as one chunk
+                chunk_indices.append((file_idx, 0))
+        
+        return chunk_indices
+    
     def __len__(self) -> int:
-        """Return dataset size."""
-        return len(self.valid_indices)
+        """Return dataset size (number of chunks, not files)."""
+        return len(self.chunk_indices)
     
     def __getitem__(self, idx: int) -> Dict[str, Any]:
         """
-        Get dataset item.
+        Get dataset item (30s chunk).
         
         Args:
-            idx: Index
+            idx: Index (chunk index)
             
         Returns:
             Dictionary with audio features and text labels
         """
-        # Get actual file index
-        file_idx = self.valid_indices[idx]
+        # Get file index and chunk number
+        file_idx, chunk_num = self.chunk_indices[idx]
         audio_path = self.audio_files[file_idx]
         
-        # Get transcription first (before audio processing for raw data)
+        # Get transcription
         text = self.transcriptions[audio_path.stem]
         text = self.text_preprocessor.preprocess(text)
         
         # Load audio
         try:
-            audio, sr = librosa.load(
+            audio, loaded_sr = librosa.load(
                 audio_path,
                 sr=self.sample_rate,
                 mono=True
             )
+            # Verify resampling to 16kHz
+            if loaded_sr != self.sample_rate:
+                logger.warning(f"Audio resampled from {loaded_sr} Hz to {self.sample_rate} Hz: {audio_path.name}")
         except Exception as e:
             logger.error(f"Error loading audio {audio_path}: {e}")
             # Return dummy data
@@ -225,46 +258,75 @@ class WhisperSpeechDataset(Dataset):
             audio = audio + noise
             audio = np.clip(audio, -1, 1)  # Clip to prevent overflow
         
-        # For raw data (audio_dir == text_dir), truncate to 30s and adjust text
+        # Extract 30s chunk
+        chunk_duration_sec = 30
+        chunk_samples = chunk_duration_sec * self.sample_rate
+        
+        # Ensure audio is at correct sample rate (16000 Hz)
+        if not hasattr(self, '_sr_verified'):
+            logger.info(f"Using sample rate: {self.sample_rate} Hz (target for Wav2Vec2/Whisper)")
+            self._sr_verified = True
+        
         is_raw = self.audio_dir == self.text_dir
         if is_raw:
-            # Truncate audio to 30s
-            max_samples_30s = 30 * self.sample_rate
-            if len(audio) > max_samples_30s:
-                audio = audio[:max_samples_30s]
-            else:
-                audio = np.pad(audio, (0, max_samples_30s - len(audio)))
+            # For raw data: extract chunk at chunk_num position
+            start_sample = chunk_num * chunk_samples
+            end_sample = start_sample + chunk_samples
             
-            # Adjust text: take proportional words for first 30s
+            if end_sample > len(audio):
+                # Last chunk might be shorter
+                audio_chunk = audio[start_sample:]
+                audio_chunk = np.pad(audio_chunk, (0, chunk_samples - len(audio_chunk)))
+            else:
+                audio_chunk = audio[start_sample:end_sample]
+            
+            # Extract corresponding text portion
             full_dur = self._audio_duration(audio_path)
             if full_dur > 0:
                 words = text.split()
                 num_words = len(words)
-                words_for_30s = int((30 / full_dur) * num_words)
-                text = ' '.join(words[:words_for_30s]) if words_for_30s > 0 else text
+                words_per_second = num_words / full_dur if full_dur > 0 else 0
+                
+                chunk_start_sec = chunk_num * chunk_duration_sec
+                chunk_end_sec = (chunk_num + 1) * chunk_duration_sec
+                
+                start_word_idx = max(0, int(chunk_start_sec * words_per_second))
+                end_word_idx = min(num_words, int(chunk_end_sec * words_per_second))
+                
+                text = ' '.join(words[start_word_idx:end_word_idx]) if start_word_idx < end_word_idx else text
+            
+            audio = audio_chunk
         else:
-            # For chunked, use max_duration
-            if len(audio) > self.max_samples:
-                audio = audio[:self.max_samples]
+            # For chunked data: use full chunk (already ~30s)
+            if len(audio) > chunk_samples:
+                audio = audio[:chunk_samples]
             else:
-                audio = np.pad(audio, (0, self.max_samples - len(audio)))
+                audio = np.pad(audio, (0, chunk_samples - len(audio)))
         
-        # Process with Whisper processor
+        # Process with model processor
         inputs = self.processor(
             audio,
             sampling_rate=self.sample_rate,
             return_tensors="pt"
         )
-        
-        # Get input features (log-mel spectrogram)
-        input_features = inputs.input_features[0]  # Remove batch dim
-        # Create an attention mask for input features (all ones — no internal padding)
-        # shape: (seq_len,)
-        try:
-            import torch as _torch
-            attention_mask = _torch.ones(input_features.shape[0], dtype=_torch.long)
-        except Exception:
-            attention_mask = None
+
+        # Handle processor output shape for both seq2seq (Whisper) and CTC (Wav2Vec2)
+        input_features = None
+        input_values = None
+        if hasattr(inputs, "input_features") and inputs.input_features is not None:
+            input_features = inputs.input_features[0]
+        if hasattr(inputs, "input_values") and inputs.input_values is not None:
+            input_values = inputs.input_values[0]
+
+        attention_mask = None
+        if hasattr(inputs, "attention_mask") and inputs.attention_mask is not None:
+            attention_mask = inputs.attention_mask[0]
+        elif input_features is not None:
+            try:
+                import torch as _torch
+                attention_mask = _torch.ones(input_features.shape[0], dtype=_torch.long)
+            except Exception:
+                attention_mask = None
         
         # Tokenize text
         labels = self.processor.tokenizer(
@@ -276,6 +338,7 @@ class WhisperSpeechDataset(Dataset):
         
         return {
             "input_features": input_features,
+            "input_values": input_values,
             "attention_mask": attention_mask,
             "labels": labels,
             "text": text,
@@ -293,7 +356,7 @@ class WhisperDataCollator:
     to avoid passing unexpected kwargs to the model forward.
     """
 
-    processor: WhisperProcessor
+    processor: Any
     include_text: bool = False
 
     def __call__(self, batch: List[Dict]) -> Dict[str, torch.Tensor]:
@@ -307,11 +370,14 @@ class WhisperDataCollator:
             Batched tensors
         """
         # Extract inputs and labels
-        input_features = [item["input_features"] for item in batch]
+        input_key = "input_features"
+        if batch[0].get("input_values") is not None:
+            input_key = "input_values"
+        model_inputs = [item[input_key] for item in batch]
         labels = [item["labels"] for item in batch]
-        
-        # Pad input features (all should be same size already from processor)
-        input_features = torch.stack(input_features)
+
+        # Pad model inputs (already standardized in dataset)
+        model_inputs = torch.stack(model_inputs)
         # build attention_mask batch if present
         attention_masks = None
         if "attention_mask" in batch[0] and batch[0]["attention_mask"] is not None:
@@ -331,7 +397,7 @@ class WhisperDataCollator:
         texts = [item.get("text", "") for item in batch]
 
         out = {
-            "input_features": input_features,
+            input_key: model_inputs,
             "attention_mask": attention_masks,
             "labels": labels,
         }
@@ -344,7 +410,7 @@ class WhisperDataCollator:
 
 def create_dataloaders(
     data_dir: str,
-    processor: WhisperProcessor,
+    processor: Any,
     batch_size: int = 4,
     num_workers: int = 0,
     pin_memory: bool = False,
@@ -359,7 +425,7 @@ def create_dataloaders(
     
     Args:
         data_dir: Directory with audio and text files
-        processor: WhisperProcessor
+        processor: Model processor (Whisper or Wav2Vec2)
         batch_size: Batch size
         num_workers: Number of workers
         pin_memory: Pin memory for faster transfer to GPU
@@ -487,7 +553,8 @@ def create_dataloaders(
     )
     # Align the indexing between train and val/test datasets to avoid mismatches
     try:
-        val_test_dataset.valid_indices = train_dataset_full.valid_indices
+        val_test_dataset.valid_file_indices = train_dataset_full.valid_file_indices
+        val_test_dataset.chunk_indices = train_dataset_full.chunk_indices
         val_test_dataset.transcriptions = train_dataset_full.transcriptions
         val_test_dataset.audio_files = train_dataset_full.audio_files
     except Exception:

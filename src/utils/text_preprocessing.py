@@ -127,24 +127,23 @@ class SerbianTextPreprocessor:
         if not text:
             return ""
         
-        # Normalize whitespace early
+        # 1. Osnovno čišćenje i transliteracija
         text = text.strip()
-        # Transliterate Cyrillic to Latin for consistent tokenization
         if self.cyrillic_re.search(text):
             text = self._transliterate(text)
-        # Lowercase
         text = text.lower()
         
-        # Convert numbers to words
+        # 2. Pretvori brojeve u reči (npr. "2024" -> "dve hiljade dvadeset četiri")
         text = self._convert_numbers_to_words(text)
         
-        # Remove punctuation and special characters
-        text = self.chars_to_remove.sub('', text)
+        # 3. BELE LISTA (White-listing): Zadrži samo slova srpske latinice i razmak
+        # Ovo automatski briše %, &, navodnike, tri tačke, i sve ostale gluposti
+        text = re.sub(r'[^a-zćčđšž ]', ' ', text)
         
-        # Normalize whitespace
+        # 4. Normalizacija razmaka
         text = self.multiple_spaces.sub(' ', text).strip()
 
-        # Collapse repeated tokens (e.g., "da da da" -> "da") up to sensible limit
+        # 5. Collapse repeated tokens
         text = self._collapse_repeated_tokens(text)
 
         return text
