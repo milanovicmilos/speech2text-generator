@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Callable, Dict, Optional
 
 from .contracts import ASRModelAdapter
+from .wav2vec2_adapter import Wav2Vec2ASRAdapter
 from .whisper_adapter import WhisperASRAdapter
 
 ModelBuilder = Callable[..., ASRModelAdapter]
@@ -35,4 +36,5 @@ def get_model_registry() -> ModelRegistry:
     if _registry is None:
         _registry = ModelRegistry()
         _registry.register("whisper", lambda **kwargs: WhisperASRAdapter(**kwargs))
+        _registry.register("wav2vec2", lambda **kwargs: Wav2Vec2ASRAdapter(**kwargs))
     return _registry

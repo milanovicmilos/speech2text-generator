@@ -7,7 +7,6 @@ from dataclasses import dataclass
 from typing import Any, Dict, Optional
 
 import torch
-from transformers import WhisperProcessor
 
 
 @dataclass(frozen=True)
@@ -73,7 +72,7 @@ class ASRModelAdapter(ABC):
         """Generate token IDs from precomputed input features."""
 
     @abstractmethod
-    def get_processor(self) -> WhisperProcessor:
+    def get_processor(self) -> Any:
         """Return processor used for feature extraction/tokenization."""
 
     @abstractmethod
