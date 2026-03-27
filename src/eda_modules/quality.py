@@ -40,7 +40,6 @@ def run_quality_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     quality_rows: List[Dict[str, Any]] = []
     quality_sources = ctx["ALIGN_DIRS"] + [
         ctx["RUN_V1_DIR"] / "aligned_holdout",
-        ctx["RUN_V2_DIR"] / "aligned_holdout",
     ]
     for align_dir in quality_sources:
         manifest_path = align_dir / "manifest.json"

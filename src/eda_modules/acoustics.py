@@ -91,10 +91,14 @@ def _normalize_prediction_frame(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def load_audio_stats(audio_paths: List[Path], max_files: int = 800) -> pd.DataFrame:
-    """Compute robust per-file audio descriptors for a bounded sample."""
+def load_audio_stats(audio_paths: List[Path], max_files: Optional[int] = None) -> pd.DataFrame:
+    """Compute robust per-file audio descriptors.
+
+    When ``max_files`` is None, process all discovered files.
+    """
     rows: List[Dict[str, Any]] = []
-    for audio_path in audio_paths[:max_files]:
+    selected_paths = audio_paths if max_files is None else audio_paths[:max_files]
+    for audio_path in selected_paths:
         try:
             y, sr = librosa.load(audio_path, sr=None, mono=True)
         except Exception:
@@ -190,8 +194,6 @@ def _resolve_audio_path(sample_id: str, raw_audio_path: str, ctx: Dict[str, Any]
     fallback_dirs = [
         Path(ctx.get("RUN_V1_DIR", Path())) / "aligned_holdout" / "audio",
         Path(ctx.get("RUN_V1_DIR", Path())) / "aligned_train" / "audio",
-        Path(ctx.get("RUN_V2_DIR", Path())) / "aligned_holdout" / "audio",
-        Path(ctx.get("RUN_V2_DIR", Path())) / "aligned_train" / "audio",
         ctx["ROOT"] / "data" / "aligned_raw_v1_rerun" / "audio",
         ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "audio",
     ]
@@ -215,7 +217,8 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     if not aligned_audio_paths:
         aligned_audio_paths = list_audio_files(ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "audio")
 
-    audio_df = load_audio_stats(aligned_audio_paths, max_files=800)
+    # Process all aligned files to keep the analysis fully data-driven.
+    audio_df = load_audio_stats(aligned_audio_paths, max_files=None)
     preview_cols = ["file_name", "duration_s", "sr", "db_mean", "zcr_mean", "silence_ratio"]
     if set(preview_cols).issubset(audio_df.columns):
         display(audio_df[preview_cols].head().fillna("n/a"))
@@ -283,8 +286,7 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     fig.show()
 
     zcr_rows = []
-    sample_for_zcr = audio_df.sample(min(250, len(audio_df)), random_state=42)
-    for _, row in sample_for_zcr.iterrows():
+    for _, row in audio_df.iterrows():
         try:
             y, _ = librosa.load(row["path"], sr=16000, mono=True)
             if y.size == 0:
@@ -307,10 +309,7 @@ def run_audio_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
         style_plotly_figure(fig, x_title="SNR klasa", y_title="Srednji ZCR [0-1]")
         fig.show()
 
-    pred_path = ctx.get(
-        "V1_FINETUNED_PRED",
-        ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "raw_aligned_v2026_run3_improved_eval_aligned_test_predictions.jsonl",
-    )
+    pred_path = ctx.get("V1_FINETUNED_PRED", Path())
 
     if pred_path.exists():
         rows = read_jsonl_records(pred_path)

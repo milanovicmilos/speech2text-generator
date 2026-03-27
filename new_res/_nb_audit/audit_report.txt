@@ -1,0 +1,678 @@
+
+=== Cell 3 ===
+source_head: # Setup: resolve Kaggle input paths directly (no copy/extract to /kaggle/working) | import sys
+outputs: 1
+-- output 1: stream
+stream:
+=== Resolving ASR run (asr_full_run_v1) from Kaggle input ===
+✓ RUN_V1 resolved: /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1
+
+=== Resolving code bundle (kaggle_bundle) from Kaggle input ===
+✓ Code bundle resolved: /kaggle/input/datasets/milomilanovi/kaggle-bundle/kaggle_bundle
+✓ Added to sys.path (priority): /kaggle/input/datasets/milomilanovi/kaggle-bundle/kaggle_bundle/src
+
+=== Resolving raw dataset (speech-recognation-raw) from Kaggle input ===
+✓ Raw dataset resolved: /kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw
+
+=== Verification ===
+run_v1 exists: True
+bundle root: /kaggle/input/datasets/milomilanovi/kaggle-bundle/kaggle_bundle
+raw dir: /kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw
+run_v1 subfolders: ['aligned_holdout', 'aligned_train', 'holdout', 'metrics', 'models']
+raw categories: ['politika', 'sport']
+
+✓ Setup completed (direct input mode, no copy)
+
+=== Cell 4 ===
+source_head: # Import EDA modula sa fallback-om za Kaggle putanje | from __future__ import annotations
+outputs: 1
+-- output 1: stream
+stream:
+✓ Svi EDA moduli uspesno importovani
+
+=== Cell 7 ===
+source_head: # Build context and override paths to use resolved Kaggle input locations | if RUN_V1_RESOLVED is None:
+outputs: 1
+-- output 1: stream
+stream:
+✓ Context built (direct input mode):
+  ROOT: /kaggle/working
+  RUN_V1_DIR: /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1
+  DATA_RAW_DIR: /kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw
+  ALIGN_DIRS: ['/kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_train', '/kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout']
+
+=== Cell 8 ===
+source_head: # Analiza akvizicije i pokrivenosti + fail-fast validacija | import pandas as pd
+outputs: 3
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+dataset  chunk_count  suspicious_count  dropped_suspicious_count  \
+0    aligned_train       4888.0               0.0                     455.0   
+1  aligned_holdout       2194.0               0.0                     140.0   
+
+     status  manifest_exists  report_exists  
+0  manifest             True           True  
+1  manifest             True           True
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>dataset</th> <th>chunk_count</th> <th>suspicious_count</th> <th>dropped_suspicious_count</th> <th>status</th> <th>manifest_exists</th> <th>report_exists</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>aligned_train</td> <td>4888.0</td> <td>0.0</td> <td>455.0</td> <td>manifest</td> <td>True</td> <td>True</td> </tr> <tr> <th>1</th> <td>aligned_holdout</td> <td>2194.0</td> <td>0.0</td> <td>140.0</td> <td>manifest</td> <td>True</td> <td>True</td> </tr> </tbody> </table> </div>
+-- output 2: stream
+stream:
+✓ Data acquisition analysis completed
+Napomena: suspicious_count = oznaceni sumnjivi chunkovi; dropped_suspicious_count = QA odbaceni chunkovi.
+-- output 3: display_data
+mimes: text/html, text/plain
+text_plain:
+dataset  chunk_count  suspicious_count  dropped_suspicious_count  \
+0    aligned_train       4888.0               0.0                     455.0   
+1  aligned_holdout       2194.0               0.0                     140.0   
+
+     status  
+0  manifest  
+1  manifest
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>dataset</th> <th>chunk_count</th> <th>suspicious_count</th> <th>dropped_suspicious_count</th> <th>status</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>aligned_train</td> <td>4888.0</td> <td>0.0</td> <td>455.0</td> <td>manifest</td> </tr> <tr> <th>1</th> <td>aligned_holdout</td> <td>2194.0</td> <td>0.0</td> <td>140.0</td> <td>manifest</td> </tr> </tbody> </table> </div>
+
+=== Cell 9 ===
+source_head: plot_data_acquisition(raw_df=raw_df, raw_total=raw_total, best_aligned=best_aligned)
+outputs: 3
+-- output 1: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="0071bd9a-ba6c-4d09-9e9e-c5e75bd8e694" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("0071bd9a-ba6c-4d09-9e9e-c5e75bd8e694")) { Plotly.newPlot( "0071bd9a-ba6c-4d09-9e9e-c5e75bd8e694", [{"alignmentgroup":"True","hovertemplate":"source=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"ostalo","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"ostalo","offsetgroup":"ostalo","orientation":"v","showlegend":true,"textposition":"auto","x":["ostalo"],"xaxis":"x","y":[763],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","ho
+-- output 2: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="39d81495-0000-4b6f-b0b4-8ec3a24c10b7" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("39d81495-0000-4b6f-b0b4-8ec3a24c10b7")) { Plotly.newPlot( "39d81495-0000-4b6f-b0b4-8ec3a24c10b7", [{"hovertemplate":"month=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","line":{"color":"#636efa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"","orientation":"v","showlegend":false,"x":["2026-03"],"xaxis":"x","y":[776],"yaxis":"y","type":"scatter"}], {"template":{"data":{"barpolar":[{"marker":{"line":{"color":
+-- output 3: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="3b6a6121-1f2c-4138-967e-b3d2cbab1f08" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("3b6a6121-1f2c-4138-967e-b3d2cbab1f08")) { Plotly.newPlot( "3b6a6121-1f2c-4138-967e-b3d2cbab1f08", [{"alignmentgroup":"True","hovertemplate":"stage=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"raw_audio","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"raw_audio","offsetgroup":"raw_audio","orientation":"v","showlegend":true,"textposition":"auto","x":["raw_audio"],"xaxis":"x","y":[776],"yaxis":"y","type":"bar"},{"alignmentgroup"
+
+=== Cell 12 ===
+source_head: # Akustička analiza | audio_section = run_audio_analysis(ctx)
+outputs: 14
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+path  \
+0                  /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici_aligned_0006.wav   
+1                /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona_aligned_0002.wav   
+2                                                      /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/amorim-sporting-mancester-junajted-fudbal_aligned_0004.wav   
+3  /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/morski-zmajevi-i-konj-u-galopu---kako-podvodne-vetrenjace-i-solarne-farme-stvaraju-odrzivu-energiju_aligned...   
+4                                  /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/kristofer-hil-bombardovanje-nato-kosovo-metohija-sad-ambasada_aligned_0024.wav   
+
+                                                                                                              file_name  \
+0                        sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici_aligned_0006.wav   
+1                      filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona_aligned_0002.wav   
+2                                                            amorim-sporting-mancester-junajted-fudbal_aligned_0004.wav   
+3  morski-zmajevi-i-konj-u-galopu---kako-podvodne-vetrenjace-i-solarne-farme-stvaraju-odrzivu-energiju_aligned_0002.wav   
+4                                        kristofer-hil-bombardovanje-nato-kosovo-metohija-sad-ambasada_aligned_0024.wav   
+
+   duration_s     sr  rms_mean    db_mean  silence_ratio  
+0       23.48  16000  0.056263 -24.995576       0.200272  
+1       23.88  16000  0.061073 -24.282995       0.200803  
+2       23.62  16000  0.060907 -24.306657       0.200271  
+3       23.26  16000  0.057814 -24.759348       0.200825  
+4       23.38  16000  0.069269 -23.189240       0.199726
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>path</th> <th>file_name</th> <th>duration_s</th> <th>sr</th> <th>rms_mean</th> <th>db_mean</th> <th>silence_ratio</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>/kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici_aligned_0006.wav</td> <td>sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici_aligned_0006.wav</td> <td>23.48</td> <td>16000</td> <td>0.056263</td> <td>-24.995576</td> <td>0.200272</td> </tr> <tr> <th>1</th> <td>/kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/aligned_holdout/audio/filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona_aligned_0002.wav</td> <td>filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona_aligned_0002.wav</td> <td>23.88</td> <td>16000</td> <td>0.061073</td> <td>-24.2829
+-- output 2: display_data
+mimes: image/png, text/plain
+saved_image: cell_12_out_02.png
+text_plain:
+<Figure size 1400x600 with 1 Axes>
+-- output 3: display_data
+mimes: text/html, text/plain
+text_plain:
+snr_class  count  duration_median  db_mean_median  zcr_proxy
+0       High SNR (studio)   1097            23.74      -24.014054   0.200269
+1  Low SNR / Field Report   1097            23.74      -25.412162   0.200269
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>snr_class</th> <th>count</th> <th>duration_median</th> <th>db_mean_median</th> <th>zcr_proxy</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>High SNR (studio)</td> <td>1097</td> <td>23.74</td> <td>-24.014054</td> <td>0.200269</td> </tr> <tr> <th>1</th> <td>Low SNR / Field Report</td> <td>1097</td> <td>23.74</td> <td>-25.412162</td> <td>0.200269</td> </tr> </tbody> </table> </div>
+-- output 4: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="6e24794e-3f50-4899-8911-ae3df94b5562" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("6e24794e-3f50-4899-8911-ae3df94b5562")) { Plotly.newPlot( "6e24794e-3f50-4899-8911-ae3df94b5562", [{"alignmentgroup":"True","boxpoints":"all","hovertemplate":"snr_class=Low SNR \u002f Field Report\u003cbr\u003edb_mean=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Low SNR \u002f Field Report","marker":{"color":"#636efa"},"name":"Low SNR \u002f Field Report","notched":false,"offsetgroup":"Low SNR \u002f Field Report","orientation":"v","showlegend":true,"x0":" ","x
+-- output 5: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="f3c59026-4419-4c13-9023-4673cde9879d" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("f3c59026-4419-4c13-9023-4673cde9879d")) { Plotly.newPlot( "f3c59026-4419-4c13-9023-4673cde9879d", [{"alignmentgroup":"True","bingroup":"x","hovertemplate":"snr_class=Low SNR \u002f Field Report\u003cbr\u003esilence_ratio=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Low SNR \u002f Field Report","marker":{"color":"#636efa","opacity":0.5,"pattern":{"shape":""}},"name":"Low SNR \u002f Field Report","nbinsx":40,"offsetgroup":"Low SNR \u002f F
+-- output 6: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="8b60afad-3727-4214-88e4-78a3065ebc9a" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("8b60afad-3727-4214-88e4-78a3065ebc9a")) { Plotly.newPlot( "8b60afad-3727-4214-88e4-78a3065ebc9a", [{"alignmentgroup":"True","box":{"visible":true},"hovertemplate":"snr_class=%{x}\u003cbr\u003ezcr_mean=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa"},"name":"","offsetgroup":"","orientation":"v","points":"all","scalegroup":"True","showlegend":false,"x":["Low SNR \u002f Field Report","High SNR (studio)","High SNR (studio)","High SNR (stu
+-- output 7: display_data
+mimes: text/html, text/plain
+text_plain:
+acoustic_regime  samples  mean_zcr  mean_snr_proxy_db  \
+1   High ZCR + Low SNR      113  0.139546          38.651679   
+3    Low ZCR + Low SNR      973  0.116723          36.826317   
+0  High ZCR + High SNR      973  0.162314          64.394499   
+2   Low ZCR + High SNR      113  0.121455          53.421054   
+
+   mean_fricative_sub_share  mean_fricative_ref_error_rate  
+1                  0.483081                       0.381081  
+3                  0.452003                       0.391085  
+0                  0.445160                       0.327605  
+2                  0.389113                       0.330334
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>acoustic_regime</th> <th>samples</th> <th>mean_zcr</th> <th>mean_snr_proxy_db</th> <th>mean_fricative_sub_share</th> <th>mean_fricative_ref_error_rate</th> </tr> </thead> <tbody> <tr> <th>1</th> <td>High ZCR + Low SNR</td> <td>113</td> <td>0.139546</td> <td>38.651679</td> <td>0.483081</td> <td>0.381081</td> </tr> <tr> <th>3</th> <td>Low ZCR + Low SNR</td> <td>973</td> <td>0.116723</td> <td>36.826317</td> <td>0.452003</td> <td>0.391085</td> </tr> <tr> <th>0</th> <td>High ZCR + High SNR</td> <td>973</td> <td>0.162314</td> <td>64.394499</td> <td>0.445160</td> <td>0.327605</td> </tr> <tr> <th>2</th> <td>Low ZCR + High SNR</td> <td>113</td> <td>0.121455</td> <td>53.421054</td> <td>0.389113</td> <td>0.330334</td> </tr> </tbody> </table> </div>
+-- output 8: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="848214a2-0478-43a4-80ef-d1cecd37f548" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("848214a2-0478-43a4-80ef-d1cecd37f548")) { Plotly.newPlot( "848214a2-0478-43a4-80ef-d1cecd37f548", [{"alignmentgroup":"True","boxpoints":"all","hovertemplate":"acoustic_regime=%{x}\u003cbr\u003efricative_sub_share=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"High ZCR + High SNR","marker":{"color":"#636efa"},"name":"High ZCR + High SNR","notched":false,"offsetgroup":"High ZCR + High SNR","orientation":"v","showlegend":true,"x":["High ZCR + High SNR","High ZCR + H
+-- output 9: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+Uočene su statističke indikacije obogaćenja frikativnih supstitucija u High-ZCR/Low-SNR režimu. Nalaz ukazuje na moguću povezanost akustičke nestabilnosti i fonetske distorzije, ali se ne interpretira kao stroga kauzalnost bez dodatnih kontrolisanih eksperimenata.
+-- output 10: display_data
+mimes: text/html, text/plain
+text_plain:
+snr_class     n  mean_wer_baseline  mean_wer_finetuned  mean_wer_delta  \
+0  High SNR  1086           0.470069            0.464772        0.005296   
+1   Low SNR  1086           0.525206            0.516162        0.009044   
+
+   median_wer_delta  
+0               0.0  
+1               0.0
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>snr_class</th> <th>n</th> <th>mean_wer_baseline</th> <th>mean_wer_finetuned</th> <th>mean_wer_delta</th> <th>median_wer_delta</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>High SNR</td> <td>1086</td> <td>0.470069</td> <td>0.464772</td> <td>0.005296</td> <td>0.0</td> </tr> <tr> <th>1</th> <td>Low SNR</td> <td>1086</td> <td>0.525206</td> <td>0.516162</td> <td>0.009044</td> <td>0.0</td> </tr> </tbody> </table> </div>
+-- output 11: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="a1fb0684-4cb2-4b10-8de3-19ee30bd63d0" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("a1fb0684-4cb2-4b10-8de3-19ee30bd63d0")) { Plotly.newPlot( "a1fb0684-4cb2-4b10-8de3-19ee30bd63d0", [{"alignmentgroup":"True","boxpoints":"all","hovertemplate":"model_variant=Baseline (Whisper Small)\u003cbr\u003esnr_class=%{x}\u003cbr\u003ewer=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Baseline (Whisper Small)","marker":{"color":"#636efa"},"name":"Baseline (Whisper Small)","notched":false,"offsetgroup":"Baseline (Whisper Small)","orientation":"v","showlegend":
+-- output 12: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="fbc90d62-dc7b-4555-8340-3fc1f6d2ee9a" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("fbc90d62-dc7b-4555-8340-3fc1f6d2ee9a")) { Plotly.newPlot( "fbc90d62-dc7b-4555-8340-3fc1f6d2ee9a", [{"hovertemplate":"zcr_class=High ZCR\u003cbr\u003esnr_proxy_db=%{x}\u003cbr\u003ewer_delta=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"High ZCR","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"High ZCR","showlegend":true,"x":[65.71008465633386,54.336874619204096,65.488584465068,65.53208278520115,65.46280401564962,65.37710561849454,65.78475
+-- output 13: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="cd79e0b3-63c8-40fe-921a-6dffa68b35b7" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("cd79e0b3-63c8-40fe-921a-6dffa68b35b7")) { Plotly.newPlot( "cd79e0b3-63c8-40fe-921a-6dffa68b35b7", [{"alignmentgroup":"True","hovertemplate":"sample_rate=%{x}\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":[16000],"xaxis":"x","y":[2194],"yaxis":"y","type":"bar"}], {"template":{"data":{"barpolar":[{"marke
+-- output 14: stream
+stream:
+✓ Audio analysis completed
+Analizirano 2194 audio uzoraka
+
+=== Cell 15 ===
+source_head: # Lingvistička analiza | text_section = run_text_analysis(ctx)
+outputs: 7
+-- output 1: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="c5128a02-1d21-440c-be81-b83943827b49" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("c5128a02-1d21-440c-be81-b83943827b49")) { Plotly.newPlot( "c5128a02-1d21-440c-be81-b83943827b49", [{"alignmentgroup":"True","hovertemplate":"count=%{x}\u003cbr\u003eword=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[814,862,898,911,961,1003,1039,1105,1118,1237,1364,1415,1595,1675,1758,1788,1815,1985,2285,2330,2689,2773,
+-- output 2: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="3d68b0d6-928b-4cf9-a854-8f58cd17e935" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("3d68b0d6-928b-4cf9-a854-8f58cd17e935")) { Plotly.newPlot( "3d68b0d6-928b-4cf9-a854-8f58cd17e935", [{"alignmentgroup":"True","hovertemplate":"count=%{x}\u003cbr\u003engram=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[217,224,237,241,242,252,257,270,275,276,281,299,308,313,330,331,337,357,386,485,490,491,554,556,609,625,
+-- output 3: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="209cfa9d-aa62-4b23-bfcb-3c35dd1346b4" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("209cfa9d-aa62-4b23-bfcb-3c35dd1346b4")) { Plotly.newPlot( "209cfa9d-aa62-4b23-bfcb-3c35dd1346b4", [{"alignmentgroup":"True","hovertemplate":"count=%{x}\u003cbr\u003engram=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"h","showlegend":false,"textposition":"auto","x":[55,56,56,57,58,60,60,61,61,61,63,64,66,66,67,69,69,71,72,74,78,81,85,86,87,103,104,115,142,167],"xaxis":
+-- output 4: display_data
+mimes: image/png, text/plain
+saved_image: cell_15_out_04.png
+text_plain:
+<Figure size 1400x600 with 1 Axes>
+-- output 5: display_data
+mimes: image/png, text/plain
+saved_image: cell_15_out_05.png
+text_plain:
+<Figure size 1400x600 with 1 Axes>
+-- output 6: display_data
+mimes: text/html, text/plain
+text_plain:
+count      mean       std       min       25%       50%  \
+cyr_ratio      7043.0  0.002410  0.008513  0.000000  0.000000  0.000000   
+lat_ratio      7043.0  0.997590  0.008513  0.932331  1.000000  1.000000   
+digit_ratio    7043.0  0.010533  0.017812  0.000000  0.000000  0.000000   
+special_ratio  7043.0  0.027054  0.010557  0.002278  0.020173  0.025641   
+
+                    75%       max  
+cyr_ratio      0.000000  0.067669  
+lat_ratio      1.000000  1.000000  
+digit_ratio    0.012949  0.169014  
+special_ratio  0.032178  0.128641
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>count</th> <th>mean</th> <th>std</th> <th>min</th> <th>25%</th> <th>50%</th> <th>75%</th> <th>max</th> </tr> </thead> <tbody> <tr> <th>cyr_ratio</th> <td>7043.0</td> <td>0.002410</td> <td>0.008513</td> <td>0.000000</td> <td>0.000000</td> <td>0.000000</td> <td>0.000000</td> <td>0.067669</td> </tr> <tr> <th>lat_ratio</th> <td>7043.0</td> <td>0.997590</td> <td>0.008513</td> <td>0.932331</td> <td>1.000000</td> <td>1.000000</td> <td>1.000000</td> <td>1.000000</td> </tr> <tr> <th>digit_ratio</th> <td>7043.0</td> <td>0.010533</td> <td>0.017812</td> <td>0.000000</td> <td>0.000000</td> <td>0.000000</td> <td>0.012949</td> <td>0.169014</td> </tr> <tr> <th>special_ratio</th> <td>7043.0</td> <td>0.027054</td> <td>0.010557</td> <td>0.002278</td> <td>0.020173</td> <td>0.025641</td> <td>0.032178</td> <td>0.128641</td> </tr> </tbody> </table> </div>
+-- output 7: stream
+stream:
+✓ Text analysis completed
+Analizirani tekstualni uzorci
+
+=== Cell 18 ===
+source_head: # Quality analiza | quality_section = run_quality_analysis(ctx)
+outputs: 7
+-- output 1: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+Definicije QA statusa: toksičan uzorak = strukturno nevalidan supervision signal (AWR < 0.60, CPS van [2, 18], prazan tekst ili nevalidno trajanje); težak uzorak = validan ali izazovan signal (granični AWR/CPS ili visok leksički obim).
+-- output 2: display_data
+mimes: text/html, text/plain
+text_plain:
+status  count  share_percent
+0           toxic    270       2.910737
+1  hard_non_toxic   3752      40.448469
+2         regular   5254      56.640793
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>status</th> <th>count</th> <th>share_percent</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>toxic</td> <td>270</td> <td>2.910737</td> </tr> <tr> <th>1</th> <td>hard_non_toxic</td> <td>3752</td> <td>40.448469</td> </tr> <tr> <th>2</th> <td>regular</td> <td>5254</td> <td>56.640793</td> </tr> </tbody> </table> </div>
+-- output 3: display_data
+mimes: image/png, text/plain
+saved_image: cell_18_out_03.png
+text_plain:
+<Figure size 1400x600 with 1 Axes>
+-- output 4: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+Distribucija CPS nije normalna, pa je Spearman korelacija metodološki opravdana.
+-- output 5: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="733bfd26-5e86-4d4a-8860-0e1ff8d573db" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("733bfd26-5e86-4d4a-8860-0e1ff8d573db")) { Plotly.newPlot( "733bfd26-5e86-4d4a-8860-0e1ff8d573db", [{"alignmentgroup":"True","boxpoints":"all","hovertemplate":"dataset=%{x}\u003cbr\u003ealigned_word_ratio=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa"},"name":"","notched":false,"offsetgroup":"","orientation":"v","showlegend":false,"x":["aligned_train","aligned_train","aligned_train","aligned_train","aligned_train","aligned_train","ali
+-- output 6: display_data
+mimes: image/png, text/plain
+saved_image: cell_18_out_06.png
+text_plain:
+<Figure size 1000x800 with 2 Axes>
+-- output 7: stream
+stream:
+✓ Quality analysis completed
+Analizirano 9276 kvalitativnih uzoraka
+
+=== Cell 21 ===
+source_head: # Ablation analiza - samo processed modus | ablation_section = run_ablation_analysis(ctx)
+outputs: 8
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+scenario       wer       cer  num_samples  \
+0   processed_baseline  0.494413  0.190840       2172.0   
+1  processed_finetuned  0.487681  0.191988       2172.0   
+
+                                                                                                        file  
+0   /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/metrics/baseline_holdout_metrics.json  
+1  /kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/metrics/finetuned_holdout_metrics.json
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>scenario</th> <th>wer</th> <th>cer</th> <th>num_samples</th> <th>file</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>processed_baseline</td> <td>0.494413</td> <td>0.190840</td> <td>2172.0</td> <td>/kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/metrics/baseline_holdout_metrics.json</td> </tr> <tr> <th>1</th> <td>processed_finetuned</td> <td>0.487681</td> <td>0.191988</td> <td>2172.0</td> <td>/kaggle/input/notebooks/milomilanovi/siap-14-march/asr_full_run_v1/metrics/finetuned_holdout_metrics.json</td> </tr> </tbody> </table> </div>
+-- output 2: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="4e025549-5a32-4935-b84c-77af21f1baf9" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("4e025549-5a32-4935-b84c-77af21f1baf9")) { Plotly.newPlot( "4e025549-5a32-4935-b84c-77af21f1baf9", [{"alignmentgroup":"True","hovertemplate":"scenario=%{x}\u003cbr\u003ewer=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"processed_finetuned","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"processed_finetuned","offsetgroup":"processed_finetuned","orientation":"v","showlegend":true,"textposition":"auto","x":["processed_finetuned"],"xaxis":"x","y":[0.48768
+-- output 3: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+Poređenje je ograničeno na jedinstveni veliki holdout skup iz new_res/asr_full_run_v1.
+-- output 4: display_data
+mimes: text/html, text/plain
+text_plain:
+comparison  num_samples  baseline_wer  finetuned_wer  \
+0  processed_baseline_vs_finetuned       2172.0      0.494413       0.487681   
+
+   delta_wer  relative_wer_improvement_percent  baseline_cer  finetuned_cer  \
+0   0.006731                           1.36148       0.19084       0.191988   
+
+   delta_cer  
+0  -0.001148
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>comparison</th> <th>num_samples</th> <th>baseline_wer</th> <th>finetuned_wer</th> <th>delta_wer</th> <th>relative_wer_improvement_percent</th> <th>baseline_cer</th> <th>finetuned_cer</th> <th>delta_cer</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>processed_baseline_vs_finetuned</td> <td>2172.0</td> <td>0.494413</td> <td>0.487681</td> <td>0.006731</td> <td>1.36148</td> <td>0.19084</td> <td>0.191988</td> <td>-0.001148</td> </tr> </tbody> </table> </div>
+-- output 5: display_data
+mimes: text/html, text/plain
+text_plain:
+Empty DataFrame
+Columns: []
+Index: []
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> </tr> </thead> <tbody> </tbody> </table> </div>
+-- output 6: display_data
+mimes: text/html, text/plain
+text_plain:
+step_order                 step       wer evidence_type
+0           1   Processed Baseline  0.494413      measured
+1           2  Processed Finetuned  0.487681      measured
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>step_order</th> <th>step</th> <th>wer</th> <th>evidence_type</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>1</td> <td>Processed Baseline</td> <td>0.494413</td> <td>measured</td> </tr> <tr> <th>1</th> <td>2</td> <td>Processed Finetuned</td> <td>0.487681</td> <td>measured</td> </tr> </tbody> </table> </div>
+-- output 7: display_data
+mimes: text/html, text/plain
+text_plain:
+component  start_wer  \
+0  Baseline vs Finetuned (Processed, large Kaggle holdout)   0.494413   
+
+    end_wer  abs_delta  rel_delta_percent  
+0  0.487681   0.006731            1.36148
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>component</th> <th>start_wer</th> <th>end_wer</th> <th>abs_delta</th> <th>rel_delta_percent</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>Baseline vs Finetuned (Processed, large Kaggle holdout)</td> <td>0.494413</td> <td>0.487681</td> <td>0.006731</td> <td>1.36148</td> </tr> </tbody> </table> </div>
+-- output 8: stream
+stream:
+✓ Ablation analysis completed
+
+=== Cell 22 ===
+source_head: # Fair comparison - striktno sample_id poređenje | comparison_section = run_fair_comparison(ctx=ctx, quality_df=quality_df)
+outputs: 2
+-- output 1: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="e24daac9-d0cc-476c-82c5-9cee0cd37e6b" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("e24daac9-d0cc-476c-82c5-9cee0cd37e6b")) { Plotly.newPlot( "e24daac9-d0cc-476c-82c5-9cee0cd37e6b", [{"alignmentgroup":"True","boxpoints":"all","hovertemplate":"model_variant=%{x}\u003cbr\u003ewer=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Baseline (Whisper Small)","marker":{"color":"#636efa"},"name":"Baseline (Whisper Small)","notched":false,"offsetgroup":"Baseline (Whisper Small)","orientation":"v","showlegend":true,"x":["Baseline (Whisper Small)","Baseline (
+-- output 2: stream
+stream:
+✓ Fair comparison completed
+Upareni uzorci: 2172
+
+=== Cell 23 ===
+source_head: # Statistički testovi | run_statistical_tests(eval_alignment_df=eval_alignment_df, v1_paired_df=v1_paired_df)
+outputs: 6
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+metric  statistic        p_value
+0   pearson_aligned_vs_wer_finetuned  -0.527272  1.032537e-155
+1  spearman_aligned_vs_wer_finetuned  -0.518505  9.265592e-150
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>metric</th> <th>statistic</th> <th>p_value</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>pearson_aligned_vs_wer_finetuned</td> <td>-0.527272</td> <td>1.032537e-155</td> </tr> <tr> <th>1</th> <td>spearman_aligned_vs_wer_finetuned</td> <td>-0.518505</td> <td>9.265592e-150</td> </tr> </tbody> </table> </div>
+-- output 2: display_data
+mimes: text/html, text/plain
+text_plain:
+test         alternative          W   p_value
+0  wilcoxon_baseline_vs_finetuned  baseline>finetuned  1064669.5  0.000012
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>test</th> <th>alternative</th> <th>W</th> <th>p_value</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>wilcoxon_baseline_vs_finetuned</td> <td>baseline&gt;finetuned</td> <td>1064669.5</td> <td>0.000012</td> </tr> </tbody> </table> </div>
+-- output 3: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+Effect size za upareno poređenje (pored p-vrednosti):
+-- output 4: display_data
+mimes: text/html, text/plain
+text_plain:
+comparison     n  median_delta_wer  mean_delta_wer  cohen_dz
+0  baseline_vs_finetuned  2172               0.0         0.00717  0.084864
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>comparison</th> <th>n</th> <th>median_delta_wer</th> <th>mean_delta_wer</th> <th>cohen_dz</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>baseline_vs_finetuned</td> <td>2172</td> <td>0.0</td> <td>0.00717</td> <td>0.084864</td> </tr> </tbody> </table> </div>
+-- output 5: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+Bonferroni korekcija za višestruka poređenja:
+-- output 6: display_data
+mimes: text/html, text/plain
+text_plain:
+test          p_raw   p_bonferroni  \
+0            shapiro_wer_baseline_v1   7.989196e-01   1.000000e+00   
+1           shapiro_wer_finetuned_v1   1.147926e-01   5.739628e-01   
+2   pearson_aligned_vs_wer_finetuned  1.032537e-155  5.162683e-155   
+3  spearman_aligned_vs_wer_finetuned  9.265592e-150  4.632796e-149   
+4     wilcoxon_baseline_vs_finetuned   1.188789e-05   5.943947e-05   
+
+   significant_005_after_bonferroni  
+0                             False  
+1                             False  
+2                              True  
+3                              True  
+4                              True
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>test</th> <th>p_raw</th> <th>p_bonferroni</th> <th>significant_005_after_bonferroni</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>shapiro_wer_baseline_v1</td> <td>7.989196e-01</td> <td>1.000000e+00</td> <td>False</td> </tr> <tr> <th>1</th> <td>shapiro_wer_finetuned_v1</td> <td>1.147926e-01</td> <td>5.739628e-01</td> <td>False</td> </tr> <tr> <th>2</th> <td>pearson_aligned_vs_wer_finetuned</td> <td>1.032537e-155</td> <td>5.162683e-155</td> <td>True</td> </tr> <tr> <th>3</th> <td>spearman_aligned_vs_wer_finetuned</td> <td>9.265592e-150</td> <td>4.632796e-149</td> <td>True</td> </tr> <tr> <th>4</th> <td>wilcoxon_baseline_vs_finetuned</td> <td>1.188789e-05</td> <td>5.943947e-05</td> <td>True</td> </tr> </tbody> </table> </div>
+
+=== Cell 24 ===
+source_head: # OOV analiza | run_oov_analysis(pred_map)
+outputs: 1
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+token  missing_count_baseline  missing_count_finetuned  \
+6            u                     190                      0.0   
+13      srbije                     129                      0.0   
+21        nije                      97                      0.0   
+20       rekao                      97                      0.0   
+24           i                      92                      0.0   
+26  predsednik                      90                      0.0   
+27         kao                      88                      0.0   
+2           na                     242                    158.0   
+10        koji                     147                     79.0   
+4           sa                     213                    149.0   
+11          je                     144                     81.0   
+9           za                     158                     95.0   
+3           iz                     225                    170.0   
+12        kada                     139                     87.0   
+14          su                     128                     77.0   
+7           ne                     181                    138.0   
+1            a                     271                    233.0   
+5            o                     204                    170.0   
+25       posle                      91                     70.0   
+19          se                      97                     77.0   
+28          da                      88                     69.0   
+23         pre                      95                     79.0   
+18          do                      98                     85.0   
+29          to                      87                     75.0   
+15          li                     127                    122.0   
+
+    gain_finetuned  
+6            190.0  
+13           129.0  
+21            97.0  
+20            97.0  
+24            92.0  
+26            90.0  
+27            88.0  
+2             84.0  
+10            68.0  
+4             64.0  
+11            63.0  
+9             63.0  
+3             55.0  
+12            52.0  
+14            51.0  
+7             43.0  
+1             38.0  
+5             34.0  
+25            21.0  
+19            20.0  
+28            19.0  
+23            16.0  
+18            13.0  
+29            12.0  
+15             5.0
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>token</th> <th>missing_count_baseline</th> <th>missing_count_finetuned</th> <th>gain_finetuned</th> </tr> </thead> <tbody> <tr> <th>6</th> <td>u</td> <td>190</td> <td>0.0</td> <td>190.0</td> </tr> <tr> <th>13</th> <td>srbije</td> <td>129</td> <td>0.0</td> <td>129.0</td> </tr> <tr> <th>21</th> <td>nije</td> <td>97</td> <td>0.0</td> <td>97.0</td> </tr> <tr> <th>20</th> <td>rekao</td> <td>97</td> <td>0.0</td> <td>97.0</td> </tr> <tr> <th>24</th> <td>i</td> <td>92</td> <td>0.0</td> <td>92.0</td> </tr> <tr> <th>26</th> <td>predsednik</td> <td>90</td> <td>0.0</td> <td>90.0</td> </tr> <tr> <th>27</th> <td>kao</td> <td>88</td> <td>0.0</td> <td>88.0</td> </tr> <tr> <th>2</th> <td>na</td> <td>242</td> <td>158.0</td> <td>84.0</td> </tr> <tr> <th>10</th> <td>koji</td> <td>147</td> <td>79.0</td> <td>68.0</td> </tr> <tr> <th>4</th> <td>sa</td> <td>213</td> <td>149.0</td> <td>64.0</td> </tr> <tr> <th>11</th> <td>je</td> <td>1
+
+=== Cell 25 ===
+source_head: # Error breakdown | run_error_breakdown(pred_map)
+outputs: 1
+-- output 1: display_data
+mimes: text/html
+html_head:
+<html> <head><meta charset="utf-8" /></head> <body> <div> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script> <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script> <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script> <div id="0183f714-d184-410d-9c62-02418a3630c8" class="plotly-graph-div" style="height:525px; width:100%;"></div> <script type="text/javascript"> window.PLOTLYENV=window.PLOTLYENV || {}; if (document.getElementById("0183f714-d184-410d-9c62-02418a3630c8")) { Plotly.newPlot( "0183f714-d184-410d-9c62-02418a3630c8", [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"type=%{label}\u003cbr\u003ecount=%{value}\u003cextra\u003e\u003c\u002fextra\u003e","labels":["substitutions","insertions","deletions"],"legendgroup":"","name":"","showlegend":true,"values":[36258,7442,14765],"type":"pie"}], {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,
+
+=== Cell 26 ===
+source_head: # Character Levenshtein analiza | run_character_levenshtein(pred_map)
+outputs: 2
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+count       mean        std       min        25%        50%  \
+char_lev       2172.0  66.616022  34.826144  3.000000  39.000000  63.000000   
+norm_char_lev  2172.0   0.187518   0.087588  0.019169   0.119403   0.181556   
+
+                     75%         max  
+char_lev       88.000000  300.000000  
+norm_char_lev   0.239913    0.710611
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>count</th> <th>mean</th> <th>std</th> <th>min</th> <th>25%</th> <th>50%</th> <th>75%</th> <th>max</th> </tr> </thead> <tbody> <tr> <th>char_lev</th> <td>2172.0</td> <td>66.616022</td> <td>34.826144</td> <td>3.000000</td> <td>39.000000</td> <td>63.000000</td> <td>88.000000</td> <td>300.000000</td> </tr> <tr> <th>norm_char_lev</th> <td>2172.0</td> <td>0.187518</td> <td>0.087588</td> <td>0.019169</td> <td>0.119403</td> <td>0.181556</td> <td>0.239913</td> <td>0.710611</td> </tr> </tbody> </table> </div>
+-- output 2: display_data
+mimes: text/html, text/plain
+text_plain:
+confusion  count
+0      č->ć   1696
+1      ć->č   1560
+3      ž->š   1383
+2      š->ž   1361
+4     đ->dj    134
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>confusion</th> <th>count</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>č-&gt;ć</td> <td>1696</td> </tr> <tr> <th>1</th> <td>ć-&gt;č</td> <td>1560</td> </tr> <tr> <th>3</th> <td>ž-&gt;š</td> <td>1383</td> </tr> <tr> <th>2</th> <td>š-&gt;ž</td> <td>1361</td> </tr> <tr> <th>4</th> <td>đ-&gt;dj</td> <td>134</td> </tr> </tbody> </table> </div>
+
+=== Cell 29 ===
+source_head: # Taxonomy analiza | taxonomy_section = run_taxonomy_analysis(ctx=ctx, pred_map=pred_map, quality_df=quality_df)
+outputs: 3
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+sample_id  \
+0  -antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0000   
+1  -antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0001   
+2  -antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0002   
+3  -antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0004   
+4  -antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0005   
+
+   sample_wer  aligned_word_ratio       cps  snr_proxy_db  \
+0    0.490566              0.6667  5.971405     65.710085   
+1    0.454545              0.7500  5.946399     54.336875   
+2    0.395833              0.7442  6.089194     65.488584   
+3    0.425926              0.7885  6.011854     65.532083   
+4    0.780000              0.6667  5.941423     11.532720   
+
+                                  error_category  substitutions  insertions  \
+0  Lingvističke greške (morfologija/ortografija)             17           0   
+1  Lingvističke greške (morfologija/ortografija)             20           9   
+2  Lingvističke greške (morfologija/ortografija)             13           5   
+3  Lingvističke greške (morfologija/ortografija)             15           5   
+4  Lingvističke greške (morfologija/ortografija)             31           4   
+
+   deletions  
+0          9  
+1          1  
+2          1  
+3          3  
+4          4
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>sample_id</th> <th>sample_wer</th> <th>aligned_word_ratio</th> <th>cps</th> <th>snr_proxy_db</th> <th>error_category</th> <th>substitutions</th> <th>insertions</th> <th>deletions</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0000</td> <td>0.490566</td> <td>0.6667</td> <td>5.971405</td> <td>65.710085</td> <td>Lingvističke greške (morfologija/ortografija)</td> <td>17</td> <td>0</td> <td>9</td> </tr> <tr> <th>1</th> <td>-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0001</td> <td>0.454545</td> <td>0.7500</td> <td>5.946399</td> <td>54.336875</td> <td>Lingvističke greške (morfologija/ortografija)</td> <td>20</td> <td>9</td> <td>1</td> </tr> <tr> <th>2</th> <td>-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0002</td> <td>0.395833</td> <td>0.7442</td> <td>6.089194
+-- output 2: display_data
+mimes: text/html, text/plain
+text_plain:
+error_category  count  mean_wer  \
+1  Lingvističke greške (morfologija/ortografija)   1895  0.470252   
+0          Akustičke greške (buka/prekid govora)    228  0.606679   
+2          Strukturne greške (tajming/alignment)     49  0.589384   
+
+   share_percent  
+1      87.246777  
+0      10.497238  
+2       2.255985
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>error_category</th> <th>count</th> <th>mean_wer</th> <th>share_percent</th> </tr> </thead> <tbody> <tr> <th>1</th> <td>Lingvističke greške (morfologija/ortografija)</td> <td>1895</td> <td>0.470252</td> <td>87.246777</td> </tr> <tr> <th>0</th> <td>Akustičke greške (buka/prekid govora)</td> <td>228</td> <td>0.606679</td> <td>10.497238</td> </tr> <tr> <th>2</th> <td>Strukturne greške (tajming/alignment)</td> <td>49</td> <td>0.589384</td> <td>2.255985</td> </tr> </tbody> </table> </div>
+-- output 3: stream
+stream:
+✓ Taxonomy analysis completed
+
+=== Cell 32 ===
+source_head: # Build final digest i eksplicitno prikazi glavne rezultate | digest_section = build_results_digest(
+outputs: 4
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+scenario  start_wer   end_wer  \
+0  Processed Baseline -> Processed Finetuned   0.494413  0.487681   
+
+   rel_delta_percent  
+0            1.36148
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>scenario</th> <th>start_wer</th> <th>end_wer</th> <th>rel_delta_percent</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>Processed Baseline -&gt; Processed Finetuned</td> <td>0.494413</td> <td>0.487681</td> <td>1.36148</td> </tr> </tbody> </table> </div>
+-- output 2: stream
+stream:
+✓ Results digest generated
+-- output 3: display_data
+mimes: text/html, text/plain
+text_plain:
+scenario  start_wer   end_wer  \
+0  Processed Baseline -> Processed Finetuned   0.494413  0.487681   
+
+   rel_delta_percent  
+0            1.36148
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>scenario</th> <th>start_wer</th> <th>end_wer</th> <th>rel_delta_percent</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>Processed Baseline -&gt; Processed Finetuned</td> <td>0.494413</td> <td>0.487681</td> <td>1.36148</td> </tr> </tbody> </table> </div>
+-- output 4: stream
+stream:
+Ključni digest:
+- ablation_processed_baseline_wer: 0.4944126668324629
+- ablation_processed_finetuned_wer: 0.48768133963359034
+- processed_baseline_wer: 0.4944126668324629
+- processed_finetuned_wer: 0.48768133963359034
+- processed_rel_improvement_percent: 1.3614795191227416
+- zcr_bridge_comparison_samples: 2172.0
+- zcr_bridge_comparison_snr_threshold: 46.276455792944446
+- zcr_bridge_comparison_zcr_threshold: 0.13294743345009724
+- zcr_bridge_high_zcr_low_snr_mean_fricative_sub_share: 0.48308087301476943
+- zcr_bridge_high_zcr_low_snr_n: 113.0
+- zcr_bridge_mann_whitney_delta_low_vs_high_snr_p: 0.3554450945896369
+- zcr_bridge_mann_whitney_delta_low_vs_high_snr_p_bonferroni: 1.0
+- zcr_bridge_mann_whitney_p: 0.0010087233496330812
+- zcr_bridge_mann_whitney_p_bonferroni: 0.0020174466992661623
+- zcr_bridge_mann_whitney_rank_biserial: 0.17219029772163652
+- zcr_bridge_mean_delta_high_snr: 0.005296341315680369
+- zcr_bridge_mean_delta_low_snr: 0.009044375584754669
+- zcr_bridge_other_regimes_mean_fricative_sub_share: 0.4453174021259285
+- zcr_bridge_other_regimes_n: 2059.0
+- zcr_bridge_snr_threshold: 46.276455792944446
+- zcr_bridge_spearman_p: 0.0031507231681124513
+- zcr_bridge_spearman_p_bonferroni: 0.0063014463362249026
+- zcr_bridge_spearman_rho: 0.06332774757362042
+- zcr_bridge_spearman_snr_vs_delta_p: 0.5402843040049691
+- zcr_bridge_spearman_snr_vs_delta_p_bonferroni: 1.0
+- zcr_bridge_spearman_snr_vs_delta_rho: -0.01314693795876375
+- zcr_bridge_spearman_zcr_vs_delta_p: 0.1466795440007615
+- zcr_bridge_spearman_zcr_vs_delta_p_bonferroni: 0.4400386320022845
+- zcr_bridge_spearman_zcr_vs_delta_rho: -0.031152292234251356
+- zcr_bridge_zcr_threshold: 0.13294743345009724
+
+=== Cell 35 ===
+source_head: # Auto-narativ: tekst zasnovan na izračunatim metrikama, bez ručnog hardkodovanja | import numpy as np
+outputs: 1
+-- output 1: display_data
+mimes: text/markdown, text/plain
+text_plain:
+<IPython.core.display.Markdown object>
+markdown:
+### Automatski generisan narativ rezultata
+U ovoj iteraciji analiza je izvršena nad kompletnim dostupnim podacima u Kaggle okruženju.
+Quality audit obuhvatio je **9276** uzoraka, dok je strogo upareno poređenje baseline i finetuned sistema obavljeno nad **2172** uzoraka (sample_id join).
+
+Na finalnom holdout poređenju dobijeno je: **WER baseline = 0.4944**, **WER finetuned = 0.4877**.
+Relativno poboljšanje finetuned sistema iznosi **1.36%**.
+
+U kvalitetu podataka identifikovano je **270** toksičnih uzoraka (**2.91%**),
+što potvrđuje da QA filtriranje ostaje ključna komponenta za stabilnu evaluaciju i interpretabilne metrike.
+
+Akustički bridge pokazuje da je u režimu High-ZCR/Low-SNR prosečan udeo frikativnih supstitucija **0.483**,
+dok je kod ostalih režima **0.445** (Mann-Whitney p=0.0010).
+Ovaj nalaz empirijski povezuje akustičku degradaciju sa fonetskim tipom greške.
+
+Validnost akvizicije/poravnanja u ovom run-u: **VALIDNO**.
+
+=== Cell 36 ===
+source_head: # Checklist pokrivenosti zahteva predmeta (operativna forma) | from IPython.display import display
+outputs: 2
+-- output 1: display_data
+mimes: text/html, text/plain
+text_plain:
+Stavka zahteva Status
+0                                 Definicija i obim skupa podataka     DA
+1       Akvizicija i poravnanje imaju validne (nenulte) evidencije     DA
+2  Eksplorativna analiza podataka (akustika, lingvistika, quality)     DA
+3                    Metod evaluacije i mera performansi (WER/CER)     DA
+4                            Statističko testiranje razlika modela     DA
+5                Analiza grešaka modela (OOV, breakdown, taxonomy)     DA
+6               Akustički bridge ima numerički validne pokazatelje     DA
+7                       Reproducibilnost putanja i izvora podataka     DA
+html_head:
+<div> <style scoped> .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; } </style> <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>Stavka zahteva</th> <th>Status</th> </tr> </thead> <tbody> <tr> <th>0</th> <td>Definicija i obim skupa podataka</td> <td>DA</td> </tr> <tr> <th>1</th> <td>Akvizicija i poravnanje imaju validne (nenulte) evidencije</td> <td>DA</td> </tr> <tr> <th>2</th> <td>Eksplorativna analiza podataka (akustika, lingvistika, quality)</td> <td>DA</td> </tr> <tr> <th>3</th> <td>Metod evaluacije i mera performansi (WER/CER)</td> <td>DA</td> </tr> <tr> <th>4</th> <td>Statističko testiranje razlika modela</td> <td>DA</td> </tr> <tr> <th>5</th> <td>Analiza grešaka modela (OOV, breakdown, taxonomy)</td> <td>DA</td> </tr> <tr> <th>6</th> <td>Akustički bridge ima numerički validne pokazatelje</td> <td>DA</td> </tr> <tr> <th>7</th> <td>Reproducibilnost putanja i izvora podataka</td> <td>DA</td> </tr> </tbody> </table> </div>
+-- output 2: stream
+stream:
+✓ Sve ključne stavke iz operativne checkliste su pokrivene u notebook-u.

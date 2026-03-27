@@ -114,15 +114,10 @@ def normalize_cols(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
-    """Run metric aggregation, normalization-only estimate and ablation summary."""
+    """Run metric aggregation using only primary large-run processed metrics."""
     metric_files = {
         "processed_baseline": ctx["V1_BASELINE_METRICS"],
         "processed_finetuned": ctx["V1_FINETUNED_METRICS"],
-        "raw_finetuned": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "raw_v2026_run1_eval_raw_test.json",
-        "raw_baseline": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "baseline_raw_openai_whisper_base.json",
-        "unfiltered_baseline": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "baseline_openai_whisper_base_eval_aligned_test.json",
-        "unfiltered_finetuned": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "raw_aligned_v2026_run2_eval_aligned_test.json",
-        "aligned_baseline": ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "baseline_openai_whisper_base_eval_aligned_test.json",
     }
 
     rows = []
@@ -149,73 +144,39 @@ def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
             x="scenario",
             y="wer",
             color="scenario",
-            title="WER po scenariju: sirovi i obrađeni podaci",
+            title="WER na velikom Kaggle holdout skupu (new_res)",
         )
         style_plotly_figure(fig, x_title="Scenarijo evaluacije", y_title="WER [0-1]", show_target_wer=True, y_is_wer=True)
         fig.show()
 
     dual_reporting_df = pd.DataFrame()
-    if not data_first_metrics.empty:
-        by_scenario = data_first_metrics.set_index("scenario")
-
-        def metric_value(key: str, col: str) -> float:
-            if key not in by_scenario.index:
-                return np.nan
-            return float(by_scenario.loc[key, col])
+    if {"processed_baseline", "processed_finetuned"}.issubset(set(data_first_metrics.get("scenario", []))):
+        metrics = data_first_metrics.set_index("scenario")
+        baseline_wer = float(metrics.loc["processed_baseline", "wer"])
+        finetuned_wer = float(metrics.loc["processed_finetuned", "wer"])
+        baseline_cer = float(metrics.loc["processed_baseline", "cer"])
+        finetuned_cer = float(metrics.loc["processed_finetuned", "cer"])
+        n_samples = float(metrics.loc["processed_baseline", "num_samples"])
 
         dual_reporting_df = pd.DataFrame(
             [
                 {
-                    "model_family": "Baseline",
-                    "unfiltered_wer": metric_value("unfiltered_baseline", "wer"),
-                    "filtered_wer": metric_value("processed_baseline", "wer"),
-                    "unfiltered_num_samples": metric_value("unfiltered_baseline", "num_samples"),
-                    "filtered_num_samples": metric_value("processed_baseline", "num_samples"),
-                },
-                {
-                    "model_family": "Finetuned",
-                    "unfiltered_wer": metric_value("unfiltered_finetuned", "wer"),
-                    "filtered_wer": metric_value("processed_finetuned", "wer"),
-                    "unfiltered_num_samples": metric_value("unfiltered_finetuned", "num_samples"),
-                    "filtered_num_samples": metric_value("processed_finetuned", "num_samples"),
-                },
+                    "comparison": "processed_baseline_vs_finetuned",
+                    "num_samples": n_samples,
+                    "baseline_wer": baseline_wer,
+                    "finetuned_wer": finetuned_wer,
+                    "delta_wer": baseline_wer - finetuned_wer,
+                    "relative_wer_improvement_percent": ((baseline_wer - finetuned_wer) / baseline_wer) * 100.0 if baseline_wer > 0 else np.nan,
+                    "baseline_cer": baseline_cer,
+                    "finetuned_cer": finetuned_cer,
+                    "delta_cer": baseline_cer - finetuned_cer,
+                }
             ]
         )
-        dual_reporting_df["absolute_drop_wer"] = dual_reporting_df["unfiltered_wer"] - dual_reporting_df["filtered_wer"]
-        dual_reporting_df["relative_drop_percent"] = (
-            100.0 * dual_reporting_df["absolute_drop_wer"] / dual_reporting_df["unfiltered_wer"]
-        )
-        dual_reporting_df["relative_drop_percent"] = dual_reporting_df["relative_drop_percent"].replace([np.inf, -np.inf], np.nan)
-
-        display(Markdown("Obavezno dualno izveštavanje (unfiltered vs filtered) radi eliminacije cherry-picking sumnje:"))
+        display(Markdown("Poređenje je ograničeno na jedinstveni veliki holdout skup iz new_res/asr_full_run_v1."))
         display(dual_reporting_df)
 
     normalization_effect: Dict[str, Any] = {}
-    pred_path = (
-        ctx["ROOT"] / "logs" / "verification" / "dataset_strategy" / "raw_aligned_v2026_run3_improved_eval_aligned_test_predictions.jsonl"
-    )
-    if pred_path.exists():
-        pred_df = read_predictions_jsonl(pred_path)
-        required = {"reference_raw", "prediction_raw", "reference_preprocessed", "prediction_preprocessed"}
-        if required.issubset(pred_df.columns):
-            raw_err = raw_words = prep_err = prep_words = 0
-            for _, row in pred_df.iterrows():
-                e_raw, w_raw = _sentence_wer(str(row.get("reference_raw", "")), str(row.get("prediction_raw", "")))
-                e_prep, w_prep = _sentence_wer(str(row.get("reference_preprocessed", "")), str(row.get("prediction_preprocessed", "")))
-                raw_err += e_raw
-                raw_words += w_raw
-                prep_err += e_prep
-                prep_words += w_prep
-
-            raw_wer = raw_err / max(1, raw_words)
-            prep_wer = prep_err / max(1, prep_words)
-            normalization_effect = {
-                "samples": int(len(pred_df)),
-                "raw_text_wer": float(raw_wer),
-                "preprocessed_text_wer": float(prep_wer),
-                "absolute_drop": float(raw_wer - prep_wer),
-                "relative_drop_percent": float(((raw_wer - prep_wer) / raw_wer) * 100 if raw_wer > 0 else np.nan),
-            }
 
     report_files = {
         "aligned_raw_v1": ctx["ROOT"] / "data" / "aligned_raw_v1" / "report.json",
@@ -316,65 +277,31 @@ def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
 
     ablation_df = pd.DataFrame()
     improvement_attribution = pd.DataFrame()
-    if not data_first_metrics.empty:
+    if {"processed_baseline", "processed_finetuned"}.issubset(set(data_first_metrics.get("scenario", []))):
         metrics = data_first_metrics.set_index("scenario")
-        raw_baseline_wer = float(metrics.loc["raw_baseline", "wer"]) if "raw_baseline" in metrics.index else np.nan
-        aligned_baseline_wer = float(metrics.loc["aligned_baseline", "wer"]) if "aligned_baseline" in metrics.index else np.nan
-        processed_baseline_wer = float(metrics.loc["processed_baseline", "wer"]) if "processed_baseline" in metrics.index else np.nan
-
-        norm_only_wer = np.nan
-        rel_drop = normalization_effect.get("relative_drop_percent", np.nan)
-        if not np.isnan(raw_baseline_wer) and pd.notna(rel_drop):
-            norm_only_wer = raw_baseline_wer * (1.0 - rel_drop / 100.0)
+        proc_b = float(metrics.loc["processed_baseline", "wer"])
+        proc_ft = float(metrics.loc["processed_finetuned", "wer"])
 
         ablation_df = pd.DataFrame(
             [
-                {"step_order": 1, "step": "Raw Data", "wer": raw_baseline_wer, "evidence_type": "measured"},
-                {"step_order": 2, "step": "Text Normalization Only", "wer": norm_only_wer, "evidence_type": "estimated_from_same-prediction_delta"},
-                {"step_order": 3, "step": "Text Norm + Audio Alignment", "wer": aligned_baseline_wer, "evidence_type": "measured"},
-                {"step_order": 4, "step": "Text Norm + Alignment + CPS Filtering", "wer": processed_baseline_wer, "evidence_type": "measured"},
+                {"step_order": 1, "step": "Processed Baseline", "wer": proc_b, "evidence_type": "measured"},
+                {"step_order": 2, "step": "Processed Finetuned", "wer": proc_ft, "evidence_type": "measured"},
             ]
         ).sort_values("step_order")
         display(ablation_df)
 
-        if {"raw_baseline", "raw_finetuned", "processed_baseline", "processed_finetuned"}.issubset(metrics.index):
-            raw_b = float(metrics.loc["raw_baseline", "wer"])
-            raw_ft = float(metrics.loc["raw_finetuned", "wer"])
-            proc_b = float(metrics.loc["processed_baseline", "wer"])
-            proc_ft = float(metrics.loc["processed_finetuned", "wer"])
-            total_gain = raw_b - proc_ft
-            preprocessing_gain = raw_b - proc_b
-            finetuning_gain_processed = proc_b - proc_ft
-
-            improvement_attribution = pd.DataFrame(
-                [
-                    {
-                        "component": "Baseline vs Finetuned (Raw)",
-                        "start_wer": raw_b,
-                        "end_wer": raw_ft,
-                        "abs_delta": raw_b - raw_ft,
-                        "rel_delta_percent": ((raw_b - raw_ft) / raw_b) * 100.0 if raw_b > 0 else np.nan,
-                        "share_of_total_gain_percent": ((raw_b - raw_ft) / total_gain) * 100.0 if total_gain != 0 else np.nan,
-                    },
-                    {
-                        "component": "Baseline vs Finetuned (Processed)",
-                        "start_wer": proc_b,
-                        "end_wer": proc_ft,
-                        "abs_delta": finetuning_gain_processed,
-                        "rel_delta_percent": ((proc_b - proc_ft) / proc_b) * 100.0 if proc_b > 0 else np.nan,
-                        "share_of_total_gain_percent": (finetuning_gain_processed / total_gain) * 100.0 if total_gain != 0 else np.nan,
-                    },
-                    {
-                        "component": "Poboljšanje pripisano isključivo preprocessingu",
-                        "start_wer": raw_b,
-                        "end_wer": proc_b,
-                        "abs_delta": preprocessing_gain,
-                        "rel_delta_percent": (preprocessing_gain / raw_b) * 100.0 if raw_b > 0 else np.nan,
-                        "share_of_total_gain_percent": (preprocessing_gain / total_gain) * 100.0 if total_gain != 0 else np.nan,
-                    },
-                ]
-            )
-            display(improvement_attribution)
+        improvement_attribution = pd.DataFrame(
+            [
+                {
+                    "component": "Baseline vs Finetuned (Processed, large Kaggle holdout)",
+                    "start_wer": proc_b,
+                    "end_wer": proc_ft,
+                    "abs_delta": proc_b - proc_ft,
+                    "rel_delta_percent": ((proc_b - proc_ft) / proc_b) * 100.0 if proc_b > 0 else np.nan,
+                }
+            ]
+        )
+        display(improvement_attribution)
 
     return {
         "data_first_metrics": data_first_metrics,
@@ -638,7 +565,7 @@ def run_error_breakdown(pred_map: Dict[str, pd.DataFrame]) -> None:
 
     source_v2 = "v1_finetuned" if "v1_finetuned" in pred_map else ("v2_finetuned" if "v2_finetuned" in pred_map else ("v2" if "v2" in pred_map else None))
     if source_v2 is not None and {"ref", "pred"}.issubset(pred_map[source_v2].columns):
-        sample_df = pred_map[source_v2].dropna(subset=["ref", "pred"]).head(500)
+        sample_df = pred_map[source_v2].dropna(subset=["ref", "pred"])
         agg: Counter[str] = Counter()
         for _, row in sample_df.iterrows():
             agg.update(edit_breakdown(tokenize(str(row["ref"])), tokenize(str(row["pred"]))))
@@ -671,7 +598,7 @@ def run_character_levenshtein(pred_map: Dict[str, pd.DataFrame]) -> None:
         rows = []
         confusion: Counter[str] = Counter()
 
-        for _, row in pred_map[source_v2].dropna(subset=["ref", "pred"]).head(1200).iterrows():
+        for _, row in pred_map[source_v2].dropna(subset=["ref", "pred"]).iterrows():
             ref = str(row["ref"]).lower()
             pred = str(row["pred"]).lower()
             dist = levenshtein_chars(ref, pred)

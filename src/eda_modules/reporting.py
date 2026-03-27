@@ -22,19 +22,12 @@ def build_results_digest(
 
     if not data_first_metrics.empty:
         metrics = data_first_metrics.set_index("scenario")
-        if {"raw_finetuned", "processed_finetuned"}.issubset(metrics.index):
-            raw_ft = float(metrics.loc["raw_finetuned", "wer"])
-            proc_ft = float(metrics.loc["processed_finetuned", "wer"])
-            digest["raw_finetuned_wer"] = raw_ft
-            digest["processed_finetuned_wer"] = proc_ft
-            digest["finetuned_rel_drop_percent"] = ((raw_ft - proc_ft) / raw_ft * 100.0) if raw_ft > 0 else np.nan
-
-        if {"raw_baseline", "processed_baseline"}.issubset(metrics.index):
-            raw_b = float(metrics.loc["raw_baseline", "wer"])
+        if {"processed_baseline", "processed_finetuned"}.issubset(metrics.index):
             proc_b = float(metrics.loc["processed_baseline", "wer"])
-            digest["raw_baseline_wer"] = raw_b
+            proc_ft = float(metrics.loc["processed_finetuned", "wer"])
             digest["processed_baseline_wer"] = proc_b
-            digest["baseline_rel_drop_percent"] = ((raw_b - proc_b) / raw_b * 100.0) if raw_b > 0 else np.nan
+            digest["processed_finetuned_wer"] = proc_ft
+            digest["processed_rel_improvement_percent"] = ((proc_b - proc_ft) / proc_b * 100.0) if proc_b > 0 else np.nan
 
     if not ablation_df.empty:
         for _, row in ablation_df.iterrows():
@@ -60,17 +53,11 @@ def build_results_digest(
 
     summary_rows = [
         {
-            "scenario": "Raw Finetuned",
-            "start_wer": digest.get("raw_finetuned_wer", np.nan),
+            "scenario": "Processed Baseline -> Processed Finetuned",
+            "start_wer": digest.get("processed_baseline_wer", np.nan),
             "end_wer": digest.get("processed_finetuned_wer", np.nan),
-            "rel_delta_percent": digest.get("finetuned_rel_drop_percent", np.nan),
-        },
-        {
-            "scenario": "Raw Baseline",
-            "start_wer": digest.get("raw_baseline_wer", np.nan),
-            "end_wer": digest.get("processed_baseline_wer", np.nan),
-            "rel_delta_percent": digest.get("baseline_rel_drop_percent", np.nan),
-        },
+            "rel_delta_percent": digest.get("processed_rel_improvement_percent", np.nan),
+        }
     ]
     summary_table_df = pd.DataFrame(summary_rows)
     display(summary_table_df)
@@ -92,7 +79,7 @@ def build_results_digest(
         {latex_rows}
         \\hline
         \\end{{tabular}}
-        \\caption{{Sazetak efekta preprocessinga i fine-tuninga.}}
+        \\caption{{Sazetak poboljsanja na velikom Kaggle holdout skupu (new_res).}}
         \\end{{table*}}
         """
     )

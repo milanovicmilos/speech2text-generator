@@ -14,13 +14,19 @@ from IPython.display import display
 from .visualization import style_plotly_figure
 
 
-def load_text_corpus(text_dirs: List[Path], max_files: int = 5000) -> pd.DataFrame:
-    """Load transcript corpus and compute base textual dimensions."""
+def load_text_corpus(text_dirs: List[Path], max_files: int | None = None) -> pd.DataFrame:
+    """Load transcript corpus and compute base textual dimensions.
+
+    When ``max_files`` is None, all available transcript files are loaded.
+    """
     rows: List[Dict[str, Any]] = []
     for text_dir in text_dirs:
         if not text_dir.exists():
             continue
-        for path in list(text_dir.rglob("*.txt"))[:max_files]:
+        txt_paths = list(text_dir.rglob("*.txt"))
+        if max_files is not None:
+            txt_paths = txt_paths[:max_files]
+        for path in txt_paths:
             try:
                 text = path.read_text(encoding="utf-8", errors="ignore").strip()
             except Exception:
@@ -36,10 +42,10 @@ def run_text_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
     """Run lexical statistics, n-grams and script-mix diagnostics."""
     text_dirs = [
         ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "text",
-        ctx["RUN_V2_DIR"] / "aligned_train" / "text",
-        ctx["RUN_V2_DIR"] / "aligned_holdout" / "text",
+        ctx["RUN_V1_DIR"] / "aligned_train" / "text",
+        ctx["RUN_V1_DIR"] / "aligned_holdout" / "text",
     ]
-    text_df = load_text_corpus(text_dirs)
+    text_df = load_text_corpus(text_dirs, max_files=None)
 
     all_tokens: List[str] = []
     for text in text_df.get("text", pd.Series(dtype=str)).tolist():

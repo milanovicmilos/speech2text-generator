@@ -57,7 +57,7 @@ def run_taxonomy_analysis(ctx: Dict[str, Any], pred_map: Dict[str, pd.DataFrame]
         return (counts["substitutions"] + counts["insertions"] + counts["deletions"]) / max(1, len(ref_tokens))
 
     def resolve_audio_path_for_id(sample_id: str) -> Optional[Path]:
-        candidates = list((ctx["RUN_V2_DIR"] / "aligned_holdout" / "audio").glob(f"{sample_id}*"))
+        candidates = list((ctx["RUN_V1_DIR"] / "aligned_holdout" / "audio").glob(f"{sample_id}*"))
         if candidates:
             return candidates[0]
         fallback = ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "audio" / f"{sample_id}.wav"
@@ -105,8 +105,9 @@ def run_taxonomy_analysis(ctx: Dict[str, Any], pred_map: Dict[str, pd.DataFrame]
         return "Lingvističke greške (morfologija/ortografija)"
 
     taxonomy_df = pd.DataFrame()
-    if "v2" in pred_map and {"ref", "pred"}.issubset(pred_map["v2"].columns):
-        base_df = pred_map["v2"].dropna(subset=["ref", "pred"]).head(600).copy()
+    source_key = "v1_finetuned" if "v1_finetuned" in pred_map else ("v2" if "v2" in pred_map else None)
+    if source_key is not None and {"ref", "pred"}.issubset(pred_map[source_key].columns):
+        base_df = pred_map[source_key].dropna(subset=["ref", "pred"]).copy()
 
         if "audio_path" in base_df.columns:
             base_df["sample_key"] = base_df["audio_path"].map(normalize_sample_id)
