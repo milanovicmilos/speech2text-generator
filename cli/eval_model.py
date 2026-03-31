@@ -10,6 +10,7 @@ import sys
 import logging
 import argparse
 import json
+import hashlib
 from pathlib import Path
 from typing import Any, Dict
 
@@ -31,6 +32,28 @@ from src.utils.metrics import evaluate_predictions
 from src.utils.text_preprocessing import SerbianTextPreprocessor
 
 logger = logging.getLogger(__name__)
+
+
+def _canonical_sample_id(
+    sample_id: Any,
+    audio_path: Any,
+    reference_raw: str,
+    row_index: int,
+) -> str:
+    """Return a stable, non-empty sample identifier for row-level joins."""
+    sid = str(sample_id or "").strip()
+    if sid:
+        return sid
+
+    path_value = str(audio_path or "").strip()
+    if path_value:
+        normalized = Path(path_value).as_posix().lower()
+        digest = hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:16]
+        return f"pathsha1_{digest}"
+
+    fallback = f"{reference_raw.strip()}|{row_index}"
+    digest = hashlib.sha1(fallback.encode("utf-8")).hexdigest()[:16]
+    return f"rowsha1_{digest}"
 
 
 def _load_generation_defaults(config_path: str = "configs/config.yaml") -> Dict[str, Any]:
@@ -222,6 +245,12 @@ def main():
             prediction_raw = text
             sample_id = sample_ids[i] if isinstance(sample_ids, list) and i < len(sample_ids) else ""
             audio_path = audio_paths[i] if isinstance(audio_paths, list) and i < len(audio_paths) else ""
+            canonical_sample_id = _canonical_sample_id(
+                sample_id=sample_id,
+                audio_path=audio_path,
+                reference_raw=reference_raw,
+                row_index=len(prediction_rows),
+            )
 
             preds_raw.append(prediction_raw)
             refs_raw.append(reference_raw)
@@ -229,7 +258,7 @@ def main():
             prediction_rows.append(
                 {
                     "id": len(prediction_rows),
-                    "sample_id": sample_id,
+                    "sample_id": canonical_sample_id,
                     "audio_path": audio_path,
                     "prediction_raw": prediction_raw,
                     "reference_raw": reference_raw,

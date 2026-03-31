@@ -1,0 +1,63 @@
+allow_auto_populate: false
+batch_size: 8
+data:
+  batch_size: 4
+  max_duration: 30.0
+  num_workers: 0
+  pin_memory: false
+  raw_data_dir: data/raw
+  sample_rate: 16000
+  test_ratio: 0.1
+  train_ratio: 0.8
+  val_ratio: 0.1
+data_dir: /kaggle/working/asr_full_run_v1/aligned_train
+dropout: null
+epochs: 8
+fp16: true
+freeze_encoder_layers: 0
+generation:
+  length_penalty: 1.0
+  max_length: 256
+  max_new_tokens: 128
+  no_repeat_ngram_size: 10
+  num_beams: 8
+  repetition_penalty: 5.0
+  temperature: 0.0
+gradient_accumulation_steps: 1
+gradient_checkpointing: false
+learning_rate: 2.0e-06
+log_dir: logs
+max_label_length: 448
+model:
+  freeze_encoder: true
+  freeze_n_layers: 0
+  language: Serbian
+  pretrained_model: openai/whisper-base
+model_name: openai/whisper-base
+model_type: whisper
+num_workers: 2
+output_dir: /kaggle/working/asr_full_run_v1/models/raw_aligned_full
+paths:
+  best_model_path: models/best_model.pt
+  checkpoint_dir: models/checkpoints
+  log_dir: logs
+  tensorboard_dir: logs/tensorboard
+pin_memory: false
+resume_from_checkpoint: null
+seed: 42
+training:
+  early_stopping:
+    min_delta: 0.001
+    patience: 3
+  eval_steps: 100
+  gradient_accumulation_steps: 1
+  gradient_checkpointing: false
+  learning_rate: 1e-5
+  max_grad_norm: 1.0
+  mixed_precision: false
+  num_epochs: 5
+  save_steps: null
+  warmup_steps: 500
+unfreeze_encoder: false
+use_lora: false
+warmup_steps: 600

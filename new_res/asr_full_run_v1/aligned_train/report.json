@@ -1,0 +1,49 @@
+{
+  "raw_dir": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw",
+  "out_dir": "/kaggle/working/asr_full_run_v1/aligned_train",
+  "pairs_total": 544,
+  "pairs_kept": 537,
+  "pairs_skipped": 7,
+  "total_chunks_written": 4888,
+  "avg_chunks_per_kept_pair": 9.1024208566108,
+  "qa": {
+    "unmatched_threshold": 0.42,
+    "max_chunk_seconds": 30.0,
+    "min_aligned_word_ratio": 0.5,
+    "max_chars_per_second": 23.0,
+    "drop_suspicious": true,
+    "suspicious_chunks": 0,
+    "dropped_suspicious_chunks": 455,
+    "suspicious_chunk_ratio": 0.0
+  },
+  "skipped_examples": [
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/gorstacka-elegija.mp3",
+      "reason": "no_valid_chunks"
+    },
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vlasti-u-pristini-zabranile-ulazak-patrijarhu-porfiriju-na-kim.mp3",
+      "reason": "no_valid_chunks"
+    },
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dizanje-tegova-olimpijske-igre-2024-pariz.mp3",
+      "reason": "no_valid_chunks"
+    },
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/konji---ljubav-i-ponos-sapcana.mp3",
+      "reason": "no_valid_chunks"
+    },
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novi-gol-vlahovic-liga-sampiona-juventus.mp3",
+      "reason": "no_valid_chunks"
+    },
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/vlahovic-juventus-liga-sampiona-lil.mp3",
+      "reason": "no_valid_chunks"
+    },
+    {
+      "audio": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/zvonko-bogdan-golubarstvo-golub-pismonosa-.mp3",
+      "reason": "no_valid_chunks"
+    }
+  ]
+}

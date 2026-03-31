@@ -1,0 +1,2387 @@
+[
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0000.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0001.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0002.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0003.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0004.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0005.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0006.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0007.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0008.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0009.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0010.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0011.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0012.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0013.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0014.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0015.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0016",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0016.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0016.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0017",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0017.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0017.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0018",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0018.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0018.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0019",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0019.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0019.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0020",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0020.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0020.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0021",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0021.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0021.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0022",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0022.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0022.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0023",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0023.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0023.txt"
+  },
+  {
+    "sample_id": "djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0024",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0024.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djurdjevic-stamenkovski-vazno-da-dokazem-da-sam-prava-srpkinja-a-ne-opozicionar-gajic-probacemo-da-napravimo-treci-put_aligned_0024.txt"
+  },
+  {
+    "sample_id": "put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0000.txt"
+  },
+  {
+    "sample_id": "put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0001.txt"
+  },
+  {
+    "sample_id": "put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/put-bez-putovanja-predrag-jurisevic-zule--od-masinca-do-sportskog-komentatora_aligned_0002.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0000.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0001.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0002.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0003.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0004.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0005.txt"
+  },
+  {
+    "sample_id": "ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ministarstvo-spoljnih-poslova-uputilo-protestnu-notu-ambasadi-hrvatske-_aligned_0006.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0000.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0001.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0002.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0003.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0004.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0005.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0006.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0007.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0008.txt"
+  },
+  {
+    "sample_id": "inflacija-jorgovanka-tabakovic_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inflacija-jorgovanka-tabakovic_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inflacija-jorgovanka-tabakovic_aligned_0009.txt"
+  },
+  {
+    "sample_id": "omaz-prof-dr-draganu-lakicevicu_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/omaz-prof-dr-draganu-lakicevicu_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/omaz-prof-dr-draganu-lakicevicu_aligned_0001.txt"
+  },
+  {
+    "sample_id": "omaz-prof-dr-draganu-lakicevicu_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/omaz-prof-dr-draganu-lakicevicu_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/omaz-prof-dr-draganu-lakicevicu_aligned_0002.txt"
+  },
+  {
+    "sample_id": "omaz-prof-dr-draganu-lakicevicu_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/omaz-prof-dr-draganu-lakicevicu_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/omaz-prof-dr-draganu-lakicevicu_aligned_0003.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0000.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0001.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0002.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0003.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0004.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0005.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0006.txt"
+  },
+  {
+    "sample_id": "zujalica---bozicna_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zujalica---bozicna_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zujalica---bozicna_aligned_0007.txt"
+  },
+  {
+    "sample_id": "fudbalski-savez-kameruna-suspendovao-62-igraca-zbog-laziranja-godina_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/fudbalski-savez-kameruna-suspendovao-62-igraca-zbog-laziranja-godina_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/fudbalski-savez-kameruna-suspendovao-62-igraca-zbog-laziranja-godina_aligned_0001.txt"
+  },
+  {
+    "sample_id": "fudbalski-savez-kameruna-suspendovao-62-igraca-zbog-laziranja-godina_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/fudbalski-savez-kameruna-suspendovao-62-igraca-zbog-laziranja-godina_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/fudbalski-savez-kameruna-suspendovao-62-igraca-zbog-laziranja-godina_aligned_0002.txt"
+  },
+  {
+    "sample_id": "nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0000.txt"
+  },
+  {
+    "sample_id": "nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0001.txt"
+  },
+  {
+    "sample_id": "nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0002.txt"
+  },
+  {
+    "sample_id": "nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0003.txt"
+  },
+  {
+    "sample_id": "nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nemacki-ideoloski-koktel--od-fabrike-do-preprodavca-ideja_aligned_0004.txt"
+  },
+  {
+    "sample_id": "valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0001.txt"
+  },
+  {
+    "sample_id": "valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0002.txt"
+  },
+  {
+    "sample_id": "valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/valjevo-rio-tinto-mars-iz-srbije-litijum-_aligned_0003.txt"
+  },
+  {
+    "sample_id": "zene-u-sportu-jelena-eric_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zene-u-sportu-jelena-eric_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zene-u-sportu-jelena-eric_aligned_0000.txt"
+  },
+  {
+    "sample_id": "zene-u-sportu-jelena-eric_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zene-u-sportu-jelena-eric_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zene-u-sportu-jelena-eric_aligned_0001.txt"
+  },
+  {
+    "sample_id": "zene-u-sportu-jelena-eric_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zene-u-sportu-jelena-eric_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zene-u-sportu-jelena-eric_aligned_0002.txt"
+  },
+  {
+    "sample_id": "novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0000.txt"
+  },
+  {
+    "sample_id": "novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0001.txt"
+  },
+  {
+    "sample_id": "novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0003.txt"
+  },
+  {
+    "sample_id": "novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/novi-pritisak-na-srbe-posle-eksplozije-u-zubinom-potoku_aligned_0004.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0000.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0001.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0002.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0003.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0004.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0005.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0006.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0007.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0008.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0009.txt"
+  },
+  {
+    "sample_id": "ljubinko-drulovic-srbija-slovenija-evro_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/ljubinko-drulovic-srbija-slovenija-evro_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/ljubinko-drulovic-srbija-slovenija-evro_aligned_0010.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0000.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0001.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0002.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0003.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0004.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0005.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0006.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0007.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0008.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0009.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0010.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0011.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0012.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0013.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0014.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0015.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0016",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0016.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0016.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0017",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0017.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0017.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0018",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0018.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0018.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0019",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0019.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0019.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0020",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0020.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0020.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0021",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0021.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0021.txt"
+  },
+  {
+    "sample_id": "brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0022",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0022.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/brige-zapada-u-vezi-sa-kineskom-podrskom-rusiji_aligned_0022.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0000.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0001.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0002.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0003.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0004.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0005.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0006.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0007.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0008.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0009.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0010.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0011.txt"
+  },
+  {
+    "sample_id": "pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pozitivan-signal-od-nbs--smese-li-nam-se-jeftiniji-stambeni-krediti-i-punije-korpe_aligned_0012.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0000.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0001.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0002.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0003.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0004.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0005.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0006.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0007.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0008.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0009.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0010.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0011.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0012.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0013.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0014.txt"
+  },
+  {
+    "sample_id": "branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/branko-radujko-o-sastanku-uefa-u-kanu-pripremi-komgresa-i-evropskom-prvenstvu_aligned_0015.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0000.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0001.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0002.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0003.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0004.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0005.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0006.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0007.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0008.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0009.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0010.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0011.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0012.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0013.txt"
+  },
+  {
+    "sample_id": "vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vojna-mornarica-sad-kina-juzna-koreja-japan_aligned_0014.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0000.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0001.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0002.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0003.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0004.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0005.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0006.txt"
+  },
+  {
+    "sample_id": "italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/italija-ferari-hibridni-motor-elektricni-fabrika_aligned_0007.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0000.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0001.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0002.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0003.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0004.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0005.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0006.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0007.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0008.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0009.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0010.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0011.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0012.txt"
+  },
+  {
+    "sample_id": "stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/stano-lajcak-nije-bio-neuspesan-niko-ne-moze-da-natera-strane-da-napreduju_aligned_0013.txt"
+  },
+  {
+    "sample_id": "jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0001.txt"
+  },
+  {
+    "sample_id": "jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0002.txt"
+  },
+  {
+    "sample_id": "jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0003.txt"
+  },
+  {
+    "sample_id": "jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0004.txt"
+  },
+  {
+    "sample_id": "jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0005.txt"
+  },
+  {
+    "sample_id": "jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/jovan-ristic-1829-1899---biografija-srpskog-drzavnika_aligned_0006.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0001.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0002.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0003.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0004.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0005.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0006.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0007.txt"
+  },
+  {
+    "sample_id": "zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/zvezda-novi-evropski-ispit-stutgart-marakana_aligned_0008.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0000.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0001.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0002.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0003.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0004.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0005.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0006.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0007.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0008.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0009.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0010.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0011.txt"
+  },
+  {
+    "sample_id": "temu-onlajn-kupovina_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/temu-onlajn-kupovina_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/temu-onlajn-kupovina_aligned_0012.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0000.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0001.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0002.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0003.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0004.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0005.txt"
+  },
+  {
+    "sample_id": "josif-i-njegova-braca-tomasa-mana_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/josif-i-njegova-braca-tomasa-mana_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/josif-i-njegova-braca-tomasa-mana_aligned_0006.txt"
+  },
+  {
+    "sample_id": "u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0000.txt"
+  },
+  {
+    "sample_id": "u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0001.txt"
+  },
+  {
+    "sample_id": "u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0002.txt"
+  },
+  {
+    "sample_id": "u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-susret-evropskom-prvenstvu-u-fudbalu---nemacka-2024_aligned_0003.txt"
+  },
+  {
+    "sample_id": "inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0000.txt"
+  },
+  {
+    "sample_id": "inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0001.txt"
+  },
+  {
+    "sample_id": "inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0002.txt"
+  },
+  {
+    "sample_id": "inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0003.txt"
+  },
+  {
+    "sample_id": "inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0004.txt"
+  },
+  {
+    "sample_id": "inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/inter-preziveo-mancester-pobede-seltik-borusija-psz_aligned_0005.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0000.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0001.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0002.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0004.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0005.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0006.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0007.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0000.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0001.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0002.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0003.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0004.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0005.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0006.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0007.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0008.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0009.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0010.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0011.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0012.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0013.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0014.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0015.txt"
+  },
+  {
+    "sample_id": "u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0016",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0016.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/u-kulturnom-centru-srbije-u-parizu-otvorena-izlozba-sport-u-umetnosti-umetnost-sporta_aligned_0016.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0001.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0002.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0003.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0004.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0005.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0006.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0007.txt"
+  },
+  {
+    "sample_id": "pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0000.txt"
+  },
+  {
+    "sample_id": "pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0001.txt"
+  },
+  {
+    "sample_id": "pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0002.txt"
+  },
+  {
+    "sample_id": "pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0003.txt"
+  },
+  {
+    "sample_id": "pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pocinje-prijava-djaka-za-polaganje-prijemnog-ispita-za-specijalizovana-odeljenja_aligned_0004.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0001.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0002.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0003.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0004.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0005.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0006.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0007.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0008.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0009.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0010.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0011.txt"
+  },
+  {
+    "sample_id": "liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/liffe-festival-radionica-za-razvoj-i-rad-na-scenariju-leskovac_aligned_0012.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0000.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0001.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0002.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0003.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0004.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0005.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0006.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0007.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0008.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0009.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0010.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0011.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0012.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0013.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0014.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0015.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0016",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0016.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0016.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0017",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0017.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0017.txt"
+  },
+  {
+    "sample_id": "mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0018",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0018.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mali-sa-georgijevom-u-vasingtonu-produzicemo-aranzman-sa-mmf-om-jos-najmanje-dve-godine_aligned_0018.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0000.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0001.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0002.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0003.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0004.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0005.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0006.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0007.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0008.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0009.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0010.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0011.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0012.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0013.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0014.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0015.txt"
+  },
+  {
+    "sample_id": "americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0016",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0016.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-donald-tramp-kamala-haris-strahinja-matejic_aligned_0016.txt"
+  },
+  {
+    "sample_id": "nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0001.txt"
+  },
+  {
+    "sample_id": "nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0002.txt"
+  },
+  {
+    "sample_id": "nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0003.txt"
+  },
+  {
+    "sample_id": "nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0005.txt"
+  },
+  {
+    "sample_id": "nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0006.txt"
+  },
+  {
+    "sample_id": "nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nova-programska-sema-rts-serija-sablja-nobelovac-pola-veka-otpisanih_aligned_0007.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0000.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0001.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0002.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0003.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0004.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0005.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0006.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0007.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0008.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0009.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0010.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0011.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0012.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0013.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0014.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0015",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0015.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0015.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0016",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0016.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0016.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0017",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0017.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0017.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0018",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0018.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0018.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0019",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0019.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0019.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0020",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0020.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0020.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0021",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0021.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0021.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0022",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0022.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0022.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0023",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0023.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0023.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0024",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0024.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0024.txt"
+  },
+  {
+    "sample_id": "takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0025",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0025.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/takovska-10-kakav-rasplet-ceka-ukrajinu_aligned_0025.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0001.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0002.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0003.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0004.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0005.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0006.txt"
+  },
+  {
+    "sample_id": "hrabro-srce-hajducko_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/hrabro-srce-hajducko_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/hrabro-srce-hajducko_aligned_0007.txt"
+  },
+  {
+    "sample_id": "mira-adanja-polak-ekskluzivno_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mira-adanja-polak-ekskluzivno_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mira-adanja-polak-ekskluzivno_aligned_0001.txt"
+  },
+  {
+    "sample_id": "mira-adanja-polak-ekskluzivno_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mira-adanja-polak-ekskluzivno_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mira-adanja-polak-ekskluzivno_aligned_0002.txt"
+  },
+  {
+    "sample_id": "mira-adanja-polak-ekskluzivno_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/mira-adanja-polak-ekskluzivno_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/mira-adanja-polak-ekskluzivno_aligned_0003.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0000.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0001.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0002.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0003.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0004.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0005.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0006.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0007.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0008.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0009.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0010.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0011.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0012.txt"
+  },
+  {
+    "sample_id": "juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/juda-iskariotski-izdaja-poverenje-eksperiment-ekonomija_aligned_0013.txt"
+  },
+  {
+    "sample_id": "put-bez-putovanja-milos-stanojevic_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/put-bez-putovanja-milos-stanojevic_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/put-bez-putovanja-milos-stanojevic_aligned_0001.txt"
+  },
+  {
+    "sample_id": "put-bez-putovanja-milos-stanojevic_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/put-bez-putovanja-milos-stanojevic_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/put-bez-putovanja-milos-stanojevic_aligned_0002.txt"
+  },
+  {
+    "sample_id": "saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0000.txt"
+  },
+  {
+    "sample_id": "saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0001.txt"
+  },
+  {
+    "sample_id": "saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0002.txt"
+  },
+  {
+    "sample_id": "saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/saracin-kljucno-je-da-se-implementira-ohridski-sporazum_aligned_0003.txt"
+  },
+  {
+    "sample_id": "vesti-iz-sveta-sporta_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vesti-iz-sveta-sporta_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vesti-iz-sveta-sporta_aligned_0000.txt"
+  },
+  {
+    "sample_id": "vesti-iz-sveta-sporta_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vesti-iz-sveta-sporta_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vesti-iz-sveta-sporta_aligned_0001.txt"
+  },
+  {
+    "sample_id": "vesti-iz-sveta-sporta_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/vesti-iz-sveta-sporta_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/vesti-iz-sveta-sporta_aligned_0002.txt"
+  },
+  {
+    "sample_id": "pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0000.txt"
+  },
+  {
+    "sample_id": "pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0001.txt"
+  },
+  {
+    "sample_id": "pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0002.txt"
+  },
+  {
+    "sample_id": "pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0003.txt"
+  },
+  {
+    "sample_id": "pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pobednici-potere-tragac-je-znao-odgovore-ali-je-gresio-iz-zurbe-da-nas-stigne_aligned_0004.txt"
+  },
+  {
+    "sample_id": "nepristojan-govor-u-medijskom-prostoru_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nepristojan-govor-u-medijskom-prostoru_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nepristojan-govor-u-medijskom-prostoru_aligned_0000.txt"
+  },
+  {
+    "sample_id": "nepristojan-govor-u-medijskom-prostoru_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nepristojan-govor-u-medijskom-prostoru_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nepristojan-govor-u-medijskom-prostoru_aligned_0001.txt"
+  },
+  {
+    "sample_id": "nepristojan-govor-u-medijskom-prostoru_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nepristojan-govor-u-medijskom-prostoru_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nepristojan-govor-u-medijskom-prostoru_aligned_0002.txt"
+  },
+  {
+    "sample_id": "nepristojan-govor-u-medijskom-prostoru_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/nepristojan-govor-u-medijskom-prostoru_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/nepristojan-govor-u-medijskom-prostoru_aligned_0003.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0000.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0001.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0002.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0003.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0004.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0005.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0006.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0007.txt"
+  },
+  {
+    "sample_id": "filip-stojanovic_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/filip-stojanovic_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/filip-stojanovic_aligned_0008.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0000.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0001.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0002.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0003.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0004.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0005.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0006.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0007.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0008.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0009.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0010.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0011.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0012.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0013",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0013.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0013.txt"
+  },
+  {
+    "sample_id": "donald-tramp-sad-administracija_aligned_0014",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/donald-tramp-sad-administracija_aligned_0014.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/donald-tramp-sad-administracija_aligned_0014.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0001.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0002.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0003.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0004.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0005.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0006.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0007.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0008.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0009.txt"
+  },
+  {
+    "sample_id": "press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0012",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0012.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/press-photo-srbija-vizualizator-fotografije-nagrade-izlozba_aligned_0012.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0001.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0002.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0003.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0004.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0005.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0006.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0000.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0001.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0002.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0003.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0004.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0005.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0006.txt"
+  },
+  {
+    "sample_id": "tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tadic-nacionalni-stadion-izuzetno-potreba-reprezentacija_aligned_0007.txt"
+  },
+  {
+    "sample_id": "pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0000.txt"
+  },
+  {
+    "sample_id": "pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0001.txt"
+  },
+  {
+    "sample_id": "pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0002.txt"
+  },
+  {
+    "sample_id": "pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0003.txt"
+  },
+  {
+    "sample_id": "pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/pancevo-ana-vlcek-nekada-korisnik-udruzenja-na-pola-puta-sada-pomaze-drugima-_aligned_0004.txt"
+  },
+  {
+    "sample_id": "knjizar-i-izdavac-cvijanovic_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/knjizar-i-izdavac-cvijanovic_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/knjizar-i-izdavac-cvijanovic_aligned_0000.txt"
+  },
+  {
+    "sample_id": "knjizar-i-izdavac-cvijanovic_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/knjizar-i-izdavac-cvijanovic_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/knjizar-i-izdavac-cvijanovic_aligned_0001.txt"
+  },
+  {
+    "sample_id": "knjizar-i-izdavac-cvijanovic_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/knjizar-i-izdavac-cvijanovic_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/knjizar-i-izdavac-cvijanovic_aligned_0002.txt"
+  },
+  {
+    "sample_id": "tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0000.txt"
+  },
+  {
+    "sample_id": "tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0001.txt"
+  },
+  {
+    "sample_id": "tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0002.txt"
+  },
+  {
+    "sample_id": "tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0003.txt"
+  },
+  {
+    "sample_id": "tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/tkivni-ekspander-vma-kancer-dojke-rekonstrukcija_aligned_0004.txt"
+  },
+  {
+    "sample_id": "etjen-balibar-spinoza-i-politika-2_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/etjen-balibar-spinoza-i-politika-2_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/etjen-balibar-spinoza-i-politika-2_aligned_0001.txt"
+  },
+  {
+    "sample_id": "etjen-balibar-spinoza-i-politika-2_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/etjen-balibar-spinoza-i-politika-2_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/etjen-balibar-spinoza-i-politika-2_aligned_0002.txt"
+  },
+  {
+    "sample_id": "etjen-balibar-spinoza-i-politika-2_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/etjen-balibar-spinoza-i-politika-2_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/etjen-balibar-spinoza-i-politika-2_aligned_0003.txt"
+  },
+  {
+    "sample_id": "etjen-balibar-spinoza-i-politika-2_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/etjen-balibar-spinoza-i-politika-2_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/etjen-balibar-spinoza-i-politika-2_aligned_0004.txt"
+  },
+  {
+    "sample_id": "etjen-balibar-spinoza-i-politika-2_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/etjen-balibar-spinoza-i-politika-2_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/etjen-balibar-spinoza-i-politika-2_aligned_0005.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0000.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0001.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0002.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0003.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0004.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0005.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0006.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0008.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0009.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0010",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0010.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0010.txt"
+  },
+  {
+    "sample_id": "americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0011",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0011.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/americki-izbori-2024-kamala-haris-donald-tramp-glasanje_aligned_0011.txt"
+  },
+  {
+    "sample_id": "dacic-grlic-radman_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dacic-grlic-radman_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dacic-grlic-radman_aligned_0000.txt"
+  },
+  {
+    "sample_id": "dacic-grlic-radman_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dacic-grlic-radman_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dacic-grlic-radman_aligned_0001.txt"
+  },
+  {
+    "sample_id": "dacic-grlic-radman_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dacic-grlic-radman_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dacic-grlic-radman_aligned_0002.txt"
+  },
+  {
+    "sample_id": "dacic-grlic-radman_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dacic-grlic-radman_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dacic-grlic-radman_aligned_0003.txt"
+  },
+  {
+    "sample_id": "dacic-grlic-radman_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dacic-grlic-radman_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dacic-grlic-radman_aligned_0004.txt"
+  },
+  {
+    "sample_id": "duljaj-pobeda-partizan-radnik_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/duljaj-pobeda-partizan-radnik_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/duljaj-pobeda-partizan-radnik_aligned_0001.txt"
+  },
+  {
+    "sample_id": "duljaj-pobeda-partizan-radnik_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/duljaj-pobeda-partizan-radnik_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/duljaj-pobeda-partizan-radnik_aligned_0002.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0000.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0001.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0002.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0003.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0004.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0005.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0006",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0006.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0006.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0007",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0007.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0007.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0008",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0008.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0008.txt"
+  },
+  {
+    "sample_id": "milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0009",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0009.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/milos-vucevic-novi-sad-nesreca-zeleznicka-stanica-protest-_aligned_0009.txt"
+  },
+  {
+    "sample_id": "sport-na-talasima-radio-beograda_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/sport-na-talasima-radio-beograda_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/sport-na-talasima-radio-beograda_aligned_0000.txt"
+  },
+  {
+    "sample_id": "sport-na-talasima-radio-beograda_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/sport-na-talasima-radio-beograda_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/sport-na-talasima-radio-beograda_aligned_0001.txt"
+  },
+  {
+    "sample_id": "dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0000",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0000.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0000.txt"
+  },
+  {
+    "sample_id": "dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0001",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0001.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0001.txt"
+  },
+  {
+    "sample_id": "dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0002",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0002.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0002.txt"
+  },
+  {
+    "sample_id": "dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0003",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0003.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0003.txt"
+  },
+  {
+    "sample_id": "dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0004",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0004.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0004.txt"
+  },
+  {
+    "sample_id": "dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0005",
+    "audio_path": "/kaggle/working/asr_full_run_v1/aligned_train/audio/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0005.wav",
+    "text_path": "/kaggle/working/asr_full_run_v1/aligned_train/text/dragic-okupio-svetski-kosarkaski-krem-nba-velikani-u-ljubljani_aligned_0005.txt"
+  }
+]

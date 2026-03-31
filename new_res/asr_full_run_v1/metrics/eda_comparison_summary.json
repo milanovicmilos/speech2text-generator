@@ -1,0 +1,17 @@
+{
+  "n_v1_paired_sample_id": 2172,
+  "n_cross_v1_vs_v2_finetuned": 32,
+  "mean_wer_baseline_v1": 0.49763747489340665,
+  "mean_wer_finetuned_v1": 0.49046711644318913,
+  "mean_delta_baseline_minus_finetuned_v1": 0.0071703584502175195,
+  "mean_wer_v2_finetuned_overlap": 0.4957266603652405,
+  "mean_wer_v1_finetuned_overlap": 0.5028026742372127,
+  "mean_delta_v2_minus_v1": -0.007076013871972226,
+  "comparison_samples_with_acoustics": 2172,
+  "snr_threshold": 46.276455792944446,
+  "zcr_threshold": 0.13294743345009724,
+  "wilcoxon_v1_baseline_gt_finetuned_p": 1.1887894966552878e-05,
+  "wilcoxon_v2_gt_v1_p": 0.5258625982280382,
+  "wilcoxon_v1_baseline_gt_finetuned_p_bonferroni": 2.3775789933105756e-05,
+  "wilcoxon_v2_gt_v1_p_bonferroni": 1.0
+}

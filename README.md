@@ -19,7 +19,22 @@ This keeps training, evaluation, and inference entrypoints stable while enabling
 - `cli/` main command-line workflows
 - `tools/` helper scripts (analysis, scraping, diagnostics)
 - `configs/` runtime config (`config.yaml`)
-- `data/`, `models/`, `logs/` runtime artifacts
+- `notebooks/` final notebook artifacts (Kaggle/EDA)
+- `docs/` course requirements and submission documents
+- `tests/` integrity checks (e.g., holdout leakage)
+- `data/`, `models/`, `logs/`, `res/`, `dist/` runtime artifacts
+
+## Source Of Truth And Kaggle Packaging
+
+- Canonical implementation lives only in `src/`, `cli/`, `tools/`, `configs/`, `kaggle/`.
+- Kaggle mirror folders were removed to avoid drift and inconsistent behavior.
+- Build a clean Kaggle package from canonical folders:
+
+```bash
+python build_kaggle.py
+```
+
+- Output is generated under `dist/kaggle_bundle/` and `dist/kaggle_bundle.zip`.
 
 ## Setup
 

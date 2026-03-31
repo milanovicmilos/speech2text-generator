@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-03-14T01:37:06.245917+00:00",
+  "seed": 42,
+  "data_dir": "/kaggle/working/asr_full_run_v1/aligned_train",
+  "model_name": "openai/whisper-base",
+  "git_commit": "unknown"
+}

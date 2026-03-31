@@ -1,0 +1,615 @@
+from __future__ import annotations
+
+import re
+from collections import Counter
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
+
+import numpy as np
+import pandas as pd
+import plotly.express as px
+from IPython.display import Markdown, display
+from scipy import stats
+
+from .io_utils import read_json, read_jsonl_records
+from .stats import bonferroni_correction
+from .visualization import style_plotly_figure
+
+
+MODEL_LABEL_MAP = {
+    "wer_baseline_v1": "Baseline (Whisper Small)",
+    "wer_finetuned_v1": "Finetuned (RTS optimized)",
+    "wer_baseline": "Baseline (Whisper Small)",
+    "wer_finetuned": "Finetuned (RTS optimized)",
+}
+
+
+def read_metrics_file(path: Path) -> Dict[str, float]:
+    """Read standard metric file and coerce fields to float."""
+    data = read_json(path)
+    if not isinstance(data, dict):
+        return {"wer": np.nan, "cer": np.nan, "num_samples": np.nan}
+    return {
+        "wer": float(data.get("wer", np.nan)),
+        "cer": float(data.get("cer", np.nan)),
+        "num_samples": float(data.get("num_samples", np.nan)),
+    }
+
+
+def read_predictions_jsonl(path: Path) -> pd.DataFrame:
+    """Read predictions JSONL as dataframe."""
+    return pd.DataFrame(read_jsonl_records(path))
+
+
+def _sentence_wer(reference: str, hypothesis: str) -> Tuple[int, int]:
+    """Return edit distance and reference length at sentence level."""
+    ref = str(reference).split()
+    hyp = str(hypothesis).split()
+    m, n = len(ref), len(hyp)
+    if m == 0:
+        return (0 if n == 0 else n), max(1, m)
+
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(m + 1):
+        dp[i][0] = i
+    for j in range(n + 1):
+        dp[0][j] = j
+
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            cost = 0 if ref[i - 1] == hyp[j - 1] else 1
+            dp[i][j] = min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost)
+
+    return dp[m][n], m
+
+
+def normalize_cols(df: pd.DataFrame) -> pd.DataFrame:
+    """Normalize prediction schema to sample_id/ref/pred/wer/audio_path."""
+    if df.empty:
+        return df
+
+    out = df.copy()
+    ref_candidates = [c for c in out.columns if c.lower() in ["reference", "ref", "target", "label", "text", "ground_truth"]]
+    pred_candidates = [c for c in out.columns if c.lower() in ["prediction", "pred", "hypothesis", "generated_text", "transcription"]]
+    wer_candidates = [c for c in out.columns if c.lower() in ["wer", "sample_wer"]]
+
+    if ref_candidates and "ref" not in out.columns:
+        out = out.rename(columns={ref_candidates[0]: "ref"})
+    if pred_candidates and "pred" not in out.columns:
+        out = out.rename(columns={pred_candidates[0]: "pred"})
+    if wer_candidates and "wer" not in out.columns:
+        out = out.rename(columns={wer_candidates[0]: "wer"})
+
+    if "wer" not in out.columns and {"ref", "pred"}.issubset(out.columns):
+        computed_wer: List[float] = []
+        for ref_val, pred_val in zip(out["ref"], out["pred"]):
+            errors, ref_len = _sentence_wer(str(ref_val), str(pred_val))
+            computed_wer.append(errors / max(1, ref_len))
+        out["wer"] = computed_wer
+
+    if "audio_path" not in out.columns:
+        audio_path_candidates = [c for c in out.columns if c.lower() in ["path", "audio_path"]]
+        if audio_path_candidates:
+            out = out.rename(columns={audio_path_candidates[0]: "audio_path"})
+
+    if "sample_id" not in out.columns:
+        sample_id_candidates = [c for c in out.columns if c.lower() in ["sample_id", "audio_id"]]
+        if sample_id_candidates:
+            out = out.rename(columns={sample_id_candidates[0]: "sample_id"})
+
+    if "sample_id" not in out.columns:
+        raise ValueError("Missing required 'sample_id' column. Row-order comparison is forbidden.")
+
+    out["sample_id"] = out["sample_id"].astype(str).str.strip()
+    if out["sample_id"].eq("").any():
+        raise ValueError("Empty sample_id values detected. sample_id is required for strict merge.")
+    if out["sample_id"].duplicated().any():
+        duplicates = int(out["sample_id"].duplicated().sum())
+        raise ValueError(f"Duplicate sample_id values detected: {duplicates}")
+
+    if "wer" in out.columns:
+        out["wer"] = pd.to_numeric(out["wer"], errors="coerce")
+
+    return out
+
+
+def run_ablation_analysis(ctx: Dict[str, Any]) -> Dict[str, Any]:
+    """Run metric aggregation using only primary large-run processed metrics."""
+    metric_files = {
+        "processed_baseline": ctx["V1_BASELINE_METRICS"],
+        "processed_finetuned": ctx["V1_FINETUNED_METRICS"],
+    }
+
+    rows = []
+    for label, path in metric_files.items():
+        if not path.exists():
+            continue
+        metric = read_metrics_file(path)
+        rows.append(
+            {
+                "scenario": label,
+                "wer": metric["wer"],
+                "cer": metric["cer"],
+                "num_samples": metric["num_samples"],
+                "file": str(path),
+            }
+        )
+
+    data_first_metrics = pd.DataFrame(rows)
+    display(data_first_metrics)
+
+    if not data_first_metrics.empty:
+        fig = px.bar(
+            data_first_metrics.sort_values("wer"),
+            x="scenario",
+            y="wer",
+            color="scenario",
+            title="WER na velikom Kaggle holdout skupu (new_res)",
+        )
+        style_plotly_figure(fig, x_title="Scenarijo evaluacije", y_title="WER [0-1]", show_target_wer=True, y_is_wer=True)
+        fig.show()
+
+    dual_reporting_df = pd.DataFrame()
+    if {"processed_baseline", "processed_finetuned"}.issubset(set(data_first_metrics.get("scenario", []))):
+        metrics = data_first_metrics.set_index("scenario")
+        baseline_wer = float(metrics.loc["processed_baseline", "wer"])
+        finetuned_wer = float(metrics.loc["processed_finetuned", "wer"])
+        baseline_cer = float(metrics.loc["processed_baseline", "cer"])
+        finetuned_cer = float(metrics.loc["processed_finetuned", "cer"])
+        n_samples = float(metrics.loc["processed_baseline", "num_samples"])
+
+        dual_reporting_df = pd.DataFrame(
+            [
+                {
+                    "comparison": "processed_baseline_vs_finetuned",
+                    "num_samples": n_samples,
+                    "baseline_wer": baseline_wer,
+                    "finetuned_wer": finetuned_wer,
+                    "delta_wer": baseline_wer - finetuned_wer,
+                    "relative_wer_improvement_percent": ((baseline_wer - finetuned_wer) / baseline_wer) * 100.0 if baseline_wer > 0 else np.nan,
+                    "baseline_cer": baseline_cer,
+                    "finetuned_cer": finetuned_cer,
+                    "delta_cer": baseline_cer - finetuned_cer,
+                }
+            ]
+        )
+        display(Markdown("Poređenje je ograničeno na jedinstveni veliki holdout skup iz new_res/asr_full_run_v1."))
+        display(dual_reporting_df)
+
+    normalization_effect: Dict[str, Any] = {}
+
+    report_files = {
+        "aligned_raw_v1": ctx["ROOT"] / "data" / "aligned_raw_v1" / "report.json",
+        "aligned_raw_v1_improved": ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "report.json",
+        "aligned_raw_v1_rerun": ctx["ROOT"] / "data" / "aligned_raw_v1_rerun" / "report.json",
+    }
+
+    evolution_rows = []
+    for dataset_name, report_path in report_files.items():
+        if not report_path.exists():
+            continue
+        report = read_json(report_path)
+        if not isinstance(report, dict):
+            continue
+        evolution_rows.append(
+            {
+                "dataset": dataset_name,
+                "pairs_total": float(report.get("pairs_total", np.nan)),
+                "pairs_kept": float(report.get("pairs_kept", np.nan)),
+                "pairs_skipped": float(report.get("pairs_skipped", 0)),
+                "total_chunks_written": float(report.get("total_chunks_written", np.nan)),
+                "dropped_suspicious_chunks": float(report.get("qa", {}).get("dropped_suspicious_chunks", 0)),
+                "suspicious_chunks": float(report.get("qa", {}).get("suspicious_chunks", 0)),
+                "suspicious_chunk_ratio": float(report.get("qa", {}).get("suspicious_chunk_ratio", np.nan)),
+            }
+        )
+
+    data_quality_evolution = pd.DataFrame(evolution_rows)
+    if not data_quality_evolution.empty:
+        fill_zero_cols = [
+            "pairs_skipped",
+            "dropped_suspicious_chunks",
+            "suspicious_chunks",
+            "suspicious_chunk_ratio",
+        ]
+        for col in fill_zero_cols:
+            if col in data_quality_evolution.columns:
+                data_quality_evolution[col] = data_quality_evolution[col].fillna(0.0)
+    display(data_quality_evolution)
+
+    quality_cost_summary = pd.DataFrame()
+    improved_report_path = ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "report.json"
+    improved_manifest_path = ctx["ROOT"] / "data" / "aligned_raw_v1_improved" / "manifest.json"
+    rerun_manifest_path = ctx["ROOT"] / "data" / "aligned_raw_v1_rerun" / "manifest.json"
+
+    if improved_report_path.exists() and improved_manifest_path.exists():
+        improved_report = read_json(improved_report_path)
+        improved_manifest = read_json(improved_manifest_path)
+        if isinstance(improved_report, dict) and isinstance(improved_manifest, list):
+            retained_audio_sec = float(sum(float(row.get("duration_sec", 0.0) or 0.0) for row in improved_manifest if isinstance(row, dict)))
+            reported_dropped = int(improved_report.get("qa", {}).get("dropped_suspicious_chunks", 0))
+            candidate_total = int(improved_report.get("total_chunks_written", 0)) + reported_dropped
+            reported_ratio = (reported_dropped / candidate_total) * 100.0 if candidate_total > 0 else np.nan
+
+            reconstructed_drop_count = np.nan
+            reconstructed_drop_audio_sec = np.nan
+            if rerun_manifest_path.exists():
+                rerun_manifest = read_json(rerun_manifest_path)
+                if isinstance(rerun_manifest, list):
+                    reconstructed_rows = []
+                    unmatched_threshold = float(improved_report.get("qa", {}).get("unmatched_threshold", 0.35))
+                    max_chunk_seconds = float(improved_report.get("qa", {}).get("max_chunk_seconds", 30.0))
+                    min_aligned_word_ratio = float(improved_report.get("qa", {}).get("min_aligned_word_ratio", 0.55))
+                    max_chars_per_second = float(improved_report.get("qa", {}).get("max_chars_per_second", 20.0))
+
+                    for row in rerun_manifest:
+                        if not isinstance(row, dict):
+                            continue
+                        duration_sec = float(row.get("duration_sec", 0.0) or 0.0)
+                        aligned_word_ratio = float(row.get("aligned_word_ratio", 0.0) or 0.0)
+                        chars_per_second = float(row.get("chars_per_second", 0.0) or 0.0)
+                        suspicious = (
+                            (duration_sec > max_chunk_seconds)
+                            or ((1.0 - aligned_word_ratio) > unmatched_threshold)
+                            or (min_aligned_word_ratio > 0 and aligned_word_ratio < min_aligned_word_ratio)
+                            or (max_chars_per_second > 0 and chars_per_second > max_chars_per_second)
+                        )
+                        if suspicious:
+                            reconstructed_rows.append(row)
+
+                    reconstructed_drop_count = int(len(reconstructed_rows))
+                    reconstructed_drop_audio_sec = float(sum(float(row.get("duration_sec", 0.0) or 0.0) for row in reconstructed_rows))
+
+            quality_cost_summary = pd.DataFrame(
+                [
+                    {
+                        "reported_dropped_chunks": reported_dropped,
+                        "reported_drop_ratio_percent": reported_ratio,
+                        "retained_audio_sec": retained_audio_sec,
+                        "retained_audio_hours": retained_audio_sec / 3600.0,
+                        "reconstructed_drop_count": reconstructed_drop_count,
+                        "reconstructed_drop_audio_sec": reconstructed_drop_audio_sec,
+                        "reconstructed_drop_audio_ms": reconstructed_drop_audio_sec * 1000.0 if pd.notna(reconstructed_drop_audio_sec) else np.nan,
+                    }
+                ]
+            )
+            display(quality_cost_summary)
+
+    ablation_df = pd.DataFrame()
+    improvement_attribution = pd.DataFrame()
+    if {"processed_baseline", "processed_finetuned"}.issubset(set(data_first_metrics.get("scenario", []))):
+        metrics = data_first_metrics.set_index("scenario")
+        proc_b = float(metrics.loc["processed_baseline", "wer"])
+        proc_ft = float(metrics.loc["processed_finetuned", "wer"])
+
+        ablation_df = pd.DataFrame(
+            [
+                {"step_order": 1, "step": "Processed Baseline", "wer": proc_b, "evidence_type": "measured"},
+                {"step_order": 2, "step": "Processed Finetuned", "wer": proc_ft, "evidence_type": "measured"},
+            ]
+        ).sort_values("step_order")
+        display(ablation_df)
+
+        improvement_attribution = pd.DataFrame(
+            [
+                {
+                    "component": "Baseline vs Finetuned (Processed, large Kaggle holdout)",
+                    "start_wer": proc_b,
+                    "end_wer": proc_ft,
+                    "abs_delta": proc_b - proc_ft,
+                    "rel_delta_percent": ((proc_b - proc_ft) / proc_b) * 100.0 if proc_b > 0 else np.nan,
+                }
+            ]
+        )
+        display(improvement_attribution)
+
+    return {
+        "data_first_metrics": data_first_metrics,
+        "dual_reporting_df": dual_reporting_df,
+        "normalization_effect": normalization_effect,
+        "data_quality_evolution": data_quality_evolution,
+        "quality_cost_summary": quality_cost_summary,
+        "ablation_df": ablation_df,
+        "improvement_attribution": improvement_attribution,
+    }
+
+
+def run_fair_comparison(ctx: Dict[str, Any], quality_df: pd.DataFrame) -> Dict[str, Any]:
+    """Build strict sample_id paired comparison for baseline vs finetuned predictions."""
+    preferred_pred_files = {
+        "v1_baseline": ctx["V1_BASELINE_PRED"],
+        "v1_finetuned": ctx["V1_FINETUNED_PRED"],
+    }
+
+    pred_map: Dict[str, pd.DataFrame] = {}
+    for key, path in preferred_pred_files.items():
+        if path.exists():
+            pred_map[key] = normalize_cols(read_predictions_jsonl(path))
+
+    if not {"v1_baseline", "v1_finetuned"}.issubset(pred_map.keys()):
+        pred_files = [p for p in ctx["ROOT"].rglob("*.jsonl") if any(k in p.name.lower() for k in ["pred", "holdout"])]
+        for path in pred_files:
+            lower = str(path).lower()
+            if "baseline_holdout_predictions" in lower:
+                key = "v1_baseline"
+            elif "finetuned_holdout_predictions" in lower:
+                key = "v1_finetuned"
+            else:
+                key = "other"
+            if key in pred_map:
+                continue
+            try:
+                pred_map[key] = normalize_cols(read_predictions_jsonl(path))
+            except Exception:
+                continue
+
+    eval_alignment_df = pd.DataFrame()
+    v1_paired_df = pd.DataFrame()
+
+    if "v1_baseline" in pred_map and "v1_finetuned" in pred_map:
+        baseline_df = pred_map["v1_baseline"]
+        finetuned_df = pred_map["v1_finetuned"]
+        needed = {"sample_id", "wer"}
+        if needed.issubset(baseline_df.columns) and needed.issubset(finetuned_df.columns):
+            v1_paired_df = pd.merge(
+                baseline_df[["sample_id", "wer"]].rename(columns={"wer": "wer_baseline_v1"}),
+                finetuned_df[["sample_id", "wer"]].rename(columns={"wer": "wer_finetuned_v1"}),
+                on="sample_id",
+                how="inner",
+            )
+            if len(v1_paired_df) > 0:
+                v1_paired_df["wer_delta_baseline_minus_finetuned"] = (
+                    v1_paired_df["wer_baseline_v1"] - v1_paired_df["wer_finetuned_v1"]
+                )
+                fig = px.box(
+                    v1_paired_df.melt(
+                        id_vars=["sample_id"],
+                        value_vars=["wer_baseline_v1", "wer_finetuned_v1"],
+                        var_name="model_variant",
+                        value_name="wer",
+                    ).assign(model_variant=lambda df: df["model_variant"].map(MODEL_LABEL_MAP).fillna(df["model_variant"])),
+                    x="model_variant",
+                    y="wer",
+                    points="all",
+                    color="model_variant",
+                    title="Fiksni skup: Baseline vs Finetuned (strict sample_id)",
+                )
+                style_plotly_figure(fig, x_title="Model", y_title="WER [0-1]", show_target_wer=True, y_is_wer=True)
+                fig.show()
+
+    if not v1_paired_df.empty:
+        eval_alignment_df = v1_paired_df.copy()
+        if not quality_df.empty and {"sample_id", "aligned_word_ratio"}.issubset(quality_df.columns):
+            awr_by_sample = quality_df[["sample_id", "aligned_word_ratio"]].dropna().drop_duplicates("sample_id")
+            eval_alignment_df = eval_alignment_df.merge(awr_by_sample, on="sample_id", how="left")
+
+    return {"pred_map": pred_map, "eval_alignment_df": eval_alignment_df, "v1_paired_df": v1_paired_df}
+
+
+def run_statistical_tests(eval_alignment_df: pd.DataFrame, v1_paired_df: pd.DataFrame | None = None) -> None:
+    """Run robust normality, correlation and paired tests for baseline vs finetuned."""
+    if eval_alignment_df.empty and (v1_paired_df is None or v1_paired_df.empty):
+        return
+
+    baseline_col = "wer_baseline_v1" if "wer_baseline_v1" in eval_alignment_df.columns else "wer_v1"
+    finetuned_col = "wer_finetuned_v1" if "wer_finetuned_v1" in eval_alignment_df.columns else "wer_v2"
+
+    normality_rejected = False
+    p_values: Dict[str, float] = {}
+    for run_col in [baseline_col, finetuned_col]:
+        if run_col not in eval_alignment_df.columns:
+            continue
+        series = eval_alignment_df[run_col].dropna()
+        if len(series) > 3:
+            sample = series.sample(min(5000, len(series)), random_state=42)
+            sh_w, sh_p = stats.shapiro(sample)
+            normality_rejected = normality_rejected or (sh_p < 0.05)
+            p_values[f"shapiro_{run_col}"] = float(sh_p)
+
+    if normality_rejected:
+        display(Markdown("Distribucije WER nisu normalne, poređenje verzija je vođeno neparametrijskim testovima."))
+
+    corr_df = (
+        eval_alignment_df.dropna(subset=["aligned_word_ratio", finetuned_col])
+        if {"aligned_word_ratio", finetuned_col}.issubset(eval_alignment_df.columns)
+        else pd.DataFrame()
+    )
+    if len(corr_df) > 3:
+        pearson_r, pearson_p = stats.pearsonr(corr_df["aligned_word_ratio"], corr_df[finetuned_col])
+        spearman_r, spearman_p = stats.spearmanr(corr_df["aligned_word_ratio"], corr_df[finetuned_col], nan_policy="omit")
+        p_values["pearson_aligned_vs_wer_finetuned"] = float(pearson_p)
+        p_values["spearman_aligned_vs_wer_finetuned"] = float(spearman_p)
+        corr_summary_df = pd.DataFrame(
+            [
+                {
+                    "metric": "pearson_aligned_vs_wer_finetuned",
+                    "statistic": float(pearson_r),
+                    "p_value": float(pearson_p),
+                },
+                {
+                    "metric": "spearman_aligned_vs_wer_finetuned",
+                    "statistic": float(spearman_r),
+                    "p_value": float(spearman_p),
+                },
+            ]
+        )
+        display(corr_summary_df)
+
+    paired = (
+        eval_alignment_df.dropna(subset=[baseline_col, finetuned_col])
+        if {baseline_col, finetuned_col}.issubset(eval_alignment_df.columns)
+        else pd.DataFrame()
+    )
+    if len(paired) > 3:
+        diff = paired[baseline_col] - paired[finetuned_col]
+        wilcoxon_stat, wilcoxon_p = stats.wilcoxon(
+            paired[baseline_col],
+            paired[finetuned_col],
+            alternative="greater",
+        )
+        p_values["wilcoxon_baseline_vs_finetuned"] = float(wilcoxon_p)
+        wilcoxon_df = pd.DataFrame(
+            [
+                {
+                    "test": "wilcoxon_baseline_vs_finetuned",
+                    "alternative": "baseline>finetuned",
+                    "W": float(wilcoxon_stat),
+                    "p_value": float(wilcoxon_p),
+                }
+            ]
+        )
+        display(wilcoxon_df)
+
+        std_diff = float(np.nanstd(diff, ddof=1)) if len(diff) > 1 else np.nan
+        cohen_dz = float(np.nanmean(diff) / std_diff) if pd.notna(std_diff) and std_diff > 0 else np.nan
+        effect_size_df = pd.DataFrame(
+            [
+                {
+                    "comparison": "baseline_vs_finetuned",
+                    "n": int(len(diff)),
+                    "median_delta_wer": float(np.nanmedian(diff)),
+                    "mean_delta_wer": float(np.nanmean(diff)),
+                    "cohen_dz": cohen_dz,
+                }
+            ]
+        )
+        display(Markdown("Effect size za upareno poređenje (pored p-vrednosti):"))
+        display(effect_size_df)
+
+    if p_values:
+        adjusted = bonferroni_correction(p_values)
+        bonf_df = pd.DataFrame(
+            {
+                "test": list(p_values.keys()),
+                "p_raw": [p_values[key] for key in p_values],
+                "p_bonferroni": [adjusted[key] for key in p_values],
+            }
+        )
+        bonf_df["significant_005_after_bonferroni"] = bonf_df["p_bonferroni"] < 0.05
+        display(Markdown("Bonferroni korekcija za višestruka poređenja:"))
+        display(bonf_df)
+
+
+def run_oov_analysis(pred_map: Dict[str, pd.DataFrame]) -> None:
+    """Estimate missing-reference-token reduction from baseline to finetuned."""
+    source_baseline = "v1_baseline" if "v1_baseline" in pred_map else ("baseline" if "baseline" in pred_map else None)
+    source_finetuned = "v1_finetuned" if "v1_finetuned" in pred_map else ("finetuned" if "finetuned" in pred_map else None)
+    if source_baseline is None or source_finetuned is None:
+        return
+
+    p1 = pred_map[source_baseline]
+    p2 = pred_map[source_finetuned]
+    needed = {"sample_id", "ref", "pred"}
+    if not needed.issubset(p1.columns) or not needed.issubset(p2.columns):
+        return
+
+    joined = pd.merge(
+        p1[["sample_id", "ref", "pred"]].rename(columns={"pred": "pred_baseline"}),
+        p2[["sample_id", "pred"]].rename(columns={"pred": "pred_finetuned"}),
+        on="sample_id",
+        how="inner",
+    )
+
+    def token_set(value: str) -> set[str]:
+        return set(re.findall(r"\w+", (value or "").lower(), flags=re.UNICODE))
+
+    oov_v1: Counter[str] = Counter()
+    oov_v2: Counter[str] = Counter()
+
+    for _, row in joined.iterrows():
+        ref_tokens = token_set(str(row["ref"]))
+        baseline_tokens = token_set(str(row["pred_baseline"]))
+        finetuned_tokens = token_set(str(row["pred_finetuned"]))
+        oov_v1.update(ref_tokens - baseline_tokens)
+        oov_v2.update(ref_tokens - finetuned_tokens)
+
+    top_v1 = pd.DataFrame(oov_v1.most_common(30), columns=["token", "missing_count_baseline"])
+    top_v2 = pd.DataFrame(oov_v2.most_common(30), columns=["token", "missing_count_finetuned"])
+    learned = top_v1.merge(top_v2, on="token", how="left").fillna(0)
+    learned["gain_finetuned"] = learned["missing_count_baseline"] - learned["missing_count_finetuned"]
+    display(learned.sort_values("gain_finetuned", ascending=False).head(25))
+
+
+def run_error_breakdown(pred_map: Dict[str, pd.DataFrame]) -> None:
+    """Compute substitution/insertion/deletion pie chart from v2 predictions."""
+    def tokenize(value: str) -> List[str]:
+        return re.findall(r"\w+", (value or "").lower(), flags=re.UNICODE)
+
+    def edit_breakdown(ref: List[str], hyp: List[str]) -> Dict[str, int]:
+        n, m = len(ref), len(hyp)
+        dp = [[(0, 0, 0, 0)] * (m + 1) for _ in range(n + 1)]
+        for i in range(1, n + 1):
+            dist, sub, ins, dele = dp[i - 1][0]
+            dp[i][0] = (dist + 1, sub, ins, dele + 1)
+        for j in range(1, m + 1):
+            dist, sub, ins, dele = dp[0][j - 1]
+            dp[0][j] = (dist + 1, sub, ins + 1, dele)
+
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                if ref[i - 1] == hyp[j - 1]:
+                    dp[i][j] = dp[i - 1][j - 1]
+                else:
+                    sub = dp[i - 1][j - 1]
+                    ins = dp[i][j - 1]
+                    dele = dp[i - 1][j]
+                    cands = [
+                        (sub[0] + 1, sub[1] + 1, sub[2], sub[3]),
+                        (ins[0] + 1, ins[1], ins[2] + 1, ins[3]),
+                        (dele[0] + 1, dele[1], dele[2], dele[3] + 1),
+                    ]
+                    dp[i][j] = min(cands, key=lambda x: x[0])
+
+        _, sub, ins, dele = dp[n][m]
+        return {"substitutions": sub, "insertions": ins, "deletions": dele}
+
+    source_v2 = "v1_finetuned" if "v1_finetuned" in pred_map else ("v2_finetuned" if "v2_finetuned" in pred_map else ("v2" if "v2" in pred_map else None))
+    if source_v2 is not None and {"ref", "pred"}.issubset(pred_map[source_v2].columns):
+        sample_df = pred_map[source_v2].dropna(subset=["ref", "pred"])
+        agg: Counter[str] = Counter()
+        for _, row in sample_df.iterrows():
+            agg.update(edit_breakdown(tokenize(str(row["ref"])), tokenize(str(row["pred"]))))
+        err_df = pd.DataFrame({"type": list(agg.keys()), "count": list(agg.values())})
+        if not err_df.empty:
+            fig = px.pie(err_df, names="type", values="count", title="Error categorization (Sub/Del/Ins)")
+            fig.show()
+
+
+def run_character_levenshtein(pred_map: Dict[str, pd.DataFrame]) -> None:
+    """Analyze normalized character-Levenshtein profile and Serbian grapheme confusions."""
+    def levenshtein_chars(a: str, b: str) -> int:
+        n, m = len(a), len(b)
+        if n == 0:
+            return m
+        if m == 0:
+            return n
+        dp = np.zeros((n + 1, m + 1), dtype=int)
+        dp[:, 0] = np.arange(n + 1)
+        dp[0, :] = np.arange(m + 1)
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                cost = 0 if a[i - 1] == b[j - 1] else 1
+                dp[i, j] = min(dp[i - 1, j] + 1, dp[i, j - 1] + 1, dp[i - 1, j - 1] + cost)
+        return int(dp[n, m])
+
+    source_v2 = "v1_finetuned" if "v1_finetuned" in pred_map else ("v2_finetuned" if "v2_finetuned" in pred_map else ("v2" if "v2" in pred_map else None))
+    if source_v2 is not None and {"ref", "pred"}.issubset(pred_map[source_v2].columns):
+        pairs = [("č", "ć"), ("ć", "č"), ("š", "ž"), ("ž", "š"), ("đ", "dj")]
+        rows = []
+        confusion: Counter[str] = Counter()
+
+        for _, row in pred_map[source_v2].dropna(subset=["ref", "pred"]).iterrows():
+            ref = str(row["ref"]).lower()
+            pred = str(row["pred"]).lower()
+            dist = levenshtein_chars(ref, pred)
+            rows.append({"sample_id": str(row.get("sample_id", "")), "char_lev": dist, "norm_char_lev": dist / max(len(ref), 1)})
+            for src, dst in pairs:
+                if src in ref and dst in pred:
+                    confusion[f"{src}->{dst}"] += 1
+
+        lev_df = pd.DataFrame(rows)
+        if not lev_df.empty:
+            display(lev_df.describe().T)
+        if confusion:
+            conf_df = pd.DataFrame(confusion.items(), columns=["confusion", "count"]).sort_values("count", ascending=False)
+            display(conf_df)
