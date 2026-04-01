@@ -9,7 +9,8 @@ from pathlib import Path
 from typing import Iterable, List, Tuple
 
 
-ROOT = Path(__file__).resolve().parent
+# Resolve repository root (works even when this script lives in `tools/`)
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def _copy_dir(src: Path, dst: Path) -> None:
