@@ -27,6 +27,11 @@ dist/
 
 # Logs
 *.log
+logs/
+logs/**/*
+res/
+dist/
+*.zip
 
 # OS files
 .DS_Store
@@ -34,11 +39,64 @@ Thumbs.db
 
 # Results and outputs
 /scripts/results/
+results/
 
-# Audio outputs
+# Audio outputs - KEEP SAMPLES FOR TESTING
 *.mp3
 *.wav
+
+# Data directories - Large datasets should not be in git
+data/raw/**/*.mp3
+data/raw/**/*.wav
+data/raw/**/*.flac
+data/processed/
+
+# Model files - Large model checkpoints and weights
+models/*/checkpoint-*/
+models/*/final/
+models/**/*.pt
+models/**/*.pth
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.ckpt
+models/**/*.h5
+
+# Ignore large tokenizer files in model checkpoints
+models/**/tokenizer.json
+models/**/vocab.json
+models/**/merges.txt
+models/**/special_tokens_map.json
+models/**/tokenizer_config.json
+
+# Keep model configs and README files
+!models/**/config.json
+!models/**/README.md
+!models/**/training_args.bin
+
+# Tensorboard logs
+logs/tensorboard/
+
+# Training checkpoints and experiment outputs
+**/checkpoint-*/
 
 # Secrets
 .env
 secrets.json
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MyPy cache
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.covernew_res/**/models/
+new_res/asr_full_run_v1/models/
+*.safetensors

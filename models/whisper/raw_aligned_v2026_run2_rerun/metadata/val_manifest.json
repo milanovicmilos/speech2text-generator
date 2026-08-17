@@ -1,0 +1,387 @@
+[
+  {
+    "sample_id": "brest-psv-atalanta-real-madrid-liga-sampiona_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\brest-psv-atalanta-real-madrid-liga-sampiona_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\brest-psv-atalanta-real-madrid-liga-sampiona_aligned_0003.txt"
+  },
+  {
+    "sample_id": "dejan-savic-novi-selektor-crna-gora_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dejan-savic-novi-selektor-crna-gora_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dejan-savic-novi-selektor-crna-gora_aligned_0000.txt"
+  },
+  {
+    "sample_id": "ekspo-borovcanin-beograd_aligned_0009",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ekspo-borovcanin-beograd_aligned_0009.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ekspo-borovcanin-beograd_aligned_0009.txt"
+  },
+  {
+    "sample_id": "dva-gola-vlahovic-juventus-preokret-lil-sok-real_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dva-gola-vlahovic-juventus-preokret-lil-sok-real_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dva-gola-vlahovic-juventus-preokret-lil-sok-real_aligned_0003.txt"
+  },
+  {
+    "sample_id": "dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027_aligned_0007",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027_aligned_0007.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027_aligned_0007.txt"
+  },
+  {
+    "sample_id": "djokovic-tenis-laures-nagrada-najbolji-sportista-sveta_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-tenis-laures-nagrada-najbolji-sportista-sveta_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-tenis-laures-nagrada-najbolji-sportista-sveta_aligned_0001.txt"
+  },
+  {
+    "sample_id": "djokoviceva-poruka-amerikancima-imali-ste-srece-protiv-srbije-u-kosarci-na-oi_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokoviceva-poruka-amerikancima-imali-ste-srece-protiv-srbije-u-kosarci-na-oi_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokoviceva-poruka-amerikancima-imali-ste-srece-protiv-srbije-u-kosarci-na-oi_aligned_0002.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0002.txt"
+  },
+  {
+    "sample_id": "dinamo-zagreb-liga-sampiona-cetvrto-kolo-slovan-bratislava_aligned_0006",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dinamo-zagreb-liga-sampiona-cetvrto-kolo-slovan-bratislava_aligned_0006.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dinamo-zagreb-liga-sampiona-cetvrto-kolo-slovan-bratislava_aligned_0006.txt"
+  },
+  {
+    "sample_id": "direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0011",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0011.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0011.txt"
+  },
+  {
+    "sample_id": "arsenal-muka-realizacija-slabost-koncept-lazna-devetka_aligned_0011",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\arsenal-muka-realizacija-slabost-koncept-lazna-devetka_aligned_0011.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\arsenal-muka-realizacija-slabost-koncept-lazna-devetka_aligned_0011.txt"
+  },
+  {
+    "sample_id": "bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0020",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0020.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0020.txt"
+  },
+  {
+    "sample_id": "beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0004.txt"
+  },
+  {
+    "sample_id": "derbi-ponedeljak_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\derbi-ponedeljak_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\derbi-ponedeljak_aligned_0000.txt"
+  },
+  {
+    "sample_id": "aba-salje-disciplinskog-sudiju-u-beograd-povodom-slucaja-naneli-lazarevic_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\aba-salje-disciplinskog-sudiju-u-beograd-povodom-slucaja-naneli-lazarevic_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\aba-salje-disciplinskog-sudiju-u-beograd-povodom-slucaja-naneli-lazarevic_aligned_0000.txt"
+  },
+  {
+    "sample_id": "digitalna-demencija-zavisnost-dece-i-mladih-od-interneta-_aligned_0012",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\digitalna-demencija-zavisnost-dece-i-mladih-od-interneta-_aligned_0012.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\digitalna-demencija-zavisnost-dece-i-mladih-od-interneta-_aligned_0012.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0009",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0009.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga_aligned_0009.txt"
+  },
+  {
+    "sample_id": "djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0000.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0003.txt"
+  },
+  {
+    "sample_id": "dve-stotine-doktora-nauka-i-12-akademika---za-vek-i-po-valjevske-gimnazije-_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dve-stotine-doktora-nauka-i-12-akademika---za-vek-i-po-valjevske-gimnazije-_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dve-stotine-doktora-nauka-i-12-akademika---za-vek-i-po-valjevske-gimnazije-_aligned_0008.txt"
+  },
+  {
+    "sample_id": "ataman-protiv-sarasa-panatinaikos-i-fener-u-napadu-na-finale-evrolige_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ataman-protiv-sarasa-panatinaikos-i-fener-u-napadu-na-finale-evrolige_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ataman-protiv-sarasa-panatinaikos-i-fener-u-napadu-na-finale-evrolige_aligned_0000.txt"
+  },
+  {
+    "sample_id": "direktor-cikaski-maraton-rts-organizacija-trka-_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\direktor-cikaski-maraton-rts-organizacija-trka-_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\direktor-cikaski-maraton-rts-organizacija-trka-_aligned_0004.txt"
+  },
+  {
+    "sample_id": "bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0018.txt"
+  },
+  {
+    "sample_id": "direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0008.txt"
+  },
+  {
+    "sample_id": "dan-mladosti-tito_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dan-mladosti-tito_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dan-mladosti-tito_aligned_0001.txt"
+  },
+  {
+    "sample_id": "dinamo-zagreb-liga-sampiona-cetvrto-kolo-slovan-bratislava_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dinamo-zagreb-liga-sampiona-cetvrto-kolo-slovan-bratislava_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dinamo-zagreb-liga-sampiona-cetvrto-kolo-slovan-bratislava_aligned_0003.txt"
+  },
+  {
+    "sample_id": "djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0016",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0016.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0016.txt"
+  },
+  {
+    "sample_id": "bol-u-kolenima-lecenje-terapije-preventiva_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0005.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5_aligned_0007",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5_aligned_0007.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5_aligned_0007.txt"
+  },
+  {
+    "sample_id": "ceferin-uefa-fudbal-beograd-kongres_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ceferin-uefa-fudbal-beograd-kongres_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ceferin-uefa-fudbal-beograd-kongres_aligned_0004.txt"
+  },
+  {
+    "sample_id": "djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-uzivam-u-takmicenju-samokritican-sam-na-terenu_aligned_0004.txt"
+  },
+  {
+    "sample_id": "bol-u-kolenima-lecenje-terapije-preventiva_aligned_0019",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0019.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0019.txt"
+  },
+  {
+    "sample_id": "-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit_aligned_0004.txt"
+  },
+  {
+    "sample_id": "djokovic-u-velikom-intervjuu-za-rts-olimpijske-igre-su-kruna-moje-karijere-motivisu-me-grend-slemovi-i-reprezentacija-_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-u-velikom-intervjuu-za-rts-olimpijske-igre-su-kruna-moje-karijere-motivisu-me-grend-slemovi-i-reprezentacija-_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-u-velikom-intervjuu-za-rts-olimpijske-igre-su-kruna-moje-karijere-motivisu-me-grend-slemovi-i-reprezentacija-_aligned_0018.txt"
+  },
+  {
+    "sample_id": "dokumentarni-filmovi-na-festivalu-u-vranju_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dokumentarni-filmovi-na-festivalu-u-vranju_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dokumentarni-filmovi-na-festivalu-u-vranju_aligned_0003.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka_aligned_0003.txt"
+  },
+  {
+    "sample_id": "digitalna-demencija-zavisnost-dece-i-mladih-od-interneta-_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\digitalna-demencija-zavisnost-dece-i-mladih-od-interneta-_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\digitalna-demencija-zavisnost-dece-i-mladih-od-interneta-_aligned_0018.txt"
+  },
+  {
+    "sample_id": "ataman-protiv-sarasa-panatinaikos-i-fener-u-napadu-na-finale-evrolige_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ataman-protiv-sarasa-panatinaikos-i-fener-u-napadu-na-finale-evrolige_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ataman-protiv-sarasa-panatinaikos-i-fener-u-napadu-na-finale-evrolige_aligned_0003.txt"
+  },
+  {
+    "sample_id": "direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0007",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0007.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0007.txt"
+  },
+  {
+    "sample_id": "ceferin-uefa-fudbal-beograd-kongres_aligned_0013",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ceferin-uefa-fudbal-beograd-kongres_aligned_0013.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ceferin-uefa-fudbal-beograd-kongres_aligned_0013.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0006",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0006.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0006.txt"
+  },
+  {
+    "sample_id": "aleks-de-minir-izjava-posle-pobede-nad-novakom-djokovicem-junajted-kup_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\aleks-de-minir-izjava-posle-pobede-nad-novakom-djokovicem-junajted-kup_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\aleks-de-minir-izjava-posle-pobede-nad-novakom-djokovicem-junajted-kup_aligned_0000.txt"
+  },
+  {
+    "sample_id": "-medjunarodni-dan-dunava_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\-medjunarodni-dan-dunava_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\-medjunarodni-dan-dunava_aligned_0002.txt"
+  },
+  {
+    "sample_id": "bokserima-crvene-zvezde-bronzana-medalja-na-kupu-sampiona-u-krasnodaru_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bokserima-crvene-zvezde-bronzana-medalja-na-kupu-sampiona-u-krasnodaru_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bokserima-crvene-zvezde-bronzana-medalja-na-kupu-sampiona-u-krasnodaru_aligned_0002.txt"
+  },
+  {
+    "sample_id": "barselona-i-borusija-neumoljive-leverkuzen-porazio-milan-arsenalu-derbi-kola_aligned_0010",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\barselona-i-borusija-neumoljive-leverkuzen-porazio-milan-arsenalu-derbi-kola_aligned_0010.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\barselona-i-borusija-neumoljive-leverkuzen-porazio-milan-arsenalu-derbi-kola_aligned_0010.txt"
+  },
+  {
+    "sample_id": "-kako-je-vaterpolo-postao-najuspesnijiji-sport-u-valjevu_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\-kako-je-vaterpolo-postao-najuspesnijiji-sport-u-valjevu_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\-kako-je-vaterpolo-postao-najuspesnijiji-sport-u-valjevu_aligned_0002.txt"
+  },
+  {
+    "sample_id": "djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi_aligned_0018.txt"
+  },
+  {
+    "sample_id": "bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0008.txt"
+  },
+  {
+    "sample_id": "davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0008",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0008.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0008.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0000.txt"
+  },
+  {
+    "sample_id": "bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bozidar-maljkovic-o-tome-da-su-olimpijci-najbolji-ambasadori-zemlje_aligned_0003.txt"
+  },
+  {
+    "sample_id": "covic-rts-srbija-2027-novi-kosarkaski-centar_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\covic-rts-srbija-2027-novi-kosarkaski-centar_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\covic-rts-srbija-2027-novi-kosarkaski-centar_aligned_0002.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5_aligned_0006",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5_aligned_0006.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5_aligned_0006.txt"
+  },
+  {
+    "sample_id": "direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0026",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0026.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\direktor-kls-a-grujin-za-rts-stvorili-smo-finansijski-zdrav-organizam-kvalitet-je-prepoznat_aligned_0026.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-_aligned_0002.txt"
+  },
+  {
+    "sample_id": "barselona-ukinula-daniju-alvesu-status-legende_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\barselona-ukinula-daniju-alvesu-status-legende_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\barselona-ukinula-daniju-alvesu-status-legende_aligned_0000.txt"
+  },
+  {
+    "sample_id": "ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0010",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0010.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0010.txt"
+  },
+  {
+    "sample_id": "danska-prestolonaslednik-frederik-kraljica-margrete-_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\danska-prestolonaslednik-frederik-kraljica-margrete-_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\danska-prestolonaslednik-frederik-kraljica-margrete-_aligned_0000.txt"
+  },
+  {
+    "sample_id": "djokovic-u-velikom-intervjuu-za-rts-olimpijske-igre-su-kruna-moje-karijere-motivisu-me-grend-slemovi-i-reprezentacija-_aligned_0023",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\djokovic-u-velikom-intervjuu-za-rts-olimpijske-igre-su-kruna-moje-karijere-motivisu-me-grend-slemovi-i-reprezentacija-_aligned_0023.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\djokovic-u-velikom-intervjuu-za-rts-olimpijske-igre-su-kruna-moje-karijere-motivisu-me-grend-slemovi-i-reprezentacija-_aligned_0023.txt"
+  },
+  {
+    "sample_id": "barselona-i-borusija-neumoljive-leverkuzen-porazio-milan-arsenalu-derbi-kola_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\barselona-i-borusija-neumoljive-leverkuzen-porazio-milan-arsenalu-derbi-kola_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\barselona-i-borusija-neumoljive-leverkuzen-porazio-milan-arsenalu-derbi-kola_aligned_0004.txt"
+  },
+  {
+    "sample_id": "ekspo-borovcanin-beograd_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ekspo-borovcanin-beograd_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ekspo-borovcanin-beograd_aligned_0000.txt"
+  },
+  {
+    "sample_id": "del-potro-djokovic-egzibicioni-mec-tenis-ispovest_aligned_0009",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\del-potro-djokovic-egzibicioni-mec-tenis-ispovest_aligned_0009.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\del-potro-djokovic-egzibicioni-mec-tenis-ispovest_aligned_0009.txt"
+  },
+  {
+    "sample_id": "ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0012",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0012.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0012.txt"
+  },
+  {
+    "sample_id": "-badnje-vece-dolazi_aligned_0004",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\-badnje-vece-dolazi_aligned_0004.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\-badnje-vece-dolazi_aligned_0004.txt"
+  },
+  {
+    "sample_id": "beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\beograd-zvanicno-kandidat-za-evropsko-prvenstvo-u-atletici-2028-godine_aligned_0001.txt"
+  },
+  {
+    "sample_id": "advokat-janika-sinera-suspenzija-doping-zalba_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\advokat-janika-sinera-suspenzija-doping-zalba_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\advokat-janika-sinera-suspenzija-doping-zalba_aligned_0002.txt"
+  },
+  {
+    "sample_id": "davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0011",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0011.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\davor-stefanek-goran-marinkovic-sporsko-savez-srbije-rts_aligned_0011.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0001",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0001.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0001.txt"
+  },
+  {
+    "sample_id": "bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0003",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0003.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bodiroga-optimista-ucesce-partizan-zvezda-evroliga_aligned_0003.txt"
+  },
+  {
+    "sample_id": "bol-u-kolenima-lecenje-terapije-preventiva_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bol-u-kolenima-lecenje-terapije-preventiva_aligned_0018.txt"
+  },
+  {
+    "sample_id": "ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0000",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0000.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0000.txt"
+  },
+  {
+    "sample_id": "brest-maksimalan-u-prva-dva-kola-remi-stutgarta-i-sparte-u-ligi-sampiona_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\brest-maksimalan-u-prva-dva-kola-remi-stutgarta-i-sparte-u-ligi-sampiona_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\brest-maksimalan-u-prva-dva-kola-remi-stutgarta-i-sparte-u-ligi-sampiona_aligned_0002.txt"
+  },
+  {
+    "sample_id": "brankica-jankovic-sport-nisu-samo-medalje-ima-mnogo-problema-na-koje-se-zmuri_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\brankica-jankovic-sport-nisu-samo-medalje-ima-mnogo-problema-na-koje-se-zmuri_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\brankica-jankovic-sport-nisu-samo-medalje-ima-mnogo-problema-na-koje-se-zmuri_aligned_0002.txt"
+  },
+  {
+    "sample_id": "bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0029",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0029.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\bolje-je-organski--koja-nba-ekipa-ima-najbolju-domacu-bazu_aligned_0029.txt"
+  },
+  {
+    "sample_id": "dan-mladosti-tito_aligned_0002",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\dan-mladosti-tito_aligned_0002.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\dan-mladosti-tito_aligned_0002.txt"
+  },
+  {
+    "sample_id": "crveno-beli-ili-rosoneri---zvezda-protiv-milana-sa-dobrom-tradicijom-na-san-siru_aligned_0018",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\crveno-beli-ili-rosoneri---zvezda-protiv-milana-sa-dobrom-tradicijom-na-san-siru_aligned_0018.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\crveno-beli-ili-rosoneri---zvezda-protiv-milana-sa-dobrom-tradicijom-na-san-siru_aligned_0018.txt"
+  },
+  {
+    "sample_id": "ekspo-urucena-zastava-srbiji-pariz_aligned_0005",
+    "audio_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\audio\\ekspo-urucena-zastava-srbiji-pariz_aligned_0005.wav",
+    "text_path": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_rerun\\text\\ekspo-urucena-zastava-srbiji-pariz_aligned_0005.txt"
+  }
+]

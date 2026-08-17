@@ -1,0 +1,1162 @@
+[
+  {
+    "sample_id": "talasima-kulture",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/talasima-kulture.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/talasima-kulture.txt"
+  },
+  {
+    "sample_id": "eu-prosirenje-20-godina",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/eu-prosirenje-20-godina.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/eu-prosirenje-20-godina.txt"
+  },
+  {
+    "sample_id": "price-sa-zidova-drugi-deo",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/price-sa-zidova-drugi-deo.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/price-sa-zidova-drugi-deo.txt"
+  },
+  {
+    "sample_id": "dve-stotine-doktora-nauka-i-12-akademika---za-vek-i-po-valjevske-gimnazije-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dve-stotine-doktora-nauka-i-12-akademika---za-vek-i-po-valjevske-gimnazije-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dve-stotine-doktora-nauka-i-12-akademika---za-vek-i-po-valjevske-gimnazije-.txt"
+  },
+  {
+    "sample_id": "kreativne-industrije-leva-skretanja--kreativnost-i-politika-2-10",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kreativne-industrije-leva-skretanja--kreativnost-i-politika-2-10.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kreativne-industrije-leva-skretanja--kreativnost-i-politika-2-10.txt"
+  },
+  {
+    "sample_id": "dokumentarne-fusnote--let-na-recept",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dokumentarne-fusnote--let-na-recept.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dokumentarne-fusnote--let-na-recept.txt"
+  },
+  {
+    "sample_id": "srpski-paraolimpijac-nebojsa-djuric-se-povukao-sa-poi-u-parizu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/srpski-paraolimpijac-nebojsa-djuric-se-povukao-sa-poi-u-parizu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/srpski-paraolimpijac-nebojsa-djuric-se-povukao-sa-poi-u-parizu.txt"
+  },
+  {
+    "sample_id": "prijatelji-zapadnog-balkana-u-pismu-komesarkama-vreme-je-za-odlucujuci-napredak-u-evropskim-integracijama",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/prijatelji-zapadnog-balkana-u-pismu-komesarkama-vreme-je-za-odlucujuci-napredak-u-evropskim-integracijama.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/prijatelji-zapadnog-balkana-u-pismu-komesarkama-vreme-je-za-odlucujuci-napredak-u-evropskim-integracijama.txt"
+  },
+  {
+    "sample_id": "obracun-u-filadelfiji--kamala-haris-protiv-donalda-trampa",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/obracun-u-filadelfiji--kamala-haris-protiv-donalda-trampa.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/obracun-u-filadelfiji--kamala-haris-protiv-donalda-trampa.txt"
+  },
+  {
+    "sample_id": "-badnje-vece-dolazi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/-badnje-vece-dolazi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/-badnje-vece-dolazi.txt"
+  },
+  {
+    "sample_id": "studio-6",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/studio-6.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/studio-6.txt"
+  },
+  {
+    "sample_id": "u-susret-1-maju-o-onima-bez-kojih-se-sve-teze-moze-polozaj-radnica-na-poslovima-ciscenja-i-nege-u-srbiji",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/u-susret-1-maju-o-onima-bez-kojih-se-sve-teze-moze-polozaj-radnica-na-poslovima-ciscenja-i-nege-u-srbiji.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/u-susret-1-maju-o-onima-bez-kojih-se-sve-teze-moze-polozaj-radnica-na-poslovima-ciscenja-i-nege-u-srbiji.txt"
+  },
+  {
+    "sample_id": "priprema-rezolucije-o-srebrenici--i-poruka-i-dvosekli-mac",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/priprema-rezolucije-o-srebrenici--i-poruka-i-dvosekli-mac.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/priprema-rezolucije-o-srebrenici--i-poruka-i-dvosekli-mac.txt"
+  },
+  {
+    "sample_id": "kakve-su-sanse-da-srbija-u-decembru-otvori-klaster-3",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kakve-su-sanse-da-srbija-u-decembru-otvori-klaster-3.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kakve-su-sanse-da-srbija-u-decembru-otvori-klaster-3.txt"
+  },
+  {
+    "sample_id": "be-em-iks-slobodnim-stilom",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/be-em-iks-slobodnim-stilom.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/be-em-iks-slobodnim-stilom.txt"
+  },
+  {
+    "sample_id": "filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/filipovic-nije-mala-stvar-pobediti-usred-splita-ekipu-sa-osam-svetskih-sampiona.txt"
+  },
+  {
+    "sample_id": "tatra-forum-slovacka-sinisa-mali",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/tatra-forum-slovacka-sinisa-mali.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/tatra-forum-slovacka-sinisa-mali.txt"
+  },
+  {
+    "sample_id": "evropsko-prvenstvo-2024-nemacka-danska",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/evropsko-prvenstvo-2024-nemacka-danska.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/evropsko-prvenstvo-2024-nemacka-danska.txt"
+  },
+  {
+    "sample_id": "srpski-fudbaler-dejan-joveljic-strelac-u-pobedi-la-galaksija-protiv-sportinga",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/srpski-fudbaler-dejan-joveljic-strelac-u-pobedi-la-galaksija-protiv-sportinga.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/srpski-fudbaler-dejan-joveljic-strelac-u-pobedi-la-galaksija-protiv-sportinga.txt"
+  },
+  {
+    "sample_id": "osmi-mart-zenski-mars-za-ravnopravnost-iz-1908-godine--i-dalje-traje",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/osmi-mart-zenski-mars-za-ravnopravnost-iz-1908-godine--i-dalje-traje.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/osmi-mart-zenski-mars-za-ravnopravnost-iz-1908-godine--i-dalje-traje.txt"
+  },
+  {
+    "sample_id": "sinisa-cvetic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sinisa-cvetic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sinisa-cvetic.txt"
+  },
+  {
+    "sample_id": "narodna-banka-srbije-zadrzala-referentnu-kamatnu-stopu-na-sest-odsto",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/narodna-banka-srbije-zadrzala-referentnu-kamatnu-stopu-na-sest-odsto.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/narodna-banka-srbije-zadrzala-referentnu-kamatnu-stopu-na-sest-odsto.txt"
+  },
+  {
+    "sample_id": "sport-s-obe-strane-drine",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sport-s-obe-strane-drine.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sport-s-obe-strane-drine.txt"
+  },
+  {
+    "sample_id": "osmi-mart-zasto-se-slavi-prava-zena-medjunarodni-dan",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/osmi-mart-zasto-se-slavi-prava-zena-medjunarodni-dan.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/osmi-mart-zasto-se-slavi-prava-zena-medjunarodni-dan.txt"
+  },
+  {
+    "sample_id": "novak-djokovic-penzija-mladi-teniseri",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-penzija-mladi-teniseri.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-penzija-mladi-teniseri.txt"
+  },
+  {
+    "sample_id": "luka-jovic-povredio-misic-na-treningu-ne-igra-protiv-juventusa",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/luka-jovic-povredio-misic-na-treningu-ne-igra-protiv-juventusa.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/luka-jovic-povredio-misic-na-treningu-ne-igra-protiv-juventusa.txt"
+  },
+  {
+    "sample_id": "izlozba-u-beckom-jevrejskom-muzeju-prikazuje-istorijske-i-aktuelne-dimenzije-straha",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/izlozba-u-beckom-jevrejskom-muzeju-prikazuje-istorijske-i-aktuelne-dimenzije-straha.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/izlozba-u-beckom-jevrejskom-muzeju-prikazuje-istorijske-i-aktuelne-dimenzije-straha.txt"
+  },
+  {
+    "sample_id": "vestacka-inteligencija-inovacije-podaci",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vestacka-inteligencija-inovacije-podaci.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vestacka-inteligencija-inovacije-podaci.txt"
+  },
+  {
+    "sample_id": "sto-godina-radio-beograda",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/sto-godina-radio-beograda.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/sto-godina-radio-beograda.txt"
+  },
+  {
+    "sample_id": "sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/sahranjeno-14-zrtava-u-potocarima-obelezeno-29-godina-od-zlocina-u-srebrenici.txt"
+  },
+  {
+    "sample_id": "koliko-je-bolestan-nemacki-obrazovni-sistem---ucenici-sve-agresivniji-nastavnici-na-ivici-nervnog-sloma",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/koliko-je-bolestan-nemacki-obrazovni-sistem---ucenici-sve-agresivniji-nastavnici-na-ivici-nervnog-sloma.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/koliko-je-bolestan-nemacki-obrazovni-sistem---ucenici-sve-agresivniji-nastavnici-na-ivici-nervnog-sloma.txt"
+  },
+  {
+    "sample_id": "dan-mladosti-tito",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dan-mladosti-tito.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dan-mladosti-tito.txt"
+  },
+  {
+    "sample_id": "doping-siner-djokovic-tenis-pikbol",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/doping-siner-djokovic-tenis-pikbol.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/doping-siner-djokovic-tenis-pikbol.txt"
+  },
+  {
+    "sample_id": "amazon-hibridni-rad-ukidanje-zaposleni",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/amazon-hibridni-rad-ukidanje-zaposleni.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/amazon-hibridni-rad-ukidanje-zaposleni.txt"
+  },
+  {
+    "sample_id": "litijum-jadarit-rio-tinto-projekat-jadar-struka-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/litijum-jadarit-rio-tinto-projekat-jadar-struka-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/litijum-jadarit-rio-tinto-projekat-jadar-struka-.txt"
+  },
+  {
+    "sample_id": "kresit-priroda-ekoloski-dug-srbija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kresit-priroda-ekoloski-dug-srbija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kresit-priroda-ekoloski-dug-srbija.txt"
+  },
+  {
+    "sample_id": "amorim-sporting-mancester-junajted-fudbal",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/amorim-sporting-mancester-junajted-fudbal.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/amorim-sporting-mancester-junajted-fudbal.txt"
+  },
+  {
+    "sample_id": "kim-nemacka-ambasada-saracin",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kim-nemacka-ambasada-saracin.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kim-nemacka-ambasada-saracin.txt"
+  },
+  {
+    "sample_id": "posle-pauze-u-velikoj-plani-ponovo-radi-savetovaliste-za-mlade",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/posle-pauze-u-velikoj-plani-ponovo-radi-savetovaliste-za-mlade.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/posle-pauze-u-velikoj-plani-ponovo-radi-savetovaliste-za-mlade.txt"
+  },
+  {
+    "sample_id": "igor-duljaj-partizan-superliga-srbije",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/igor-duljaj-partizan-superliga-srbije.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/igor-duljaj-partizan-superliga-srbije.txt"
+  },
+  {
+    "sample_id": "svetski-dan-mentalnog-zdravlja-zlatibor-loncar",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/svetski-dan-mentalnog-zdravlja-zlatibor-loncar.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/svetski-dan-mentalnog-zdravlja-zlatibor-loncar.txt"
+  },
+  {
+    "sample_id": "novi-francuski-premijer-fransoa-bajru",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/novi-francuski-premijer-fransoa-bajru.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/novi-francuski-premijer-fransoa-bajru.txt"
+  },
+  {
+    "sample_id": "zoran-gajic-dimitrije-cabarkapa-sportske-povrede-preventiva-nauka-sajam-inovacije-bio4-kampus",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/zoran-gajic-dimitrije-cabarkapa-sportske-povrede-preventiva-nauka-sajam-inovacije-bio4-kampus.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/zoran-gajic-dimitrije-cabarkapa-sportske-povrede-preventiva-nauka-sajam-inovacije-bio4-kampus.txt"
+  },
+  {
+    "sample_id": "nebojsa-celik--kako-preziveti-moderna-vremena-slobodno-vreme",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/nebojsa-celik--kako-preziveti-moderna-vremena-slobodno-vreme.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/nebojsa-celik--kako-preziveti-moderna-vremena-slobodno-vreme.txt"
+  },
+  {
+    "sample_id": "nasledje-hane-arent--govori-lazar-atanaskovic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/nasledje-hane-arent--govori-lazar-atanaskovic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/nasledje-hane-arent--govori-lazar-atanaskovic.txt"
+  },
+  {
+    "sample_id": "nikola-pilic-tenis-djokovic-olimpijske-igre-zlatna-medalja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/nikola-pilic-tenis-djokovic-olimpijske-igre-zlatna-medalja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/nikola-pilic-tenis-djokovic-olimpijske-igre-zlatna-medalja.txt"
+  },
+  {
+    "sample_id": "djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/djokovic-na-korak-do-olimpijskog-sna-alkaraz-poslednja-prepreka.txt"
+  },
+  {
+    "sample_id": "abazovic-za-rts-sve-smo-probali-u-regionu-samo-nismo-dogovor",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/abazovic-za-rts-sve-smo-probali-u-regionu-samo-nismo-dogovor.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/abazovic-za-rts-sve-smo-probali-u-regionu-samo-nismo-dogovor.txt"
+  },
+  {
+    "sample_id": "bec-burg-teatar-premijera-trg-heroja-tomas-bernhard-frank-kastorf",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/bec-burg-teatar-premijera-trg-heroja-tomas-bernhard-frank-kastorf.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/bec-burg-teatar-premijera-trg-heroja-tomas-bernhard-frank-kastorf.txt"
+  },
+  {
+    "sample_id": "liga-sampiona-mancester-siti-inter",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/liga-sampiona-mancester-siti-inter.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/liga-sampiona-mancester-siti-inter.txt"
+  },
+  {
+    "sample_id": "bivsi-izaslanik-eu-za-kim-petric-knjiga-je-poruka-za-gradjane-srbije--morate-da-postane-deo-eu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/bivsi-izaslanik-eu-za-kim-petric-knjiga-je-poruka-za-gradjane-srbije--morate-da-postane-deo-eu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/bivsi-izaslanik-eu-za-kim-petric-knjiga-je-poruka-za-gradjane-srbije--morate-da-postane-deo-eu.txt"
+  },
+  {
+    "sample_id": "gazeta-delo-sport-samardzic-u-pregovorima-sa-atalantom",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-samardzic-u-pregovorima-sa-atalantom.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-samardzic-u-pregovorima-sa-atalantom.txt"
+  },
+  {
+    "sample_id": "dacic-sa-lavrovom-u-moskvi-bilateralni-odnosi-srbije-i-rusije-na-visokom-nivou",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dacic-sa-lavrovom-u-moskvi-bilateralni-odnosi-srbije-i-rusije-na-visokom-nivou.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dacic-sa-lavrovom-u-moskvi-bilateralni-odnosi-srbije-i-rusije-na-visokom-nivou.txt"
+  },
+  {
+    "sample_id": "sostakovic-i-fudbal",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sostakovic-i-fudbal.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sostakovic-i-fudbal.txt"
+  },
+  {
+    "sample_id": "-most-na-ibru-kancelarija-za-kim",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-most-na-ibru-kancelarija-za-kim.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-most-na-ibru-kancelarija-za-kim.txt"
+  },
+  {
+    "sample_id": "svecano-otvoreno-evropsko-prvenstvo-u-tekvondu-u-beogradu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/svecano-otvoreno-evropsko-prvenstvo-u-tekvondu-u-beogradu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/svecano-otvoreno-evropsko-prvenstvo-u-tekvondu-u-beogradu.txt"
+  },
+  {
+    "sample_id": "tv-minijature-mala-srpska-sampionka",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/tv-minijature-mala-srpska-sampionka.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/tv-minijature-mala-srpska-sampionka.txt"
+  },
+  {
+    "sample_id": "predsednistvo-sns",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/predsednistvo-sns.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/predsednistvo-sns.txt"
+  },
+  {
+    "sample_id": "sainc-melburn-formula-1-slepo-crevo",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sainc-melburn-formula-1-slepo-crevo.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sainc-melburn-formula-1-slepo-crevo.txt"
+  },
+  {
+    "sample_id": "vrsnjacko-digitalno-nasilje",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vrsnjacko-digitalno-nasilje.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vrsnjacko-digitalno-nasilje.txt"
+  },
+  {
+    "sample_id": "novak-djokovic-nikola-jokic-travis-kelsi-maks-ferstapen",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-nikola-jokic-travis-kelsi-maks-ferstapen.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-nikola-jokic-travis-kelsi-maks-ferstapen.txt"
+  },
+  {
+    "sample_id": "dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/dzeruzalem-post-izraelske-inovacije-dobrodosle-na-beogradski-ekspo-2027.txt"
+  },
+  {
+    "sample_id": "djuric-podrska-od-grcke-do-baltika-da-srbija-ide-brze-ka-eu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/djuric-podrska-od-grcke-do-baltika-da-srbija-ide-brze-ka-eu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/djuric-podrska-od-grcke-do-baltika-da-srbija-ide-brze-ka-eu.txt"
+  },
+  {
+    "sample_id": "muzicka-produkcija-rts",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/muzicka-produkcija-rts.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/muzicka-produkcija-rts.txt"
+  },
+  {
+    "sample_id": "-izborna-godina-u-sad-hvatanje-zaleta-za-novi-duel-bajdena-i-trampa",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-izborna-godina-u-sad-hvatanje-zaleta-za-novi-duel-bajdena-i-trampa.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-izborna-godina-u-sad-hvatanje-zaleta-za-novi-duel-bajdena-i-trampa.txt"
+  },
+  {
+    "sample_id": "kilijan-mbape-pari-sen-zermen-demantovao-da-se-dogovorio-sa-realom",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/kilijan-mbape-pari-sen-zermen-demantovao-da-se-dogovorio-sa-realom.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/kilijan-mbape-pari-sen-zermen-demantovao-da-se-dogovorio-sa-realom.txt"
+  },
+  {
+    "sample_id": "svetski-dan-devojcica---one-mogu-sve",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/svetski-dan-devojcica---one-mogu-sve.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/svetski-dan-devojcica---one-mogu-sve.txt"
+  },
+  {
+    "sample_id": "mings-komicnom-greskom-poklonio-pobedu-brizu-jang-bojs-i-dalje-bez-boda",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mings-komicnom-greskom-poklonio-pobedu-brizu-jang-bojs-i-dalje-bez-boda.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mings-komicnom-greskom-poklonio-pobedu-brizu-jang-bojs-i-dalje-bez-boda.txt"
+  },
+  {
+    "sample_id": "-dzon-mirsajmer-i-sebastijan-rozato-racionalnost-i-velika-strategija-5",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-dzon-mirsajmer-i-sebastijan-rozato-racionalnost-i-velika-strategija-5.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-dzon-mirsajmer-i-sebastijan-rozato-racionalnost-i-velika-strategija-5.txt"
+  },
+  {
+    "sample_id": "vlada-srbije-usvojila-strategiju-za-resavanje-pitanja-izbeglica-i-interno-raseljenih-lica",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vlada-srbije-usvojila-strategiju-za-resavanje-pitanja-izbeglica-i-interno-raseljenih-lica.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vlada-srbije-usvojila-strategiju-za-resavanje-pitanja-izbeglica-i-interno-raseljenih-lica.txt"
+  },
+  {
+    "sample_id": "dubravka-djedovic-handanovic-za-rts-nisam-ministarka-za-litijum-ali-lezimo-na-milijardama",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dubravka-djedovic-handanovic-za-rts-nisam-ministarka-za-litijum-ali-lezimo-na-milijardama.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dubravka-djedovic-handanovic-za-rts-nisam-ministarka-za-litijum-ali-lezimo-na-milijardama.txt"
+  },
+  {
+    "sample_id": "lazic-nadam-se-da-cemo-vratiti-trofej-aba-lige",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/lazic-nadam-se-da-cemo-vratiti-trofej-aba-lige.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/lazic-nadam-se-da-cemo-vratiti-trofej-aba-lige.txt"
+  },
+  {
+    "sample_id": "deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/deca-fizicka-aktivnost-deformiteti-stopala-kriva-kicma-.txt"
+  },
+  {
+    "sample_id": "vlada-kontinuiteta",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vlada-kontinuiteta.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vlada-kontinuiteta.txt"
+  },
+  {
+    "sample_id": "-kako-je-vaterpolo-postao-najuspesnijiji-sport-u-valjevu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/-kako-je-vaterpolo-postao-najuspesnijiji-sport-u-valjevu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/-kako-je-vaterpolo-postao-najuspesnijiji-sport-u-valjevu.txt"
+  },
+  {
+    "sample_id": "evropska-zajednica-london-starmer",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/evropska-zajednica-london-starmer.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/evropska-zajednica-london-starmer.txt"
+  },
+  {
+    "sample_id": "jutarnji-program-iz-tri-studija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/jutarnji-program-iz-tri-studija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/jutarnji-program-iz-tri-studija.txt"
+  },
+  {
+    "sample_id": "civilno-drustvo-i-demokratija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/civilno-drustvo-i-demokratija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/civilno-drustvo-i-demokratija.txt"
+  },
+  {
+    "sample_id": "kristofer-hil-bombardovanje-nato-kosovo-metohija-sad-ambasada",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kristofer-hil-bombardovanje-nato-kosovo-metohija-sad-ambasada.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kristofer-hil-bombardovanje-nato-kosovo-metohija-sad-ambasada.txt"
+  },
+  {
+    "sample_id": "mali-a-veliki",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mali-a-veliki.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mali-a-veliki.txt"
+  },
+  {
+    "sample_id": "portugalija--ronaldov-poslednji-ples-i-partneri-spremni-za-podijum-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/portugalija--ronaldov-poslednji-ples-i-partneri-spremni-za-podijum-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/portugalija--ronaldov-poslednji-ples-i-partneri-spremni-za-podijum-.txt"
+  },
+  {
+    "sample_id": "atentat-na-jakova-milatovica",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/atentat-na-jakova-milatovica.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/atentat-na-jakova-milatovica.txt"
+  },
+  {
+    "sample_id": "veljko-odalovic-most-na-ibru",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/veljko-odalovic-most-na-ibru.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/veljko-odalovic-most-na-ibru.txt"
+  },
+  {
+    "sample_id": "slucaj-siner---doping-afera-koja-je-otvorila-mnoga-pitanja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/slucaj-siner---doping-afera-koja-je-otvorila-mnoga-pitanja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/slucaj-siner---doping-afera-koja-je-otvorila-mnoga-pitanja.txt"
+  },
+  {
+    "sample_id": "rezolucija-o-genocidu-u-ndh-u-najavi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/rezolucija-o-genocidu-u-ndh-u-najavi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/rezolucija-o-genocidu-u-ndh-u-najavi.txt"
+  },
+  {
+    "sample_id": "aleksandar-vucic-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/aleksandar-vucic-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/aleksandar-vucic-.txt"
+  },
+  {
+    "sample_id": "knjiga-slobodan-novakovic--licnost-kao-metafora-marko-novakovic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/knjiga-slobodan-novakovic--licnost-kao-metafora-marko-novakovic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/knjiga-slobodan-novakovic--licnost-kao-metafora-marko-novakovic.txt"
+  },
+  {
+    "sample_id": "nemacka-vlada-solc-koalicija-raspad-liberali-lindner",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/nemacka-vlada-solc-koalicija-raspad-liberali-lindner.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/nemacka-vlada-solc-koalicija-raspad-liberali-lindner.txt"
+  },
+  {
+    "sample_id": "-vladimir-malahov-prevrtljivosti-multikulturalizma-1-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-vladimir-malahov-prevrtljivosti-multikulturalizma-1-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-vladimir-malahov-prevrtljivosti-multikulturalizma-1-.txt"
+  },
+  {
+    "sample_id": "otac-predrag-popovic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/otac-predrag-popovic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/otac-predrag-popovic.txt"
+  },
+  {
+    "sample_id": "sake-duzina-prstiju-sklonost-alkohol-konzumiranje-zavisnost",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sake-duzina-prstiju-sklonost-alkohol-konzumiranje-zavisnost.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sake-duzina-prstiju-sklonost-alkohol-konzumiranje-zavisnost.txt"
+  },
+  {
+    "sample_id": "fudbaleri-zvezde-startovali-sa-medicinskim-pregledima-za-prolecni-deo-sezone",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fudbaleri-zvezde-startovali-sa-medicinskim-pregledima-za-prolecni-deo-sezone.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fudbaleri-zvezde-startovali-sa-medicinskim-pregledima-za-prolecni-deo-sezone.txt"
+  },
+  {
+    "sample_id": "olimpijski-komitet-srbije-obelezio-114-rodjendan",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/olimpijski-komitet-srbije-obelezio-114-rodjendan.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/olimpijski-komitet-srbije-obelezio-114-rodjendan.txt"
+  },
+  {
+    "sample_id": "-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/-antologija-americke-eksperimentalne-poezije--dzejms-seri-i-kenet-goldsmit.txt"
+  },
+  {
+    "sample_id": "djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/djordjic-kada-sam-posmatrao-ocevu-karijeru-to-sam-zeleo-i-sebi.txt"
+  },
+  {
+    "sample_id": "ivan-kurila-amerikanci-i-svi-ostali-1",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/ivan-kurila-amerikanci-i-svi-ostali-1.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/ivan-kurila-amerikanci-i-svi-ostali-1.txt"
+  },
+  {
+    "sample_id": "mirdita-dobar-dan--mirovna-inicijativa-ili-provokacija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/mirdita-dobar-dan--mirovna-inicijativa-ili-provokacija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/mirdita-dobar-dan--mirovna-inicijativa-ili-provokacija.txt"
+  },
+  {
+    "sample_id": "kosovo-metohija-skupstina-pristina-srpska-lista",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kosovo-metohija-skupstina-pristina-srpska-lista.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kosovo-metohija-skupstina-pristina-srpska-lista.txt"
+  },
+  {
+    "sample_id": "gudelj-evropsko-prvenstvo-menisukus-propusta",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gudelj-evropsko-prvenstvo-menisukus-propusta.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gudelj-evropsko-prvenstvo-menisukus-propusta.txt"
+  },
+  {
+    "sample_id": "srbija-danska-naplata-odlicna-partija-spanija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/srbija-danska-naplata-odlicna-partija-spanija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/srbija-danska-naplata-odlicna-partija-spanija.txt"
+  },
+  {
+    "sample_id": "dzon-mirsajmer-i-sebastijan-rozato-racionalnost-i-velika-strategija-2",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dzon-mirsajmer-i-sebastijan-rozato-racionalnost-i-velika-strategija-2.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dzon-mirsajmer-i-sebastijan-rozato-racionalnost-i-velika-strategija-2.txt"
+  },
+  {
+    "sample_id": "badminton",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/badminton.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/badminton.txt"
+  },
+  {
+    "sample_id": "sokolari---hani-girgis-radan-bulatovic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sokolari---hani-girgis-radan-bulatovic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sokolari---hani-girgis-radan-bulatovic.txt"
+  },
+  {
+    "sample_id": "drugi-dan-bezbednosne-konferencije-u-minhenu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/drugi-dan-bezbednosne-konferencije-u-minhenu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/drugi-dan-bezbednosne-konferencije-u-minhenu.txt"
+  },
+  {
+    "sample_id": "saradnja-london-beograd-skoplje-pristina-migracije-krijumcarenje-lamans",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/saradnja-london-beograd-skoplje-pristina-migracije-krijumcarenje-lamans.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/saradnja-london-beograd-skoplje-pristina-migracije-krijumcarenje-lamans.txt"
+  },
+  {
+    "sample_id": "rat-ukrajina-rusija-moskva-kijev-1000-dana-amerika-rakete-vasington-treci-svetski-rat",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/rat-ukrajina-rusija-moskva-kijev-1000-dana-amerika-rakete-vasington-treci-svetski-rat.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/rat-ukrajina-rusija-moskva-kijev-1000-dana-amerika-rakete-vasington-treci-svetski-rat.txt"
+  },
+  {
+    "sample_id": "platforme-za-dostavu-hrane-nevidljive-za-aktuelne-zakone",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/platforme-za-dostavu-hrane-nevidljive-za-aktuelne-zakone.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/platforme-za-dostavu-hrane-nevidljive-za-aktuelne-zakone.txt"
+  },
+  {
+    "sample_id": "novak-djokovic-rafael-nadal-tenis",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-rafael-nadal-tenis.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-rafael-nadal-tenis.txt"
+  },
+  {
+    "sample_id": "tuca-u-gelzenkirhenu---albanci-napali-srpske-navijace-skaj-sport-englezi-nisu-ukljuceni",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/tuca-u-gelzenkirhenu---albanci-napali-srpske-navijace-skaj-sport-englezi-nisu-ukljuceni.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/tuca-u-gelzenkirhenu---albanci-napali-srpske-navijace-skaj-sport-englezi-nisu-ukljuceni.txt"
+  },
+  {
+    "sample_id": "prava-radnika-vrucine-rad-na-otvorenom",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/prava-radnika-vrucine-rad-na-otvorenom.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/prava-radnika-vrucine-rad-na-otvorenom.txt"
+  },
+  {
+    "sample_id": "spasovdanska-litija-na-ulicama-beograda",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/spasovdanska-litija-na-ulicama-beograda.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/spasovdanska-litija-na-ulicama-beograda.txt"
+  },
+  {
+    "sample_id": "kina",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kina.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kina.txt"
+  },
+  {
+    "sample_id": "gazeta-delo-sport-kostic-blizu-reza-u-juventusu-murinjo-ga-hoce",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-kostic-blizu-reza-u-juventusu-murinjo-ga-hoce.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-kostic-blizu-reza-u-juventusu-murinjo-ga-hoce.txt"
+  },
+  {
+    "sample_id": "andrej-plenkovic-hrvatska-jasenovac",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/andrej-plenkovic-hrvatska-jasenovac.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/andrej-plenkovic-hrvatska-jasenovac.txt"
+  },
+  {
+    "sample_id": "ibrahimovic-pioli-radi-dobar-posao-u-milanu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/ibrahimovic-pioli-radi-dobar-posao-u-milanu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/ibrahimovic-pioli-radi-dobar-posao-u-milanu.txt"
+  },
+  {
+    "sample_id": "lokalni-izbori-borislav-antonijevic-i-aleksandar-sapic-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/lokalni-izbori-borislav-antonijevic-i-aleksandar-sapic-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/lokalni-izbori-borislav-antonijevic-i-aleksandar-sapic-.txt"
+  },
+  {
+    "sample_id": "zona-zaric-politicki-znacaj-saosecanja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/zona-zaric-politicki-znacaj-saosecanja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/zona-zaric-politicki-znacaj-saosecanja.txt"
+  },
+  {
+    "sample_id": "trka-kao-izazov-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/trka-kao-izazov-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/trka-kao-izazov-.txt"
+  },
+  {
+    "sample_id": "direktor-cikaski-maraton-rts-organizacija-trka-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/direktor-cikaski-maraton-rts-organizacija-trka-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/direktor-cikaski-maraton-rts-organizacija-trka-.txt"
+  },
+  {
+    "sample_id": "vucic-u-sb-un-pristinske-institucije-sprovode-pravno-i-fizicko-nasilje-nad-srbima",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vucic-u-sb-un-pristinske-institucije-sprovode-pravno-i-fizicko-nasilje-nad-srbima.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vucic-u-sb-un-pristinske-institucije-sprovode-pravno-i-fizicko-nasilje-nad-srbima.txt"
+  },
+  {
+    "sample_id": "luana-fudbalsko-cudo",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/luana-fudbalsko-cudo.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/luana-fudbalsko-cudo.txt"
+  },
+  {
+    "sample_id": "rivalstvo-koje-nadilazi-sport---istorijat-susreta-srbije-i-danske",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/rivalstvo-koje-nadilazi-sport---istorijat-susreta-srbije-i-danske.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/rivalstvo-koje-nadilazi-sport---istorijat-susreta-srbije-i-danske.txt"
+  },
+  {
+    "sample_id": "sportski-direktor-arsenala-edu-gaspar-napusta-londonski-fudbalski-klub",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sportski-direktor-arsenala-edu-gaspar-napusta-londonski-fudbalski-klub.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/sportski-direktor-arsenala-edu-gaspar-napusta-londonski-fudbalski-klub.txt"
+  },
+  {
+    "sample_id": "kfor-pojacava-snage-kim-bih-nato-kavoli-rusija-republika-srpska-teska-oprema",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kfor-pojacava-snage-kim-bih-nato-kavoli-rusija-republika-srpska-teska-oprema.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kfor-pojacava-snage-kim-bih-nato-kavoli-rusija-republika-srpska-teska-oprema.txt"
+  },
+  {
+    "sample_id": "gazeta-delo-sport-vlahovicu-nedostaje-lucidnosti-zasto-ne-resava-utakmice",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-vlahovicu-nedostaje-lucidnosti-zasto-ne-resava-utakmice.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-vlahovicu-nedostaje-lucidnosti-zasto-ne-resava-utakmice.txt"
+  },
+  {
+    "sample_id": "starlink-sateliti-spejs-iks-ilon-mask-astron-istrazivanje-svemira",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/starlink-sateliti-spejs-iks-ilon-mask-astron-istrazivanje-svemira.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/starlink-sateliti-spejs-iks-ilon-mask-astron-istrazivanje-svemira.txt"
+  },
+  {
+    "sample_id": "martovski-pogrom---projektovan-zlocin",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/martovski-pogrom---projektovan-zlocin.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/martovski-pogrom---projektovan-zlocin.txt"
+  },
+  {
+    "sample_id": "bokserima-crvene-zvezde-bronzana-medalja-na-kupu-sampiona-u-krasnodaru",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bokserima-crvene-zvezde-bronzana-medalja-na-kupu-sampiona-u-krasnodaru.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bokserima-crvene-zvezde-bronzana-medalja-na-kupu-sampiona-u-krasnodaru.txt"
+  },
+  {
+    "sample_id": "robert-fico-za-rts-srbija-je-spremna-za-eu-pitanje-je-samo-politicke-volje",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/robert-fico-za-rts-srbija-je-spremna-za-eu-pitanje-je-samo-politicke-volje.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/robert-fico-za-rts-srbija-je-spremna-za-eu-pitanje-je-samo-politicke-volje.txt"
+  },
+  {
+    "sample_id": "djokoviceva-poruka-amerikancima-imali-ste-srece-protiv-srbije-u-kosarci-na-oi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/djokoviceva-poruka-amerikancima-imali-ste-srece-protiv-srbije-u-kosarci-na-oi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/djokoviceva-poruka-amerikancima-imali-ste-srece-protiv-srbije-u-kosarci-na-oi.txt"
+  },
+  {
+    "sample_id": "fijakerijada-lipicaneri-konji-crepaja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fijakerijada-lipicaneri-konji-crepaja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fijakerijada-lipicaneri-konji-crepaja.txt"
+  },
+  {
+    "sample_id": "-etjen-balibar-spinoza-i-politika-5",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-etjen-balibar-spinoza-i-politika-5.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/-etjen-balibar-spinoza-i-politika-5.txt"
+  },
+  {
+    "sample_id": "karlos-alkaraz-monte-karlo-povreda",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/karlos-alkaraz-monte-karlo-povreda.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/karlos-alkaraz-monte-karlo-povreda.txt"
+  },
+  {
+    "sample_id": "srbija-ima-presuda-za-pranje-novca-kao-ceo-region-zajedno--ipak-kaznena-politika-je-blaga-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/srbija-ima-presuda-za-pranje-novca-kao-ceo-region-zajedno--ipak-kaznena-politika-je-blaga-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/srbija-ima-presuda-za-pranje-novca-kao-ceo-region-zajedno--ipak-kaznena-politika-je-blaga-.txt"
+  },
+  {
+    "sample_id": "fk-crvena-zvezda-stanojevic-podize-tenzije-da-pokrije-sopstvene-neuspehe",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fk-crvena-zvezda-stanojevic-podize-tenzije-da-pokrije-sopstvene-neuspehe.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fk-crvena-zvezda-stanojevic-podize-tenzije-da-pokrije-sopstvene-neuspehe.txt"
+  },
+  {
+    "sample_id": "hotel-jugoslavija-broji-poslednje-dane--kako-ce-ubuduce-izgledati-taj-deo-zemunskog-keja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/hotel-jugoslavija-broji-poslednje-dane--kako-ce-ubuduce-izgledati-taj-deo-zemunskog-keja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/hotel-jugoslavija-broji-poslednje-dane--kako-ce-ubuduce-izgledati-taj-deo-zemunskog-keja.txt"
+  },
+  {
+    "sample_id": "murinjo-ocekivao-sam-vise-od-portugalskih-fudbalera-na-evropskom-prvenstvu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/murinjo-ocekivao-sam-vise-od-portugalskih-fudbalera-na-evropskom-prvenstvu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/murinjo-ocekivao-sam-vise-od-portugalskih-fudbalera-na-evropskom-prvenstvu.txt"
+  },
+  {
+    "sample_id": "presudan-dan-za-jokica-i-nagetse---kako-doncic-moze-da-pomogne-dzokeru",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/presudan-dan-za-jokica-i-nagetse---kako-doncic-moze-da-pomogne-dzokeru.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/presudan-dan-za-jokica-i-nagetse---kako-doncic-moze-da-pomogne-dzokeru.txt"
+  },
+  {
+    "sample_id": "izrael-gaza-palestina-hezbolah-liban",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/izrael-gaza-palestina-hezbolah-liban.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/izrael-gaza-palestina-hezbolah-liban.txt"
+  },
+  {
+    "sample_id": "gazeta-delo-sport-pustinja-oko-vlahovica",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-pustinja-oko-vlahovica.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/gazeta-delo-sport-pustinja-oko-vlahovica.txt"
+  },
+  {
+    "sample_id": "kakav-je-dzoging---ploging-u-kom-smo-odnedavno-svetski-prvaci",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/kakav-je-dzoging---ploging-u-kom-smo-odnedavno-svetski-prvaci.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/kakav-je-dzoging---ploging-u-kom-smo-odnedavno-svetski-prvaci.txt"
+  },
+  {
+    "sample_id": "skup-albanske-imigracije-u-atini-obratio-se-i-edi-rama",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/skup-albanske-imigracije-u-atini-obratio-se-i-edi-rama.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/skup-albanske-imigracije-u-atini-obratio-se-i-edi-rama.txt"
+  },
+  {
+    "sample_id": "albanija-evropska-unija-klasteri-pregovori-clanstvo-prosirenje-zapadni-balkan",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/albanija-evropska-unija-klasteri-pregovori-clanstvo-prosirenje-zapadni-balkan.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/albanija-evropska-unija-klasteri-pregovori-clanstvo-prosirenje-zapadni-balkan.txt"
+  },
+  {
+    "sample_id": "hodanje-zdravlje",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/hodanje-zdravlje.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/hodanje-zdravlje.txt"
+  },
+  {
+    "sample_id": "berliner-cajtung-vucic-govori-slobodno-i-uspostavlja-veze-izmedju-blokova",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/berliner-cajtung-vucic-govori-slobodno-i-uspostavlja-veze-izmedju-blokova.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/berliner-cajtung-vucic-govori-slobodno-i-uspostavlja-veze-izmedju-blokova.txt"
+  },
+  {
+    "sample_id": "bosko-djurovski-reprezentacija-piksi-izjava",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bosko-djurovski-reprezentacija-piksi-izjava.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bosko-djurovski-reprezentacija-piksi-izjava.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4.txt"
+  },
+  {
+    "sample_id": "fk-radnicki-iz-nisa-zavrsio-rekonstrukciju-terena-sa-vestackom-travom",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fk-radnicki-iz-nisa-zavrsio-rekonstrukciju-terena-sa-vestackom-travom.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/fk-radnicki-iz-nisa-zavrsio-rekonstrukciju-terena-sa-vestackom-travom.txt"
+  },
+  {
+    "sample_id": "odrzan-zreb-za-25-memorijal-igrajmo-za-16",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/odrzan-zreb-za-25-memorijal-igrajmo-za-16.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/odrzan-zreb-za-25-memorijal-igrajmo-za-16.txt"
+  },
+  {
+    "sample_id": "bregar-srbija-ceska-izjava-utakmica-evropsko-prvenstvo",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bregar-srbija-ceska-izjava-utakmica-evropsko-prvenstvo.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bregar-srbija-ceska-izjava-utakmica-evropsko-prvenstvo.txt"
+  },
+  {
+    "sample_id": "ivan-kurila-amerikanci-i-svi-ostali-2",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/ivan-kurila-amerikanci-i-svi-ostali-2.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/ivan-kurila-amerikanci-i-svi-ostali-2.txt"
+  },
+  {
+    "sample_id": "vucevic-o-izjavi-heleza-srbija-nece-dozvoliti-da-neodgovorne-izjave-i-lazi-unesu-nestabilnost",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vucevic-o-izjavi-heleza-srbija-nece-dozvoliti-da-neodgovorne-izjave-i-lazi-unesu-nestabilnost.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vucevic-o-izjavi-heleza-srbija-nece-dozvoliti-da-neodgovorne-izjave-i-lazi-unesu-nestabilnost.txt"
+  },
+  {
+    "sample_id": "mmf-srbija-u-2024-zabelezila-impresivne-makroekonomske-rezultate",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/mmf-srbija-u-2024-zabelezila-impresivne-makroekonomske-rezultate.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/mmf-srbija-u-2024-zabelezila-impresivne-makroekonomske-rezultate.txt"
+  },
+  {
+    "sample_id": "lebron-dzejms-dres-aukcija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/lebron-dzejms-dres-aukcija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/lebron-dzejms-dres-aukcija.txt"
+  },
+  {
+    "sample_id": "zvezda-barselona-42-godine-maradona-lob-dule-ponisten-gol",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/zvezda-barselona-42-godine-maradona-lob-dule-ponisten-gol.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/zvezda-barselona-42-godine-maradona-lob-dule-ponisten-gol.txt"
+  },
+  {
+    "sample_id": "jedan-dobar-dan",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/jedan-dobar-dan.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/jedan-dobar-dan.txt"
+  },
+  {
+    "sample_id": "predrag-milojevic-kazem-ja-sebi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/predrag-milojevic-kazem-ja-sebi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/predrag-milojevic-kazem-ja-sebi.txt"
+  },
+  {
+    "sample_id": "strahinja-erakovic-o-izostanku-sa-spiska-fudbalske-reprezentacije-srbije",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/strahinja-erakovic-o-izostanku-sa-spiska-fudbalske-reprezentacije-srbije.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/strahinja-erakovic-o-izostanku-sa-spiska-fudbalske-reprezentacije-srbije.txt"
+  },
+  {
+    "sample_id": "morski-zmajevi-i-konj-u-galopu---kako-podvodne-vetrenjace-i-solarne-farme-stvaraju-odrzivu-energiju",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/morski-zmajevi-i-konj-u-galopu---kako-podvodne-vetrenjace-i-solarne-farme-stvaraju-odrzivu-energiju.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/morski-zmajevi-i-konj-u-galopu---kako-podvodne-vetrenjace-i-solarne-farme-stvaraju-odrzivu-energiju.txt"
+  },
+  {
+    "sample_id": "danska-prestolonaslednik-frederik-kraljica-margrete-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/danska-prestolonaslednik-frederik-kraljica-margrete-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/danska-prestolonaslednik-frederik-kraljica-margrete-.txt"
+  },
+  {
+    "sample_id": "guvernerka-tabakovic-na-sastanku-medjunarodnog-monetarnog-i-finansijskog-komiteta",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/guvernerka-tabakovic-na-sastanku-medjunarodnog-monetarnog-i-finansijskog-komiteta.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/guvernerka-tabakovic-na-sastanku-medjunarodnog-monetarnog-i-finansijskog-komiteta.txt"
+  },
+  {
+    "sample_id": "crveni-alarm-medju-roso-nerima-ibrahimovic-drzao-govor-igracima-milana",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/crveni-alarm-medju-roso-nerima-ibrahimovic-drzao-govor-igracima-milana.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/crveni-alarm-medju-roso-nerima-ibrahimovic-drzao-govor-igracima-milana.txt"
+  },
+  {
+    "sample_id": "milojevic-ziveli-smo-i-radili-za-ovo-za-zvezdu-cu-uvek-da-budem-tu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/milojevic-ziveli-smo-i-radili-za-ovo-za-zvezdu-cu-uvek-da-budem-tu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/milojevic-ziveli-smo-i-radili-za-ovo-za-zvezdu-cu-uvek-da-budem-tu.txt"
+  },
+  {
+    "sample_id": "pobednica-potere-pomirila-sam-se-sa-sudbinom-kada-sam-ostala-jedan-na-jedan-sa-tragacem",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/pobednica-potere-pomirila-sam-se-sa-sudbinom-kada-sam-ostala-jedan-na-jedan-sa-tragacem.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/pobednica-potere-pomirila-sam-se-sa-sudbinom-kada-sam-ostala-jedan-na-jedan-sa-tragacem.txt"
+  },
+  {
+    "sample_id": "kopaonik-biznis-forum",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kopaonik-biznis-forum.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kopaonik-biznis-forum.txt"
+  },
+  {
+    "sample_id": "beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/beskrajni-vrtlog-postepeno-usisava-srpski-fudbal-otkaz-superliga.txt"
+  },
+  {
+    "sample_id": "glavni-ekonomista-svetske-banke-srbija-da-se-prikljuci-na-evropski-voz-uz-javna-neophodna-i-privatna-ulaganja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/glavni-ekonomista-svetske-banke-srbija-da-se-prikljuci-na-evropski-voz-uz-javna-neophodna-i-privatna-ulaganja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/glavni-ekonomista-svetske-banke-srbija-da-se-prikljuci-na-evropski-voz-uz-javna-neophodna-i-privatna-ulaganja.txt"
+  },
+  {
+    "sample_id": "milivojevic-napad-na-ambasadorku-srbije-refleksija-politike-koju-sprovodi-pristina",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/milivojevic-napad-na-ambasadorku-srbije-refleksija-politike-koju-sprovodi-pristina.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/milivojevic-napad-na-ambasadorku-srbije-refleksija-politike-koju-sprovodi-pristina.txt"
+  },
+  {
+    "sample_id": "besplatni-preventivni-pregledi-sirom-srbije",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/besplatni-preventivni-pregledi-sirom-srbije.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/besplatni-preventivni-pregledi-sirom-srbije.txt"
+  },
+  {
+    "sample_id": "radmila-bunusevac",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/radmila-bunusevac.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/radmila-bunusevac.txt"
+  },
+  {
+    "sample_id": "ivan-kurila-amerikanci-i-svi-ostali-4",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/ivan-kurila-amerikanci-i-svi-ostali-4.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/ivan-kurila-amerikanci-i-svi-ostali-4.txt"
+  },
+  {
+    "sample_id": "aston-vila-srusila-bajern-benfika-ubedljiva-protiv-altetika-monako-remizirao-s-dinamom",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/aston-vila-srusila-bajern-benfika-ubedljiva-protiv-altetika-monako-remizirao-s-dinamom.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/aston-vila-srusila-bajern-benfika-ubedljiva-protiv-altetika-monako-remizirao-s-dinamom.txt"
+  },
+  {
+    "sample_id": "indira-gandi-indija-cetiri-decenije-atentat",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/indira-gandi-indija-cetiri-decenije-atentat.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/indira-gandi-indija-cetiri-decenije-atentat.txt"
+  },
+  {
+    "sample_id": "milivojevic-brisel-na-odmoru-ali-rok-tece-pritisci-na-beograd-zbog-kim-ne-prestaju",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/milivojevic-brisel-na-odmoru-ali-rok-tece-pritisci-na-beograd-zbog-kim-ne-prestaju.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/milivojevic-brisel-na-odmoru-ali-rok-tece-pritisci-na-beograd-zbog-kim-ne-prestaju.txt"
+  },
+  {
+    "sample_id": "igor-duljaj-ljudi-lete-mars-teren-ivanjica-uslovi-fudbal-javor",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/igor-duljaj-ljudi-lete-mars-teren-ivanjica-uslovi-fudbal-javor.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/igor-duljaj-ljudi-lete-mars-teren-ivanjica-uslovi-fudbal-javor.txt"
+  },
+  {
+    "sample_id": "radio---zvuk-buducnosti",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/radio---zvuk-buducnosti.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/radio---zvuk-buducnosti.txt"
+  },
+  {
+    "sample_id": "izvoz-tajvana-u-kinu-najnizi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/izvoz-tajvana-u-kinu-najnizi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/izvoz-tajvana-u-kinu-najnizi.txt"
+  },
+  {
+    "sample_id": "istok-pretenduje-na-olimpijske-igre-2036--sta-nude-istanbul-katar-indija-i-indonezija",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/istok-pretenduje-na-olimpijske-igre-2036--sta-nude-istanbul-katar-indija-i-indonezija.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/istok-pretenduje-na-olimpijske-igre-2036--sta-nude-istanbul-katar-indija-i-indonezija.txt"
+  },
+  {
+    "sample_id": "predsecnik-fiskalnog-sveta",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/predsecnik-fiskalnog-sveta.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/predsecnik-fiskalnog-sveta.txt"
+  },
+  {
+    "sample_id": "priliv-novca-ekspo-2027",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/priliv-novca-ekspo-2027.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/priliv-novca-ekspo-2027.txt"
+  },
+  {
+    "sample_id": "kosovsko-pomoravlje-humanitarna-organizacija-kosovo-metohija-stipendije",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/kosovsko-pomoravlje-humanitarna-organizacija-kosovo-metohija-stipendije.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/kosovsko-pomoravlje-humanitarna-organizacija-kosovo-metohija-stipendije.txt"
+  },
+  {
+    "sample_id": "derbi-ponedeljak",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/derbi-ponedeljak.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/derbi-ponedeljak.txt"
+  },
+  {
+    "sample_id": "superbet-supersocial",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/superbet-supersocial.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/superbet-supersocial.txt"
+  },
+  {
+    "sample_id": "partizan-nadj-vojvodina-poraz",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/partizan-nadj-vojvodina-poraz.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/partizan-nadj-vojvodina-poraz.txt"
+  },
+  {
+    "sample_id": "put-bez-putovanja-mirjana-stojanovic--omiljeni-decji-trener",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/put-bez-putovanja-mirjana-stojanovic--omiljeni-decji-trener.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/put-bez-putovanja-mirjana-stojanovic--omiljeni-decji-trener.txt"
+  },
+  {
+    "sample_id": "crvena-zvezda-pripreme-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/crvena-zvezda-pripreme-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/crvena-zvezda-pripreme-.txt"
+  },
+  {
+    "sample_id": "putinova-izjava-da-ce-podrzati-kamalu-haris-na-izborima---provokacija-ili-podrska",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/putinova-izjava-da-ce-podrzati-kamalu-haris-na-izborima---provokacija-ili-podrska.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/putinova-izjava-da-ce-podrzati-kamalu-haris-na-izborima---provokacija-ili-podrska.txt"
+  },
+  {
+    "sample_id": "godisnjica-smrti-slobodana-milosevica",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/godisnjica-smrti-slobodana-milosevica.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/godisnjica-smrti-slobodana-milosevica.txt"
+  },
+  {
+    "sample_id": "inflacija-u-padu-kamate-nepromenjene",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/inflacija-u-padu-kamate-nepromenjene.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/inflacija-u-padu-kamate-nepromenjene.txt"
+  },
+  {
+    "sample_id": "nasledje-hane-arent--govori-adriana-zaharijevic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/nasledje-hane-arent--govori-adriana-zaharijevic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/nasledje-hane-arent--govori-adriana-zaharijevic.txt"
+  },
+  {
+    "sample_id": "bliski-istok-rat-gaza-izrael-taoci",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/bliski-istok-rat-gaza-izrael-taoci.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/bliski-istok-rat-gaza-izrael-taoci.txt"
+  },
+  {
+    "sample_id": "cetvrtkom-u-9-putin-na-evropskim-izborima",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/cetvrtkom-u-9-putin-na-evropskim-izborima.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/cetvrtkom-u-9-putin-na-evropskim-izborima.txt"
+  },
+  {
+    "sample_id": "novak-djokovic-laureus-nagrada-prenos-najava",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-laureus-nagrada-prenos-najava.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/novak-djokovic-laureus-nagrada-prenos-najava.txt"
+  },
+  {
+    "sample_id": "vojvodina-novi-sponzor-maksbet",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/vojvodina-novi-sponzor-maksbet.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/vojvodina-novi-sponzor-maksbet.txt"
+  },
+  {
+    "sample_id": "mancester-siti-gvardiola-rekord-poraz-premijer-liga",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mancester-siti-gvardiola-rekord-poraz-premijer-liga.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mancester-siti-gvardiola-rekord-poraz-premijer-liga.txt"
+  },
+  {
+    "sample_id": "vanredni-izbori-u-francuskoj--hoce-li-makronov-hazarderski-potez-zaustaviti-rast-ekstremne-desnice",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vanredni-izbori-u-francuskoj--hoce-li-makronov-hazarderski-potez-zaustaviti-rast-ekstremne-desnice.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/vanredni-izbori-u-francuskoj--hoce-li-makronov-hazarderski-potez-zaustaviti-rast-ekstremne-desnice.txt"
+  },
+  {
+    "sample_id": "posumljenost-srbije-marko-vujic",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/posumljenost-srbije-marko-vujic.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/posumljenost-srbije-marko-vujic.txt"
+  },
+  {
+    "sample_id": "onlajn-biblioteka-za-slepe-i-slabovide",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/onlajn-biblioteka-za-slepe-i-slabovide.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/onlajn-biblioteka-za-slepe-i-slabovide.txt"
+  },
+  {
+    "sample_id": "putovanja-bez-granica-aleksandar-djuricic-o-avanturama-koje-menjaju-zivot-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/putovanja-bez-granica-aleksandar-djuricic-o-avanturama-koje-menjaju-zivot-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/putovanja-bez-granica-aleksandar-djuricic-o-avanturama-koje-menjaju-zivot-.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-5.txt"
+  },
+  {
+    "sample_id": "reakcije-u-kini-na-nato-samit-da-li-je-peking-presudni-pomagac-moskve-u-ratu-u-ukrajini-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/reakcije-u-kini-na-nato-samit-da-li-je-peking-presudni-pomagac-moskve-u-ratu-u-ukrajini-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/reakcije-u-kini-na-nato-samit-da-li-je-peking-presudni-pomagac-moskve-u-ratu-u-ukrajini-.txt"
+  },
+  {
+    "sample_id": "povratak-zvezdama-sampion-mate-parlov",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/povratak-zvezdama-sampion-mate-parlov.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/povratak-zvezdama-sampion-mate-parlov.txt"
+  },
+  {
+    "sample_id": "omladinska-politika-i-generacijski-jaz--mladi-protiv-vecno-madih",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/omladinska-politika-i-generacijski-jaz--mladi-protiv-vecno-madih.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/omladinska-politika-i-generacijski-jaz--mladi-protiv-vecno-madih.txt"
+  },
+  {
+    "sample_id": "ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike.txt"
+  },
+  {
+    "sample_id": "zgrada-politike-prodaja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/zgrada-politike-prodaja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/zgrada-politike-prodaja.txt"
+  },
+  {
+    "sample_id": "britanija-novi-izbori-peticija-laburisti-izneverena-ocekivanja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/britanija-novi-izbori-peticija-laburisti-izneverena-ocekivanja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/britanija-novi-izbori-peticija-laburisti-izneverena-ocekivanja.txt"
+  },
+  {
+    "sample_id": "iz-arhive-radio-beograda",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/iz-arhive-radio-beograda.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/iz-arhive-radio-beograda.txt"
+  },
+  {
+    "sample_id": "bioloski-ritam-radne-nedelje",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bioloski-ritam-radne-nedelje.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/bioloski-ritam-radne-nedelje.txt"
+  },
+  {
+    "sample_id": "evropski-komesar-za-poljoprivredu-cekamo-srbiju-i-srpske-farmere-nadamo-se-da-cete-se-uskoro-pridruziti-eu-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/evropski-komesar-za-poljoprivredu-cekamo-srbiju-i-srpske-farmere-nadamo-se-da-cete-se-uskoro-pridruziti-eu-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/evropski-komesar-za-poljoprivredu-cekamo-srbiju-i-srpske-farmere-nadamo-se-da-cete-se-uskoro-pridruziti-eu-.txt"
+  },
+  {
+    "sample_id": "rasim-ljajic-o-trenutnoj-finansijskoj-situaciji-partizana",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/rasim-ljajic-o-trenutnoj-finansijskoj-situaciji-partizana.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/rasim-ljajic-o-trenutnoj-finansijskoj-situaciji-partizana.txt"
+  },
+  {
+    "sample_id": "tijana-bogdanovic-i-milica-mandic-ambasadorke-evropskog-prvenstva-u-tekvondou",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/tijana-bogdanovic-i-milica-mandic-ambasadorke-evropskog-prvenstva-u-tekvondou.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/tijana-bogdanovic-i-milica-mandic-ambasadorke-evropskog-prvenstva-u-tekvondou.txt"
+  },
+  {
+    "sample_id": "janik-siner-italija-novak-djokovic-atp-lista",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/janik-siner-italija-novak-djokovic-atp-lista.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/janik-siner-italija-novak-djokovic-atp-lista.txt"
+  },
+  {
+    "sample_id": "zvanican-kraj-niki-hejli-u-kampanji-osudjenoj-na-propast--tramp-bez-konkurencije-u-stranci-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/zvanican-kraj-niki-hejli-u-kampanji-osudjenoj-na-propast--tramp-bez-konkurencije-u-stranci-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/zvanican-kraj-niki-hejli-u-kampanji-osudjenoj-na-propast--tramp-bez-konkurencije-u-stranci-.txt"
+  },
+  {
+    "sample_id": "barselona-ukinula-daniju-alvesu-status-legende",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/barselona-ukinula-daniju-alvesu-status-legende.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/barselona-ukinula-daniju-alvesu-status-legende.txt"
+  },
+  {
+    "sample_id": "juventus-vlahovic-serija-a-kazna-fudbal-djenova-iskljucenje",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/juventus-vlahovic-serija-a-kazna-fudbal-djenova-iskljucenje.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/juventus-vlahovic-serija-a-kazna-fudbal-djenova-iskljucenje.txt"
+  },
+  {
+    "sample_id": "otvoren-sajam-sporta-u-novom-sadu-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/otvoren-sajam-sporta-u-novom-sadu-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/otvoren-sajam-sporta-u-novom-sadu-.txt"
+  },
+  {
+    "sample_id": "uefa-ce-odobriti-povecanje-broja-igraca-u-reprezentacijama-na-ep-u-nemackoj",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/uefa-ce-odobriti-povecanje-broja-igraca-u-reprezentacijama-na-ep-u-nemackoj.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/uefa-ce-odobriti-povecanje-broja-igraca-u-reprezentacijama-na-ep-u-nemackoj.txt"
+  },
+  {
+    "sample_id": "mesijev-inter-majami-slavio-na-otvaranju-nove-sezone-mls-lige",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mesijev-inter-majami-slavio-na-otvaranju-nove-sezone-mls-lige.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/mesijev-inter-majami-slavio-na-otvaranju-nove-sezone-mls-lige.txt"
+  },
+  {
+    "sample_id": "brnabic-najverovatnije-ce-se-ici-na-nove-izbore-u-beogradu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/brnabic-najverovatnije-ce-se-ici-na-nove-izbore-u-beogradu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/brnabic-najverovatnije-ce-se-ici-na-nove-izbore-u-beogradu.txt"
+  },
+  {
+    "sample_id": "otklonjena-kljucna-prepreka--kineski-elektricni-automobili-preplavice-evropu",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/otklonjena-kljucna-prepreka--kineski-elektricni-automobili-preplavice-evropu.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/otklonjena-kljucna-prepreka--kineski-elektricni-automobili-preplavice-evropu.txt"
+  },
+  {
+    "sample_id": "takovska-10-kurtijeva-politika--krsenje-svakog-dogovora",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/takovska-10-kurtijeva-politika--krsenje-svakog-dogovora.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/takovska-10-kurtijeva-politika--krsenje-svakog-dogovora.txt"
+  },
+  {
+    "sample_id": "skaj-zvicer-milovic-vucic-sad-bajden",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/skaj-zvicer-milovic-vucic-sad-bajden.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/skaj-zvicer-milovic-vucic-sad-bajden.txt"
+  },
+  {
+    "sample_id": "korijere-delo-sport-vlahovic-je-komplikovana-zagonetka",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/korijere-delo-sport-vlahovic-je-komplikovana-zagonetka.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/korijere-delo-sport-vlahovic-je-komplikovana-zagonetka.txt"
+  },
+  {
+    "sample_id": "milan-oslabljen-protiv-zvezde-pulisic-van-terena-do-kraja-godine",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/milan-oslabljen-protiv-zvezde-pulisic-van-terena-do-kraja-godine.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/milan-oslabljen-protiv-zvezde-pulisic-van-terena-do-kraja-godine.txt"
+  },
+  {
+    "sample_id": "kriptovalute-i-politika---moze-li-tramp-ispuniti-predizborna-obecanja",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kriptovalute-i-politika---moze-li-tramp-ispuniti-predizborna-obecanja.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kriptovalute-i-politika---moze-li-tramp-ispuniti-predizborna-obecanja.txt"
+  },
+  {
+    "sample_id": "caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-1",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-1.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-1.txt"
+  },
+  {
+    "sample_id": "aleksandar-vuksanovic-osudjen-zbog-povrede-casti-i-ugleda-urednice-rts-a-olivere-kovacevic-",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/aleksandar-vuksanovic-osudjen-zbog-povrede-casti-i-ugleda-urednice-rts-a-olivere-kovacevic-.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/aleksandar-vuksanovic-osudjen-zbog-povrede-casti-i-ugleda-urednice-rts-a-olivere-kovacevic-.txt"
+  },
+  {
+    "sample_id": "dragisa-bozic-selo-veselo-radio-beograd-novinar",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dragisa-bozic-selo-veselo-radio-beograd-novinar.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/dragisa-bozic-selo-veselo-radio-beograd-novinar.txt"
+  },
+  {
+    "sample_id": "petkovic-o-izjavi-stana-tako-izgleda-politika-dvostrukih-arsina",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/petkovic-o-izjavi-stana-tako-izgleda-politika-dvostrukih-arsina.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/petkovic-o-izjavi-stana-tako-izgleda-politika-dvostrukih-arsina.txt"
+  },
+  {
+    "sample_id": "kako-ce-dolazak-donalda-trampa-uticati-na-sukob-u-ukrajini",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kako-ce-dolazak-donalda-trampa-uticati-na-sukob-u-ukrajini.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/politika/kako-ce-dolazak-donalda-trampa-uticati-na-sukob-u-ukrajini.txt"
+  },
+  {
+    "sample_id": "olimpijski-krugovi",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/olimpijski-krugovi.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/olimpijski-krugovi.txt"
+  },
+  {
+    "sample_id": "milica-gardasevic-olimpijske-igre-2024-pariz",
+    "audio_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/milica-gardasevic-olimpijske-igre-2024-pariz.mp3",
+    "text_path": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw/sport/milica-gardasevic-olimpijske-igre-2024-pariz.txt"
+  }
+]

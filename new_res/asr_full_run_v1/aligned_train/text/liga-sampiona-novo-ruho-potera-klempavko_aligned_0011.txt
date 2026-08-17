@@ -1,0 +1,1 @@
+Od ukupno dve utakmice protiv timova iz istog šešira, svaka ekipa će jednom biti domaćin, a jednom gost, za šta će se pobrinuti softver. Kao i do sada, pobeda u prvoj (ligaškoj) fazi takmičenja vredi tri boda, remi bod, dok poraženi ostaje bez bodova. Nakon završetka ligaške faze takmičenja osam

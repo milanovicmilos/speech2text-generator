@@ -1,0 +1,1 @@
+Naime, kako je programom bilo predviđeno, Mihailo Simić, tehničar u radiju, započeo je svoje javljanje brojanjem 1 do 220, ali se pretpostavlja da je ipak bilo negde oko 100. Ovo brojanje imalo je dvostruku ulogu. Prva je je bila da se izvrši potrebno podešavanje u samom predajniku (nivo modulacije), a druga uloga je bila da se kod

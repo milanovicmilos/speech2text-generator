@@ -1,0 +1,18 @@
+{
+  "model_dir": "openai/whisper-base",
+  "data_dir": "/kaggle/working/asr_full_run_v1/aligned_holdout",
+  "split": "all",
+  "num_samples": 2172,
+  "decode": {
+    "num_beams": 8,
+    "no_repeat_ngram_size": 10,
+    "repetition_penalty": 5.0,
+    "length_penalty": 1.0,
+    "temperature": 0.0,
+    "max_new_tokens": 128,
+    "max_length": 256
+  },
+  "wer": 0.4944126668324629,
+  "cer": 0.19084020110370853,
+  "normalization": "SerbianTextPreprocessor.preprocess"
+}

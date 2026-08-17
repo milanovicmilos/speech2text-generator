@@ -1,0 +1,8 @@
+{
+  "raw_dir": "/kaggle/input/datasets/milomilanovi/speech-recognation-raw/raw",
+  "total_pairs": 776,
+  "train_val_pairs": 544,
+  "holdout_pairs": 232,
+  "holdout_ratio": 0.3,
+  "seed": 42
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\ambasada-francuske-u-srbiji-svecanim-prijemom-obelezila-dan-republike_aligned_0013.wav",
+    "issue": "invalid_stats: wps=1.93, words=7, dur=3.62"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-3_aligned_0007.wav",
+    "issue": "invalid_stats: wps=3.33, words=15, dur=4.50"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\caslav-koprivica-novak-djokovic--kiborg-volje-ili-o-nesavremenosti-vitestva-4_aligned_0007.wav",
+    "issue": "invalid_stats: wps=3.32, words=15, dur=4.52"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\dzudisti-crvene-zvezde-pobednici-turira-u-pirotu_aligned_0005.wav",
+    "issue": "invalid_stats: wps=2.66, words=13, dur=4.88"
+  },
+  {
+    "audio": "C:\\Users\\Milos\\PythonProjects\\speech_recognation\\data\\aligned_raw_v1_improved\\audio\\ekspo-borovcanin-beograd_aligned_0013.wav",
+    "issue": "invalid_stats: wps=2.42, words=9, dur=3.72"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "include": [
+    "src",
+    "cli",
+    "tools",
+    "kaggle",
+    "kaggle_project_code",
+    "notebooks"
+  ],
+  "extraPaths": [
+    "src"
+  ],
+  "reportMissingImports": true,
+  "venvPath": ".",
+  "venv": ".venv"
+}
